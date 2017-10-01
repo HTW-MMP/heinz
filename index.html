@@ -6,9 +6,7 @@
   <!-- make sure scaling is good for responsive content -->
   <html lang="de">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Google Fonts -->
-  <!-- <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i|Source+Code+Pro:400,700|Work+Sans:300,400,500" rel="stylesheet"> -->
-  <!-- <link href="css/main.css" rel="stylesheet"> -->
+  <link href="css/main.css" rel="stylesheet">
   <title>Heinz - the storytelling framework</title>
   <style>
     /*video {
@@ -19,14 +17,14 @@
 </head>
 
 <body>
-  <nav>
-    <a href="#">Chapter 1</a> |
-    <a href="#">Chapter 2</a> |
-    <a href="#">Chapter 3</a> |
-    <a href="#">about</a>
-  </nav>
 
   <header>
+      <nav>
+        <a href="#">Chapter 1</a> |
+        <a href="#">Chapter 2</a> |
+        <a href="#">Chapter 3</a> |
+        <a href="#">about</a>
+      </nav>
     <h1>This is a Title</h1>
     <figure>
       <img alt="Header Image" src="https://source.unsplash.com/random/">
@@ -34,7 +32,7 @@
     </figure>
   </header>
 
-  <section class="container">
+  <main class="container">
     <article>
       <h2>Article Title</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
@@ -73,7 +71,10 @@
       </p>
     </article>
 
-  </section>
+</main>
+<aside class="left">Inhalt links</aside>
+
+<aside class="right">Inhalt rechts</aside>
 
 
   <footer>Dies ist ein Footer</footer>

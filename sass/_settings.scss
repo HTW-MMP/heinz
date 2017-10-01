@@ -1,0 +1,37 @@
+// Shortcuts
+//-----------
+
+$noborder: 0 solid transparent !default;
+
+// SETTINGS
+//-------------------
+$font-directory: '../fonts';
+
+$code-font-name: 'Courier Prime Code';
+$code-font-path: 'courier_prime-code';
+
+$serif-font-name: 'Playfair Display';
+$serif-font-path: 'playfairdisplay';
+
+$sans-serif-font-name: 'Work Sans';
+$sans-serif-font-path: 'worksans';
+
+// Font Stacks
+$serif: 'Playfair Display', 'Times New Roman', serif;
+$sans-serif: 'Work Sans', 'Calibri', sans-serif;
+$monospace: 'Courier Prime Code', monospace;
+
+$column-count: 12;
+$header-height: 150px;
+$footer-height: 100px;
+$side-left-min-width: 200px;
+$side-right-max-width: 200px;
+
+$main-font: $sans-serif;
+$main-font-size: 19px;
+$main-line-height: 1.25;
+$main-font-weight: normal;
+
+$headings-font: $serif;
+
+$code-font: $monospace;
