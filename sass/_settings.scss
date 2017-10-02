@@ -2,49 +2,84 @@
 //-----------
 
 $noborder: 0 solid transparent !default;
+$transition: .3s all ease !default;
 
 // SETTINGS
 //-------------------
-$font-directory: '../fonts';
+$gutter: 10px !default;
 
-$code-font-name: 'Courier Prime Code';
-$code-font-path: 'courier_prime-code';
+$font-directory: '../fonts' !default;
 
-$serif-font-name: 'Playfair Display';
-$serif-font-path: 'playfairdisplay';
+$code-font-name: 'Courier Prime Code' !default;
+$code-font-path: 'courier_prime-code' !default;
 
-$sans-serif-font-name: 'Work Sans';
-$sans-serif-font-path: 'worksans';
+$serif-font-name: 'Playfair Display' !default;
+$serif-font-path: 'playfairdisplay' !default;
+
+$sans-serif-font-name: 'Work Sans' !default;
+$sans-serif-font-path: 'worksans' !default;
 
 // Font Stacks
-$serif: 'Playfair Display', 'Times New Roman', serif;
-$sans-serif: 'Work Sans', 'Calibri', sans-serif;
-$monospace: 'Courier Prime Code', monospace;
+$serif: 'Playfair Display', 'Times New Roman', serif !default;
+$sans-serif: 'Work Sans', 'Calibri', sans-serif !default;
+$monospace: 'Courier Prime Code', monospace !default;
 
-$column-count: 12;
+// Text settings
+$main-font: $sans-serif !default;
+$main-font-size: 16px !default;
+$main-line-height: 1.375 !default;
+$main-font-weight: normal !default;
 
-$breakpoint-xs: 600px;
-$breakpoint-sm: 960px;
-$breakspoint-md: 1260px;
-$breakspoint-lg: 1920px;
-$breakspoint-xl: 1921px;
+$headings-font: $serif !default;
 
-$column-count-xs: 4;
-$column-count-sm: 8;
-$column-count-md: 12;
-$column-count-lg: 12;
-$column-count-xl: 24;
+$code-font: $monospace !default;
 
-$header-height: 150px;
-$footer-height: 100px;
-$side-left-min-width: 200px;
-$side-right-max-width: 200px;
+$hyphenate-paragraphs: true !default;
+$hyphenate-headings: false !default;
+$paragraph-gap: $gutter/2 !default;
 
-$main-font: $sans-serif;
-$main-font-size: 19px;
-$main-line-height: 1.25;
-$main-font-weight: normal;
+$paragraph-text-align: justify !default;
 
-$headings-font: $serif;
+$text-highlighted-color: yellow !default;
 
-$code-font: $monospace;
+$link-color: red !default;
+$link-hover-color: blue !default;
+$link-line: false !default;
+$link-hover-line: true !default;
+
+$blockquote-font: $serif !default;
+$blockquote-style: italic !default;
+$blockquote-weight: bold !default;
+$blockquote-color: green !default;
+$blockquote-width: 80% !default;
+$blockquote-border-line: true !default;
+$blockquote-border-position: right !default;
+$blockquote-border-width: 3px !default;
+$blockquote-border-color: currentColor !default;
+$blockquote-text-align: right !default;
+
+$boxed-layout: true;
+$background-color: darken(white, 5%);
+$container-background-color: white;
+
+$enable-default-grid: true !default;
+$container-max-width: 900px;
+
+$column-count: 12 !default;
+
+$breakpoint-xs: 600px !default;
+$breakpoint-sm: 960px !default;
+$breakspoint-md: 1260px !default;
+$breakspoint-lg: 1920px !default;
+$breakspoint-xl: 1921px !default;
+
+$column-count-xs: 4 !default;
+$column-count-sm: 8 !default;
+$column-count-md: 12 !default;
+$column-count-lg: 12 !default;
+$column-count-xl: 24 !default;
+
+$header-height: 150px !default;
+$footer-height: 100px !default;
+$side-left-min-width: 200px !default;
+$side-right-max-width: 200px !default;

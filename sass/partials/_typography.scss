@@ -1,0 +1,132 @@
+html, body{
+    font:{
+        family: $main-font;
+        size: $main-font-size;
+        weight: $main-font-weight;
+    }
+    line-height: $main-line-height;
+}
+
+p{
+    text-align: $paragraph-text-align;
+
+    @if $hyphenate-paragraphs {
+        hyphens: auto;
+    }
+
+    & + p{
+        margin-top: $paragraph-gap;
+    }
+}
+
+h1{
+    font-size: 3em;
+    line-height: 1.05;
+}
+
+h2{
+    font-size: 2.25em;
+    line-height: 1.25;
+}
+
+h3{
+    font-size: 1.75em;
+    line-height: 1.25;
+}
+
+h4{
+    font-size: 1.125em;
+    line-height: 1.22;
+}
+
+h5{
+    font-weight: bold;
+}
+
+h6{
+    font-style: italic;
+    font-weight: bold;
+}
+
+@if $hyphenate-headings {
+    @for $i from 1 through 6{
+        h#{$i}{
+            hyphens: auto;
+        }
+    }
+}
+
+// links
+a{
+    transition: $transition;
+    color: $link-color;
+    @if $link-line == false{
+        text-decoration: none;
+    }
+
+    &:hover{
+        color: $link-hover-color;
+        @if $link-hover-line {
+            text-decoration: underline;
+        }
+    }
+}
+
+blockquote{
+    font:{
+        family: $blockquote-font;
+        style: $blockquote-style;
+        weight: $blockquote-weight;
+        size: 1.5em;
+    }
+    line-height: 1.4583;
+    @include center();
+    width: $blockquote-width;
+    text-align: right;
+    color: $blockquote-color;
+
+    @if $blockquote-border-line{
+        border-#{$blockquote-border-position}: $blockquote-border-width solid $blockquote-border-color;
+    }
+
+    padding: $gutter;
+}
+// helper classes for text
+.text{
+    &-center{
+        text-align: center;
+    }
+
+    &-justify{
+        text-align: justify;
+    }
+
+    &-left{
+        text-align: left;
+    }
+
+    &-right{
+        text-align: right;
+    }
+
+    &-hyphen{
+        hyphens: auto;
+    }
+
+    &-no-hyphen{
+        hyphens: none;
+    }
+
+    &-highlighted{
+        background: $text-highlighted-color;
+        color: black-or-white($text-highlighted-color);
+    }
+
+    &-small{
+        font-size: .8em;
+    }
+
+    &-muted{
+        opacity: .5;
+    }
+}

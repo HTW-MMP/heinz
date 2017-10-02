@@ -1,6 +1,28 @@
-body{
-    font-family: $main-font;
-    font-size: $main-font-size;
-    line-height: $main-line-height;
-    font-weight: $main-font-weight;
+// set global box sizing
+*{
+    box-sizing: border-box;
+}
+
+// add some of the defaults back in
+b, strong{
+    font-weight: bold;
+}
+
+i{
+    font-style: italic;
+}
+
+@if $boxed-layout{
+    body{
+        background: $background-color;
+
+        .box{
+            background: $container-background-color;
+        }
+    }
+}
+
+.box{
+    padding: $gutter*2;
+    margin: $gutter;
 }
