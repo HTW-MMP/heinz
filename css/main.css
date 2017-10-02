@@ -1,3 +1,9 @@
+/* How tu use this mixin:
+ * include on the parent container argumemts are as follows:
+ * 1. selector: add the complete css selector, as a string
+ * 2. items per row: how many items are in a row max.
+ * 3++. to make this responsive add breakpoints, separating with a comma, the mixin automatically reduces by 1.
+ */
 @font-face {
   font-family: "Work Sans";
   src: url("../fonts/worksans/worksans-black.woff2") format("woff2"), url("../fonts/worksans/worksans-black.woff") format("woff");
@@ -153,14 +159,9 @@ html, body {
 
 .containergrid {
   display: grid;
-  grid-template-row: auto auto auto auto;
   grid-template-columns: minmax(200px, 3fr) 6fr minmax(200px, 3fr);
-  grid-template-areas: "header header header" "left-1 content-1 right-1" "left-2 content-2 right-1" "left-2 content-3 right-2" "left-2 content-4 content-4"; }
-  .containergrid header,
-  .containergrid div {
-    border: 1px solid black;
-    margin: 3px; }
-  .containergrid header {
+  grid-template-areas: "header header header""left-1 content-1 right-1""left-2 content-2 right-1""left-2 content-3 right-2""left-2 content-4 content-4"; }
+  .containergrid .header {
     grid-area: header; }
   .containergrid .left-1 {
     grid-area: left-1; }
@@ -178,6 +179,10 @@ html, body {
     grid-area: content-3; }
   .containergrid .content-4 {
     grid-area: content-4; }
+  .containergrid header,
+  .containergrid div {
+    border: 1px solid black;
+    margin: 3px; }
 
 .bodygrid {
   display: grid;

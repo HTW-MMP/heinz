@@ -5,55 +5,21 @@ html, body {
     padding: 0;
 }
 .containergrid{
-    display: grid;
-    grid-template-row: auto auto auto auto;
-    grid-template-columns: minmax($side-left-min-width, 3fr) 6fr minmax($side-right-max-width, 3fr);
-    grid-template-areas: "header header header"
-                         "left-1 content-1 right-1"
-                         "left-2 content-2 right-1"
-                         "left-2 content-3 right-2"
-                         "left-2 content-4 content-4";
+    @include gridCreator(
+        auto auto auto auto,
+        minmax($side-left-min-width, 3fr) 6fr minmax($side-right-max-width, 3fr),
+        (header, left-1, left-2, right-1, right-2, content-1, content-2, content-3, content-4),
+        "header header header",
+        "left-1 content-1 right-1",
+        "left-2 content-2 right-1",
+        "left-2 content-3 right-2",
+        "left-2 content-4 content-4"
+    );
 
     header,
     div{
         border: 1px solid black;
         margin: 3px;
-    }
-
-    header{
-        grid-area: header;
-    }
-
-    .left-1{
-        grid-area: left-1;
-    }
-
-    .left-2{
-        grid-area: left-2;
-    }
-
-    .right-1{
-        grid-area: right-1;
-    }
-
-    .right-2{
-        grid-area: right-2;
-    }
-
-    .content-1{
-        grid-area: content-1;
-    }
-
-    .content-2{
-        grid-area: content-2;
-    }
-
-    .content-3{
-        grid-area: content-3;
-    }
-
-    .content-4{
-        grid-area: content-4;
     }
 }
 
