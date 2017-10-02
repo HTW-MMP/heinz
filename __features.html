@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<style>
+
+body{
+margin: 0px;
+overflow: visible;
+}
+
+
+/*********************************/
+/* 			   Video		   	 */
+/*********************************/
+
+
+
+.video {
+width: 60%;
+height: auto;
+object-fit: cover;
+}
+
+
+.background-video{
+width: 100%;
+min-height: 100vh;
+height: auto;
+object-fit: cover;
+}
+
+
+/*********************************/
+/* 			   Audio			 */
+/*********************************/
+
+.audio {
+width: 100%;
+}
+
+
+
+
+
+
+
+
+
+/*********************************/
+/* 			Carousel			 */
+/*********************************/
+
+
+
+
+.wrap {
+  position: relative;
+  width: 500px;
+  height: 300px;
+  margin: 0 auto;
+  box-shadow:7px 7px 5px 0px rgba(0, 0, 0, 0.25);
+}
+
+.window {
+  overflow: hidden;
+  position: relative;
+  background: #222;
+}
+
+#carousel {
+  width: 10000px;
+  position: relative;
+  top: 0;
+  left: -500px;
+}
+
+.slide {
+  height: 300px;
+  width: 500px;
+  cursor: pointer;
+  float: left;
+}
+
+.slide#b1 { background: #556270 }
+.slide#b2 { background: #4ECDC4 }
+.slide#b3 { background: #9CE462 }
+.slide#b4 { background: #FF6B6B }
+.slide#b5 { background: #C44D33 }
+
+#prev, #next {
+  cursor: pointer;
+  position: absolute;
+  top: calc(50% - 7pt);
+  font-size: 14pt;
+}
+
+#prev { left: 10px; }
+#next { right: 10px; }
+
+.transition {
+  transition: .7s;
+}
+
+</style>
+
+</head>
+<body>
+
+<video class="video" controls poster="https://peach.blender.org/wp-content/uploads/bbb-splash.png?x11217">
+  <source src="https://www.w3schools.com/TagS/mov_bbb.mp4" type="video/mp4">
+  <source src="" type="video/ogg">
+  <source src="" type="video/webm">
+</video>
+
+<br><br><br><br>
+
+<audio class="audio" controls>
+  <source src="" type="audio/ogg">
+  <source src="" type="audio/mpeg">
+  <source src="" type="audio/wav">
+</audio>
+
+<br><br><br><br>
+
+
+<video class="background-video" muted autoplay loop poster="https://peach.blender.org/wp-content/uploads/bbb-splash.png?x11217">
+  <source src="https://www.w3schools.com/TagS/mov_bbb.mp4" type="video/mp4">
+</video>
+
+<br><br><br><br>
+
+
+
+<div class="wrap">
+  <div class="window">
+    <div id="carousel">
+      <span class="slide" id="b1">SLIDE-1</span>
+      <span class="slide" id="b2">SLIDE-2</span>  
+      <span class="slide" id="b3">SLIDE-3</span>
+      <span class="slide" id="b4">SLIDE-4</span>  
+      <span class="slide" id="b5">SLIDE-5</span>
+    </div>
+  </div>
+  <span id="prev"> < </span>
+  <span id="next"> > </span>
+</div>
+
+
+
+<br><br><br><br>
+
+
+<script>
+
+var carousel = $('#carousel'),
+    threshold = 150,
+    slideWidth = 500,
+    dragStart, 
+    dragEnd;
+
+$('#next').click(function(){ shiftSlide(-1) })
+$('#prev').click(function(){ shiftSlide(1) })
+
+carousel.on('mousedown', function(){
+  if (carousel.hasClass('transition')) return;
+  dragStart = event.pageX;
+  $(this).on('mousemove', function(){
+    dragEnd = event.pageX;
+    $(this).css('transform','translateX('+ dragPos() +'px)')
+  })
+  $(document).on('mouseup', function(){
+    if (dragPos() > threshold) { return shiftSlide(1) }
+    if (dragPos() < -threshold) { return shiftSlide(-1) }
+    shiftSlide(0);
+  })
+});
+
+function dragPos() {
+  return dragEnd - dragStart;
+}
+
+function shiftSlide(direction) {
+  if (carousel.hasClass('transition')) return;
+  dragEnd = dragStart;
+  $(document).off('mouseup')
+  carousel.off('mousemove')
+          .addClass('transition')
+          .css('transform','translateX(' + (direction * slideWidth) + 'px)'); 
+  setTimeout(function(){
+    if (direction === 1) {
+      $('.slide:first').before($('.slide:last'));
+    } else if (direction === -1) {
+      $('.slide:last').after($('.slide:first'));
+    }
+    carousel.removeClass('transition')
+		carousel.css('transform','translateX(0px)'); 
+  },700)
+}
+
+</script>
+
+
+
+</body>
+</html>
+
+
