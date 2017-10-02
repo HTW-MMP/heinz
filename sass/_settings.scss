@@ -22,6 +22,19 @@ $sans-serif: 'Work Sans', 'Calibri', sans-serif;
 $monospace: 'Courier Prime Code', monospace;
 
 $column-count: 12;
+
+$breakpoint-xs: 600px;
+$breakpoint-sm: 960px;
+$breakspoint-md: 1260px;
+$breakspoint-lg: 1920px;
+$breakspoint-xl: 1921px;
+
+$column-count-xs: 4;
+$column-count-sm: 8;
+$column-count-md: 12;
+$column-count-lg: 12;
+$column-count-xl: 24;
+
 $header-height: 150px;
 $footer-height: 100px;
 $side-left-min-width: 200px;

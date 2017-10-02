@@ -160,7 +160,7 @@ html, body {
 .containergrid {
   display: grid;
   grid-template-columns: minmax(200px, 3fr) 6fr minmax(200px, 3fr);
-  grid-template-areas: "header header header""left-1 content-1 right-1""left-2 content-2 right-1""left-2 content-3 right-2""left-2 content-4 content-4"; }
+  grid-template-areas: "header header header""left-1 content-1 right-1""left-2 content-2 right-1""left-2 content-3 right-1""left-2 content-4 content-4"; }
   .containergrid .header {
     grid-area: header; }
   .containergrid .left-1 {
