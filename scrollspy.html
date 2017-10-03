@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Scrollspy</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<style>
+
+body{
+margin: 0;
+}
+
+#scrollbar {
+height: 100%;
+width: 0px;
+position: absolute;
+background: red;
+z-index: 9999;
+}
+
+.scrollspy {
+width: auto;
+height: 100%;
+position: absolute;
+}
+
+</style>
+
+</head>
+<body>
+
+<div id="scrollspy" style="height: 50px; margin:0; top: 0px; position: fixed; width: 100%; background: blue;">
+
+<div id="scrollbar"></div>
+
+</div>
+
+<div style="height: 200px; margin:0;"></div>
+
+<section>
+
+asdfasd<br>
+</section>
+
+<div style="height: 200px; margin:0;"></div>
+
+<section>ygg<br>asdfasdf
+asdfasdf<br>asdfasdf<br>asdfasdf<br>
+</section>
+
+<div style="height: 200px; margin:0;"></div>
+
+<section><h1>test</h1>
+asdfasdf<br>
+asdfasdf<br>asdfasdf<br>asdfasdf<br>asdfasdf<br>asdfasdf<br>
+
+</section>
+
+<div style="height: 200px; margin:0;"></div>
+
+<section>asdfasasdgeasdedfhjasdf<br>asdfasdf</section>
+
+
+<div style="height: 600px; margin:0;"></div>
+
+<script>
+
+
+
+
+	var sectionstart = [];
+
+	var bodyheight = $('body').height();
+
+	var counter = 1;
+		
+	$("section").each(function(){
+
+
+		var y = $(this).offset();
+		var yh = $(this).height();
+
+		
+		yleft = 100 / bodyheight * y.top;
+		ywidth = (100 / bodyheight * (y.top + yh)) - yleft;
+
+		$("#scrollspy").append('<div id="section-' + counter + '" class="scrollspy" style="background: black; left:' + yleft + '%; width:' + ywidth + '%;">1</div>');
+		
+		sectionstart[counter] = yleft;
+		
+		counter++;
+
+	});
+
+
+	
+document.addEventListener("scroll", scrollspy);
+
+function scrollspy(){
+	var scrollTop = $(window).scrollTop();
+	var navheight = 50;
+	var currentTop = (100 / bodyheight * (scrollTop + navheight)) + "%";
+	
+  $( "#scrollbar" ).css( "width", currentTop );
+  
+
+/*
+
+for (var i = 1; i < sectionstart.length; i++) {
+	
+    if (currentTop > sectionstart[i]) {
+		console.log(i);
+	}
+	
+}
+
+*/
+  
+  
+};
+
+
+</script>
+
+</body>
+
+</html>
+
+
+
