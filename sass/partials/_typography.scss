@@ -76,9 +76,12 @@ h6{
 
 
 // links
-a{
+a,
+.toggle{
     transition: $transition;
     color: $link-color;
+    cursor: pointer;
+
     @if $link-line == false{
         text-decoration: none;
     }

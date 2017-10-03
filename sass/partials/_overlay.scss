@@ -1,0 +1,33 @@
+main, header, footer, div:not(.overlay){
+    filter: blur(10px);
+}
+.overlay{
+    // display: none;
+    background: $container-background-color;
+    position: fixed;
+    width: 70%;
+    max-height: 70%;
+    overflow: auto;
+    border: $overlay-border;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    &.open{
+        display: block;
+    }
+
+    .close{
+        position: absolute;
+        right: 15px;
+        top: 10px;
+        font-family: $sans-serif;
+        font-size: 1.5em;
+        text-decoration: none;
+        z-index: 100;
+
+        &:hover{
+            text-decoration: none;
+        }
+    }
+}

@@ -39,6 +39,7 @@
         + section{
             border-top: 1px solid darken(white, 5%);
         }
+        padding: $gutter 0;
 
         &:first-of-type{
             padding-top: $gutter * 12;
@@ -55,33 +56,61 @@
 
         &.full-width,
         .full-width {
+            padding: 0;
             display: grid;
             grid-template-columns: repeat($column-count, 1fr);
             @extend .item-span-#{$column-count};
             @extend .item-offset-0;
+            position: relative;
 
             figure, iframe, video{
                 @extend .item-span-#{$column-count};
                 @extend .item-offset-0;
+                padding: 0;
+                line-height: 1;
             }
 
             div, figcaption, p{
                 @extend .item-span-#{$section-content-span};
-                @extend .item-offset-#{($section-span - $section-content-span)/2};
+                @extend .item-offset-#{($section-span - $section-content-span)};
+                position: absolute;;
+                bottom: 10px;
+                left: 0;
             }
         }
 
-        .oversized{
+        .oversized,
+        .has-sidestory{
             @extend .item-span-#{$section-span};
             display: grid;
             grid-template-columns: repeat(#{$section-span}, 1fr);
             margin: $gutter 0;
+            position: relative;
+
             img{
                 @extend .item-span-#{$section-span};
             }
             div, figcaption, p{
                 @extend .item-span-#{$section-content-span};
                 @extend .item-offset-#{($section-span - $section-content-span)/2};
+            }
+
+            .sidestory{
+                @extend .item-span-#{($section-span - $section-content-span)};
+                background: $container-background-color;
+                padding: $gutter * 2;
+                top: 0;
+                width: 100%;
+                position: absolute;
+
+                &-left{
+                    left: 0;
+                    transform: translate(-50%);
+                }
+
+                &-right{
+                    left: 350%;
+                }
             }
         }
 

@@ -249,13 +249,16 @@ h6 {
   margin-bottom: .25rem;
   font-weight: normal; }
 
-a {
+a,
+.toggle {
   -webkit-transition: 0.3s all ease;
   -o-transition: 0.3s all ease;
   transition: 0.3s all ease;
   color: #968572;
+  cursor: pointer;
   text-decoration: none; }
-  a:hover {
+  a:hover,
+  .toggle:hover {
     color: #968572;
     text-decoration: underline; }
 
@@ -340,7 +343,7 @@ body {
   .grid .item-span-1 {
     grid-column-start: auto;
     grid-column-end: span 1; }
-  .grid .item-span-2 {
+  .grid .item-span-2, .grid section .oversized .sidestory, .grid section .has-sidestory .sidestory {
     grid-column-start: auto;
     grid-column-end: span 2; }
   .grid .item-span-3 {
@@ -352,13 +355,13 @@ body {
   .grid .item-span-5 {
     grid-column-start: auto;
     grid-column-end: span 5; }
-  .grid .item-span-6, .grid section.full-width div, .grid section.full-width figcaption, .grid section.full-width p, .grid section .full-width div, .grid section .full-width figcaption, .grid section .full-width p, .grid section .oversized div, .grid section .oversized figcaption, .grid section .oversized p, .grid section h1, .grid section h2, .grid section h3, .grid section h4, .grid section h5, .grid section h6, .grid section p, .grid section img, .grid section .content-wide {
+  .grid .item-span-6, .grid section.full-width div, .grid section.full-width figcaption, .grid section.full-width p, .grid section .full-width div, .grid section .full-width figcaption, .grid section .full-width p, .grid section .oversized div, .grid section .oversized figcaption, .grid section .oversized p, .grid section .has-sidestory div, .grid section .has-sidestory figcaption, .grid section .has-sidestory p, .grid section h1, .grid section h2, .grid section h3, .grid section h4, .grid section h5, .grid section h6, .grid section p, .grid section img, .grid section .content-wide {
     grid-column-start: auto;
     grid-column-end: span 6; }
   .grid .item-span-7 {
     grid-column-start: auto;
     grid-column-end: span 7; }
-  .grid .item-span-8, .grid section, .grid section .oversized, .grid section .oversized img {
+  .grid .item-span-8, .grid section, .grid section .oversized, .grid section .has-sidestory, .grid section .oversized img, .grid section .has-sidestory img {
     grid-column-start: auto;
     grid-column-end: span 8; }
   .grid .item-span-9 {
@@ -375,9 +378,9 @@ body {
     grid-column-end: span 12; }
   .grid .item-offset-0, .grid section.full-width, .grid section .full-width, .grid section.full-width figure, .grid section.full-width iframe, .grid section.full-width video, .grid section .full-width figure, .grid section .full-width iframe, .grid section .full-width video {
     grid-column-start: 1; }
-  .grid .item-offset-1, .grid section.full-width div, .grid section.full-width figcaption, .grid section.full-width p, .grid section .full-width div, .grid section .full-width figcaption, .grid section .full-width p, .grid section .oversized div, .grid section .oversized figcaption, .grid section .oversized p, .grid section h1, .grid section h2, .grid section h3, .grid section h4, .grid section h5, .grid section h6, .grid section p, .grid section img, .grid section .content-wide {
+  .grid .item-offset-1, .grid section .oversized div, .grid section .oversized figcaption, .grid section .oversized p, .grid section .has-sidestory div, .grid section .has-sidestory figcaption, .grid section .has-sidestory p, .grid section h1, .grid section h2, .grid section h3, .grid section h4, .grid section h5, .grid section h6, .grid section p, .grid section img, .grid section .content-wide {
     grid-column-start: 2; }
-  .grid .item-offset-2, .grid section {
+  .grid .item-offset-2, .grid section, .grid section.full-width div, .grid section.full-width figcaption, .grid section.full-width p, .grid section .full-width div, .grid section .full-width figcaption, .grid section .full-width p {
     grid-column-start: 3; }
   .grid .item-offset-3 {
     grid-column-start: 4; }
@@ -398,6 +401,7 @@ body {
   .grid .item-offset-11 {
     grid-column-start: 12; }
   .grid section {
+    padding: 10px 0;
     display: grid;
     grid-template-columns: repeat(8, 1fr); }
     .grid section + section {
@@ -408,11 +412,73 @@ body {
       padding-bottom: 120px; }
     .grid section.full-width,
     .grid section .full-width {
+      padding: 0;
       display: grid;
-      grid-template-columns: repeat(12, 1fr); }
-    .grid section .oversized {
+      grid-template-columns: repeat(12, 1fr);
+      position: relative; }
+      .grid section.full-width figure, .grid section.full-width iframe, .grid section.full-width video,
+      .grid section .full-width figure,
+      .grid section .full-width iframe,
+      .grid section .full-width video {
+        padding: 0;
+        line-height: 1; }
+      .grid section.full-width div, .grid section.full-width figcaption, .grid section.full-width p,
+      .grid section .full-width div,
+      .grid section .full-width figcaption,
+      .grid section .full-width p {
+        position: absolute;
+        bottom: 10px;
+        left: 0; }
+    .grid section .oversized,
+    .grid section .has-sidestory {
       display: grid;
       grid-template-columns: repeat(8, 1fr);
-      margin: 10px 0; }
+      margin: 10px 0;
+      position: relative; }
+      .grid section .oversized .sidestory,
+      .grid section .has-sidestory .sidestory {
+        background: white;
+        padding: 20px;
+        top: 0;
+        width: 100%;
+        position: absolute; }
+        .grid section .oversized .sidestory-left,
+        .grid section .has-sidestory .sidestory-left {
+          left: 0;
+          -webkit-transform: translate(-50%);
+          -ms-transform: translate(-50%);
+          transform: translate(-50%); }
+        .grid section .oversized .sidestory-right,
+        .grid section .has-sidestory .sidestory-right {
+          left: 350%; }
     .grid section blockquote {
       grid-column-start: 4; }
+
+main, header, footer, div:not(.overlay) {
+  -webkit-filter: blur(10px);
+  filter: blur(10px); }
+
+.overlay {
+  background: white;
+  position: fixed;
+  width: 70%;
+  max-height: 70%;
+  overflow: auto;
+  border: 10px solid #747D84;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }
+  .overlay.open {
+    display: block; }
+  .overlay .close {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-family: "Work Sans", "Calibri", sans-serif;
+    font-size: 1.5em;
+    text-decoration: none;
+    z-index: 100; }
+    .overlay .close:hover {
+      text-decoration: none; }
