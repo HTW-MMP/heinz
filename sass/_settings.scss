@@ -76,22 +76,8 @@ $section-span: $column-count - 4;
 $section-content-span: $section-span - 2;
 $section-quote-span: $section-content-span - 2;
 
-$breakpoint-xs: 600px !default;
-$breakpoint-sm: 960px !default;
-$breakspoint-md: 1260px !default;
-$breakspoint-lg: 1920px !default;
-$breakspoint-xl: 1921px !default;
-
-$column-count-xs: 4 !default;
-$column-count-sm: 8 !default;
-$column-count-md: 12 !default;
-$column-count-lg: 12 !default;
-$column-count-xl: 24 !default;
-
-$header-height: 150px !default;
-$footer-height: 100px !default;
-$side-left-min-width: 200px !default;
-$side-right-max-width: 200px !default;
-
+$breakpoint-s-to-xs: 600px !default;
+$breakpoint-m-to-s: 960px !default;
+$breakpoint-l-to-m: 1260px !default;
 
 $overlay-border: 10px solid $main-blue;
