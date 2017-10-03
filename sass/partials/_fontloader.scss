@@ -64,65 +64,24 @@
 
 @font-face {
     font-family: $serif-font-name;
-    src: url('#{$font-directory}/#{$serif-font-path}/#{$serif-font-path}-black.woff2') format('woff2'),
-         url('#{$font-directory}/#{$serif-font-path}/#{$serif-font-path}-black.woff') format('woff');
-    font-weight: 900;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: $serif-font-name;
-    src: url('#{$font-directory}/#{$serif-font-path}/#{$serif-font-path}-blackitalic.woff2') format('woff2'),
-         url('#{$font-directory}/#{$serif-font-path}/#{$serif-font-path}-blackitalic.woff') format('woff');
-    font-weight: 900;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: $serif-font-name;
-    src: url('#{$font-directory}/#{$serif-font-path}/#{$serif-font-path}-bold.woff2') format('woff2'),
-         url('#{$font-directory}/#{$serif-font-path}/#{$serif-font-path}-bold.woff') format('woff');
+    src: url('#{$font-directory}/#{$serif-font-path}/#{$serif-font-path}-bold-webfont.woff2') format('woff2'),
+         url('#{$font-directory}/#{$serif-font-path}/#{$serif-font-path}-bold-webfont.woff') format('woff');
     font-weight: bold;
     font-style: normal;
 }
 
 @font-face {
     font-family: $serif-font-name;
-    src: url('#{$font-directory}/#{$serif-font-path}/#{$serif-font-path}-bolditalic.woff2') format('woff2'),
-         url('#{$font-directory}/#{$serif-font-path}/#{$serif-font-path}-bolditalic.woff') format('woff');
-    font-weight: bold;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: $serif-font-name;
-    src: url('#{$font-directory}/#{$serif-font-path}/#{$serif-font-path}-italic.woff2') format('woff2'),
-         url('#{$font-directory}/#{$serif-font-path}/#{$serif-font-path}-italic.woff') format('woff');
+    src: url('#{$font-directory}/#{$serif-font-path}/#{$serif-font-path}-italic-webfont.woff2') format('woff2'),
+         url('#{$font-directory}/#{$serif-font-path}/#{$serif-font-path}-italic-webfont.woff') format('woff');
     font-weight: normal;
     font-style: italic;
 }
 
 @font-face {
     font-family: $serif-font-name;
-    src: url('#{$font-directory}/#{$serif-font-path}/#{$serif-font-path}-regular.woff2') format('woff2'),
-         url('#{$font-directory}/#{$serif-font-path}/#{$serif-font-path}-regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-
-@font-face {
-    font-family: $code-font-name;
-    src: url('#{$font-directory}/#{$code-font-path}/#{$code-font-path}_italic.woff2') format('woff2'),
-         url('#{$font-directory}/#{$code-font-path}/#{$code-font-path}_italic.woff') format('woff');
-    font-weight: normal;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: $code-font-name;
-    src: url('#{$font-directory}/#{$code-font-path}/#{$code-font-path}.woff2') format('woff2'),
-         url('#{$font-directory}/#{$code-font-path}/#{$code-font-path}.woff') format('woff');
+    src: url('#{$font-directory}/#{$serif-font-path}/#{$serif-font-path}-regular-webfont.woff2') format('woff2'),
+         url('#{$font-directory}/#{$serif-font-path}/#{$serif-font-path}-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }

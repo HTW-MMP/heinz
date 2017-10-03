@@ -6,6 +6,8 @@ $transition: .3s all ease !default;
 
 // SETTINGS
 //-------------------
+$size-restraint-for-large-screens: true;
+
 $gutter: 10px !default;
 
 $font-directory: '../fonts' !default;
@@ -13,45 +15,49 @@ $font-directory: '../fonts' !default;
 $code-font-name: 'Courier Prime Code' !default;
 $code-font-path: 'courier_prime-code' !default;
 
-$serif-font-name: 'Playfair Display' !default;
-$serif-font-path: 'playfairdisplay' !default;
+$serif-font-name: 'Libre Baskerville' !default;
+$serif-font-path: 'librebaskerville' !default;
 
 $sans-serif-font-name: 'Work Sans' !default;
 $sans-serif-font-path: 'worksans' !default;
 
 // Font Stacks
-$serif: 'Playfair Display', 'Times New Roman', serif !default;
-$sans-serif: 'Work Sans', 'Calibri', sans-serif !default;
-$monospace: 'Courier Prime Code', monospace !default;
+$serif: $serif-font-name, 'Times New Roman', serif !default;
+$sans-serif: $sans-serif-font-name, 'Calibri', sans-serif !default;
+$monospace: $code-font-name, 'Courier', monospace !default;
 
 // Text settings
-$main-font: $sans-serif !default;
+$main-font: $serif !default;
 $main-font-size: 16px !default;
 $main-line-height: 1.375 !default;
 $main-font-weight: normal !default;
+$main-font-color: $main-blue;
 
-$headings-font: $serif !default;
+$headings-font: $sans-serif !default;
+$headings-font-weight: 300;
+$headings-font-style: normal;
+$headings-text-transform: uppercase;
+$headings-text-align: center;
 
 $code-font: $monospace !default;
 
 $hyphenate-paragraphs: true !default;
 $hyphenate-headings: false !default;
-$paragraph-gap: $gutter/2 !default;
+$paragraph-gap: 1.25rem !default;
 
 $paragraph-text-align: justify !default;
 
-$text-highlighted-color: yellow !default;
+$text-highlighted-color: $main-brown !default;
 
-$link-color: red !default;
-$link-hover-color: blue !default;
+$link-color: $main-brown !default;
+$link-hover-color: $main-brown !default;
 $link-line: false !default;
 $link-hover-line: true !default;
 
 $blockquote-font: $serif !default;
 $blockquote-style: italic !default;
-$blockquote-weight: bold !default;
-$blockquote-color: green !default;
-$blockquote-width: 80% !default;
+$blockquote-weight: normal !default;
+$blockquote-color: $main-brown !default;
 $blockquote-border-line: true !default;
 $blockquote-border-position: right !default;
 $blockquote-border-width: 3px !default;
@@ -66,6 +72,9 @@ $enable-default-grid: true !default;
 $container-max-width: 900px;
 
 $column-count: 12 !default;
+$section-span: $column-count - 4;
+$section-content-span: $section-span - 2;
+$section-quote-span: $section-content-span - 2;
 
 $breakpoint-xs: 600px !default;
 $breakpoint-sm: 960px !default;

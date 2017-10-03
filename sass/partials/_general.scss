@@ -12,17 +12,52 @@ i{
     font-style: italic;
 }
 
-@if $boxed-layout{
-    body{
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+body{
+    max-width: 100%;
+    height: auto;
+
+    @if $size-restraint-for-large-screens{
+        header,
+        main,
+        footer{
+            width: 100%;
+            max-width: 1920px;
+            margin-left: auto !important;
+            margin-right: auto !important;
+            box-sizing: border-box;
+
+        }
+    }
+
+    @if $boxed-layout{
         background: $background-color;
 
-        .box{
+        .box {
             background: $container-background-color;
         }
     }
 }
 
+
 .box{
-    padding: $gutter*2;
     margin: $gutter;
+    box-sizing: border-box;
+}
+
+section.box{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.main{
+    margin: 100px 0; // CHECK
+}
+
+figure{
+    padding-bottom: $gutter / 2;
 }

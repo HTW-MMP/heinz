@@ -9,74 +9,90 @@
     body{
         @include gridCreator(
             auto auto auto,
-            minmax($side-left-min-width, 1.5fr) 9fr minmax($side-right-max-width, 1.5fr),
-            (header, main, sb-left, sb-right, footer),
-            "header header header",
-            "sb-left main sb-right",
-            "footer footer footer"
+            12fr,
+            (head, main, foot),
+            "head",
+            "main",
+            "foot"
         );
     }
 }
 
-.main{
-    max-width: $container-max-width;
-    @include center();
-}
-.bodygrid {
+.grid{
     display: grid;
-    grid-template-rows: $header-height auto $footer-height;
-    grid-template-columns: minmax($side-left-min-width, 1.5fr) minmax(9fr, $container-max-width) minmax($side-right-max-width, 1.5fr);
-    grid-template-areas: "header header  header"
-                         "left   content right"
-                         "left   footer  right";
+    grid-template-columns: repeat($column-count, 1fr);
 
-    header,
-    aside,
-    main,
-    footer,
-    section,
-    div{
-        border: 1px solid black;
-        margin: 3px;
-    }
-
-    header {
-        grid-area: header;
-    }
-
-    aside{
-        &.left{
-            grid-area: left;
-        }
-
-        &.right{
-            grid-area: right;
+    @for $i from 1 through $column-count{
+        .item-span-#{$i}{
+            grid-column-start: auto;
+            grid-column-end: span $i;
         }
     }
 
-    main{
-        grid-area: content;
-    }
-
-    footer{
-        grid-area: footer;
+    @for $i from 1 through $column-count{
+        .item-offset-#{$i - 1}{
+            grid-column-start: $i;
+        }
     }
 
     section{
-        display: grid;
-        grid-template-columns: repeat($column-count, 1fr);
+        + section{
+            border-top: 1px solid darken(white, 5%);
+        }
 
-        @for $i from 1 through $column-count{
-            .item-span-#{$i}{
-                grid-column-start: auto;
-                grid-column-end: span $i;
+        &:first-of-type{
+            padding-top: $gutter * 12;
+        }
+        &:last-of-type{
+            padding-bottom: $gutter * 12;
+        }
+
+        @extend .item-span-#{$section-span};
+        @extend .item-offset-#{($column-count - $section-span)/2};
+
+        display: grid;
+        grid-template-columns: repeat(#{$section-span}, 1fr);
+
+        &.full-width,
+        .full-width {
+            display: grid;
+            grid-template-columns: repeat($column-count, 1fr);
+            @extend .item-span-#{$column-count};
+            @extend .item-offset-0;
+
+            figure, iframe, video{
+                @extend .item-span-#{$column-count};
+                @extend .item-offset-0;
+            }
+
+            div, figcaption, p{
+                @extend .item-span-#{$section-content-span};
+                @extend .item-offset-#{($section-span - $section-content-span)/2};
             }
         }
 
-        @for $i from 1 through $column-count{
-            .item-offset-#{$i - 1}{
-                grid-column-start: $i;
+        .oversized{
+            @extend .item-span-#{$section-span};
+            display: grid;
+            grid-template-columns: repeat(#{$section-span}, 1fr);
+            margin: $gutter 0;
+            img{
+                @extend .item-span-#{$section-span};
             }
+            div, figcaption, p{
+                @extend .item-span-#{$section-content-span};
+                @extend .item-offset-#{($section-span - $section-content-span)/2};
+            }
+        }
+
+        h1, h2, h3, h4, h5, h6, p, img, .content-wide{
+            @extend .item-span-#{$section-content-span};
+            @extend .item-offset-#{($section-span - $section-content-span)/2};
+        }
+
+        blockquote{
+            @extend .item-span-#{$section-quote-span};
+            grid-column-start: 4;
         }
     }
 }

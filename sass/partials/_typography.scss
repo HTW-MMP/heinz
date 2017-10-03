@@ -5,6 +5,7 @@ html, body{
         weight: $main-font-weight;
     }
     line-height: $main-line-height;
+    color: $main-font-color;
 }
 
 p{
@@ -19,42 +20,60 @@ p{
     }
 }
 
+@for $i from 1 through 6{
+    h#{$i}{
+        font: {
+            family: $headings-font;
+            weight: $headings-font-weight;
+            style: $headings-font-style;
+        }
+        text-transform: $headings-text-transform;
+        text-align: $headings-text-align;
+
+        @if $hyphenate-headings {
+                hyphens: auto;
+        }
+    }
+}
+
 h1{
     font-size: 3em;
     line-height: 1.05;
+    color: $main-blue;
+    margin-bottom: 2.5rem;
 }
 
 h2{
     font-size: 2.25em;
     line-height: 1.25;
+    margin-bottom: 1.25rem;
 }
 
 h3{
     font-size: 1.75em;
     line-height: 1.25;
+    margin-bottom: 1.25rem;
 }
 
 h4{
     font-size: 1.125em;
     line-height: 1.22;
+    margin-bottom: .5rem;
+    font-weight: normal;
 }
 
 h5{
-    font-weight: bold;
+    font-size: 1.1em;
+    margin-bottom: .3rem;
+    font-weight: normal;
 }
 
 h6{
-    font-style: italic;
-    font-weight: bold;
+    font-size: 1em;
+    margin-bottom: .25rem;
+    font-weight: normal;
 }
 
-@if $hyphenate-headings {
-    @for $i from 1 through 6{
-        h#{$i}{
-            hyphens: auto;
-        }
-    }
-}
 
 // links
 a{
@@ -81,7 +100,6 @@ blockquote{
     }
     line-height: 1.4583;
     @include center();
-    width: $blockquote-width;
     text-align: right;
     color: $blockquote-color;
 
@@ -90,6 +108,9 @@ blockquote{
     }
 
     padding: $gutter;
+    padding-right: $gutter * 2;
+    margin-bottom: 1.25rem;
+    margin-top: 1.25rem;
 }
 // helper classes for text
 .text{
@@ -129,4 +150,15 @@ blockquote{
     &-muted{
         opacity: .5;
     }
+
+    &-lead{
+        font-weight: bold;
+        margin-bottom: 1.25rem;
+    }
+}
+
+figcaption{
+    font-style: italic;
+    margin-bottom: 1.25rem;
+    margin-top: .5rem;
 }
