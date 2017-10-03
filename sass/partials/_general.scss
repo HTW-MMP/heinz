@@ -20,6 +20,7 @@ img{
 body{
     max-width: 100%;
     height: auto;
+    transition: $transition;
 
     @if $size-restraint-for-large-screens{
         header,

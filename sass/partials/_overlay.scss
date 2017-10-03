@@ -1,8 +1,12 @@
-main, header, footer, div:not(.overlay){
-    filter: blur(10px);
+.overlay-open{
+    overflow: hidden;
+    main, header, footer, div:not(.overlay){
+        filter: blur(10px);
+        transition: $transition;
+    }
 }
 .overlay{
-    // display: none;
+    display: none;
     background: $container-background-color;
     position: fixed;
     width: 70%;

@@ -132,6 +132,9 @@ img {
 body {
   max-width: 100%;
   height: auto;
+  -webkit-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+  transition: 0.3s all ease;
   background: #f2f2f2; }
   body header,
   body main,
@@ -454,11 +457,17 @@ body {
     .grid section blockquote {
       grid-column-start: 4; }
 
-main, header, footer, div:not(.overlay) {
-  -webkit-filter: blur(10px);
-  filter: blur(10px); }
+.overlay-open {
+  overflow: hidden; }
+  .overlay-open main, .overlay-open header, .overlay-open footer, .overlay-open div:not(.overlay) {
+    -webkit-filter: blur(10px);
+    filter: blur(10px);
+    -webkit-transition: 0.3s all ease;
+    -o-transition: 0.3s all ease;
+    transition: 0.3s all ease; }
 
 .overlay {
+  display: none;
   background: white;
   position: fixed;
   width: 70%;

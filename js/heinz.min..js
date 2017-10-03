@@ -1,0 +1,1 @@
+$(".toggle").click(function(){var o=$(this).data("toggle-overlay");$("#"+o).toggleClass("open"),$("body").toggleClass("overlay-open")}),$(".overlay .close").click(function(){$(this).closest(".overlay").removeClass("open"),$("body").removeClass("overlay-open")});
