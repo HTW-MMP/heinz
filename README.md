@@ -40,20 +40,21 @@
 ## Quick Start
 
 1. Download the latest release on [getheinz.com/download](https://getheinz.com/download) into your Project Folder.
-2. Copy-paste the stylesheet `<link>` into your `<head>` before all other stylesheets to load our CSS:
+2. Open your index.html File.
+3. Copy-paste the stylesheet `<link>` into your `<head>` before all other stylesheets to load our CSS:
 
     ```
     <link rel="stylesheet" href="css/heinz.css">
     ```
 
-3. Add the optional JavaScript near the end of your page, right before the closing `</body>` tag. Be sure to place jQuery first, as our JavaScript depends on that.
+4. Add the optional JavaScript near the end of your page, right before the closing `</body>` tag. Be sure to place jQuery first, as our JavaScript depends on that.
 
       ```
       <script src="js/jquery-3.2.1.min.js"></script>
       <script src="js/heinz.js"></script>
       ```
 
-4. And that’s about it — you’re about to come down the stretch and have your very own multimedia story. If you’re unsure about the general structure, keep reading for an example page template.
+5. And that’s about it — you’re about to come down the stretch and have your very own multimedia story. If you’re unsure about the general structure, keep reading for an example page template.
 
 ## Starter template
 Be sure to have your pages set up with the latest design and development standards. That means using an HTML5 doctype and including a viewport meta tag for proper responsive behaviors. Put it all together and your pages should look like this:
