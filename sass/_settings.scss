@@ -6,9 +6,10 @@ $transition: .3s all ease !default;
 
 // SETTINGS
 //-------------------
-$size-restraint-for-large-screens: true;
+$size-restraint-for-large-screens: true !default; // enable if you want to add a max-width to content on very large screens.
+$size-restraint-max-width: 1920px !default;
 
-$gutter: 10px !default;
+$gutter: 10px !default; // default spacing
 
 $font-directory: '../fonts' !default;
 
@@ -64,20 +65,46 @@ $blockquote-border-width: 3px !default;
 $blockquote-border-color: currentColor !default;
 $blockquote-text-align: right !default;
 
-$boxed-layout: true;
-$background-color: darken(white, 5%);
-$container-background-color: white;
+$boxed-layout: true !default;
+$background-color: darken(white, 5%) !default;
+$container-background-color: white !default;
 
 $enable-default-grid: true !default;
 $container-max-width: 900px;
 
 $column-count: 12 !default;
-$section-span: $column-count - 4;
-$section-content-span: $section-span - 2;
-$section-quote-span: $section-content-span - 2;
+$section-span: $column-count - 4 !default;
+$section-content-span: $section-span - 2 !default;
+$section-quote-span: $section-content-span - 2 !default;
 
 $breakpoint-s-to-xs: 600px !default;
 $breakpoint-m-to-s: 960px !default;
 $breakpoint-l-to-m: 1260px !default;
 
-$overlay-border: 10px solid $main-blue;
+$overlay-border: 0px solid $main-blue;
+
+
+$fullscreen-background-size: cover;
+$fullscreen-background-position: center center;
+
+$textoverlay-background: black;
+$textoverlay-image-opacity: .5;
+$textotverlay-text-align: center;
+$textoverlay-color: white;
+$textoverlay-size: 3.1em;
+$textoverlay-line-height: 1.05em;
+$textoverlay-font-weight: bold;
+$textoverlay-font-style: italic;
+
+$slider-ratio-width: 16;
+$slider-ratio-height: 9;
+$slider-navigator-size: 35px;
+$slider-arrow-color: $whiteish;
+$slider-arrow-hover-color: rgba($whiteish, .5);
+$slider-arrow-thickness: 3px;
+$slider-arrow-shadow: true;
+
+$video-ratio-width: 16;
+$video-ratio-height: 9;
+
+$video-overlay-background: rgba(black, .5);

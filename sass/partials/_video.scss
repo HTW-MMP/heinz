@@ -1,0 +1,7 @@
+.video-wrap{
+    margin: $gutter 0;
+    position: relative;
+}
+.video{
+    @include paddinghack(100%, $video-ratio-width, $video-ratio-height, "iframe, video");
+}

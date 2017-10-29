@@ -1,1 +1,0 @@
-function closeOverlay(){$(".overlay").removeClass("open"),$("body").removeClass("overlay-open")}$(".toggle").click(function(){var e=$(this).data("toggle-overlay");$("#"+e).toggleClass("open"),$("body").toggleClass("overlay-open"),$}),$(".overlay .close").click(function(){closeOverlay()}),$(document).keyup(function(e){27===e.keyCode&&closeOverlay()});

@@ -1,3 +1,4 @@
+// loads all fonts from the font directory
 @font-face {
     font-family: $sans-serif-font-name;
     src: url('#{$font-directory}/#{$sans-serif-font-path}/#{$sans-serif-font-path}-black.woff2') format('woff2'),

@@ -73,7 +73,8 @@
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
+a,
+.backtotop, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, tt, var,
 b, u, i, center,
@@ -304,7 +305,7 @@ h6 {
   margin-bottom: .25rem;
   font-weight: normal; }
 
-a,
+a, .backtotop,
 .toggle {
   -webkit-transition: 0.3s all ease;
   -o-transition: 0.3s all ease;
@@ -312,7 +313,7 @@ a,
   color: #968572;
   cursor: pointer;
   text-decoration: none; }
-  a:hover,
+  a:hover, .backtotop:hover,
   .toggle:hover {
     color: #968572;
     text-decoration: underline; }
@@ -452,11 +453,11 @@ body {
   .grid .item-span-lg-5 {
     grid-column-start: auto;
     grid-column-end: span 12; }
-  .grid .item-span-6, .grid section .oversized div, .grid section .oversized figcaption, .grid section .oversized p, .grid section .has-sidestory div, .grid section .has-sidestory figcaption, .grid section .has-sidestory p, .grid section h1, .grid section h2, .grid section h3, .grid section h4, .grid section h5, .grid section h6, .grid section p, .grid section img, .grid section .content-wide {
+  .grid .item-span-6, .grid section .oversized div, .grid section .oversized figcaption, .grid section .oversized p, .grid section .has-sidestory div, .grid section .has-sidestory figcaption, .grid section .has-sidestory p, .grid section h1, .grid section h2, .grid section h3, .grid section h4, .grid section h5, .grid section h6, .grid section p, .grid section img, .grid section .content-wide, .grid section .slider-wrap, .grid section .video-wrap {
     grid-column-start: auto;
     grid-column-end: span 6; }
   .grid .item-span-sm-6,
-  .grid .item-span-md-6, .grid section.full-width div, .grid section.full-width figcaption, .grid section.full-width p, .grid section .full-width div, .grid section .full-width figcaption, .grid section .full-width p,
+  .grid .item-span-md-6, .grid section.full-width figcaption, .grid section.full-width p, .grid section .full-width figcaption, .grid section .full-width p,
   .grid .item-span-lg-6 {
     grid-column-start: auto;
     grid-column-end: span 12; }
@@ -468,7 +469,7 @@ body {
   .grid .item-span-lg-7 {
     grid-column-start: auto;
     grid-column-end: span 12; }
-  .grid .item-span-8, .grid section .oversized, .grid section .has-sidestory {
+  .grid .item-span-8, .grid section .oversized, .grid section .has-sidestory, .grid section h1.large, .grid section h2.large, .grid section h3.large, .grid section h4.large, .grid section h5.large, .grid section h6.large, .grid section p.large, .grid section img.large, .grid section .content-wide.large, .grid section .slider-wrap.large, .grid section .video-wrap.large {
     grid-column-start: auto;
     grid-column-end: span 8; }
   .grid .item-span-sm-8,
@@ -504,20 +505,20 @@ body {
     grid-column-start: auto;
     grid-column-end: span 12; }
   .grid .item-span-sm-12,
-  .grid .item-span-md-12, .grid section.full-width, .grid section .full-width, .grid section.full-width figure, .grid section.full-width iframe, .grid section.full-width video, .grid section .full-width figure, .grid section .full-width iframe, .grid section .full-width video,
+  .grid .item-span-md-12, .grid section.full-width, .grid section .full-width, .grid section.full-width figure, .grid section.full-width iframe, .grid section.full-width video, .grid section.full-width .video-wrap, .grid section.full-width .over-video, .grid section .full-width figure, .grid section .full-width iframe, .grid section .full-width video, .grid section .full-width .video-wrap, .grid section .full-width .over-video,
   .grid .item-span-lg-12 {
     grid-column-start: auto;
     grid-column-end: span 12; }
-  .grid .item-offset-0, .grid section.full-width, .grid section .full-width, .grid section.full-width figure, .grid section.full-width iframe, .grid section.full-width video, .grid section .full-width figure, .grid section .full-width iframe, .grid section .full-width video {
+  .grid .item-offset-0, .grid section.full-width, .grid section .full-width, .grid section.full-width figure, .grid section.full-width iframe, .grid section.full-width video, .grid section.full-width .video-wrap, .grid section.full-width .over-video, .grid section .full-width figure, .grid section .full-width iframe, .grid section .full-width video, .grid section .full-width .video-wrap, .grid section .full-width .over-video, .grid section h1.large, .grid section h2.large, .grid section h3.large, .grid section h4.large, .grid section h5.large, .grid section h6.large, .grid section p.large, .grid section img.large, .grid section .content-wide.large, .grid section .slider-wrap.large, .grid section .video-wrap.large {
     grid-column-start: 1; }
   .grid .item-offset-sm-1,
   .grid .item-offset-md-1,
   .grid .item-offset-lg-1 {
     grid-column-start: auto; }
-  .grid .item-offset-1, .grid section .oversized div, .grid section .oversized figcaption, .grid section .oversized p, .grid section .has-sidestory div, .grid section .has-sidestory figcaption, .grid section .has-sidestory p, .grid section h1, .grid section h2, .grid section h3, .grid section h4, .grid section h5, .grid section h6, .grid section p, .grid section img, .grid section .content-wide {
+  .grid .item-offset-1, .grid section .oversized div, .grid section .oversized figcaption, .grid section .oversized p, .grid section .has-sidestory div, .grid section .has-sidestory figcaption, .grid section .has-sidestory p, .grid section h1, .grid section h2, .grid section h3, .grid section h4, .grid section h5, .grid section h6, .grid section p, .grid section img, .grid section .content-wide, .grid section .slider-wrap, .grid section .video-wrap {
     grid-column-start: 2; }
   .grid .item-offset-sm-2,
-  .grid .item-offset-md-2, .grid section, .grid section.full-width div, .grid section.full-width figcaption, .grid section.full-width p, .grid section .full-width div, .grid section .full-width figcaption, .grid section .full-width p,
+  .grid .item-offset-md-2, .grid section, .grid section.full-width figcaption, .grid section.full-width p, .grid section .full-width figcaption, .grid section .full-width p,
   .grid .item-offset-lg-2 {
     grid-column-start: auto; }
   .grid .item-offset-2 {
@@ -657,7 +658,7 @@ body {
     .grid .item-span-md-5 {
       grid-column-start: auto;
       grid-column-end: span 5; }
-    .grid .item-span-md-6, .grid section.full-width div, .grid section.full-width figcaption, .grid section.full-width p, .grid section .full-width div, .grid section .full-width figcaption, .grid section .full-width p {
+    .grid .item-span-md-6, .grid section.full-width figcaption, .grid section.full-width p, .grid section .full-width figcaption, .grid section .full-width p {
       grid-column-start: auto;
       grid-column-end: span 6; }
     .grid .item-span-md-7 {
@@ -675,14 +676,14 @@ body {
     .grid .item-span-md-11 {
       grid-column-start: auto;
       grid-column-end: span 11; }
-    .grid .item-span-md-12, .grid section.full-width, .grid section .full-width, .grid section.full-width figure, .grid section.full-width iframe, .grid section.full-width video, .grid section .full-width figure, .grid section .full-width iframe, .grid section .full-width video {
+    .grid .item-span-md-12, .grid section.full-width, .grid section .full-width, .grid section.full-width figure, .grid section.full-width iframe, .grid section.full-width video, .grid section.full-width .video-wrap, .grid section.full-width .over-video, .grid section .full-width figure, .grid section .full-width iframe, .grid section .full-width video, .grid section .full-width .video-wrap, .grid section .full-width .over-video {
       grid-column-start: auto;
       grid-column-end: span 12; }
     .grid .item-offset-md-0 {
       grid-column-start: 1; }
     .grid .item-offset-md-1 {
       grid-column-start: 2; }
-    .grid .item-offset-md-2, .grid section, .grid section.full-width div, .grid section.full-width figcaption, .grid section.full-width p, .grid section .full-width div, .grid section .full-width figcaption, .grid section .full-width p {
+    .grid .item-offset-md-2, .grid section, .grid section.full-width figcaption, .grid section.full-width p, .grid section .full-width figcaption, .grid section .full-width p {
       grid-column-start: 3; }
     .grid .item-offset-md-3 {
       grid-column-start: 4; }
@@ -764,8 +765,9 @@ body {
     .grid .item-offset-lg-11 {
       grid-column-start: 12; } }
   .grid .fullscreen {
-    background: red;
-    height: 100vh; }
+    height: 100vh;
+    background-size: cover;
+    background-position: center center; }
   .grid section {
     padding: 10px 0;
     display: grid;
@@ -782,14 +784,26 @@ body {
       display: grid;
       grid-template-columns: repeat(12, 1fr);
       position: relative; }
-      .grid section.full-width figure, .grid section.full-width iframe, .grid section.full-width video,
+      .grid section.full-width figure, .grid section.full-width iframe, .grid section.full-width video, .grid section.full-width .video-wrap, .grid section.full-width .over-video,
       .grid section .full-width figure,
       .grid section .full-width iframe,
-      .grid section .full-width video {
+      .grid section .full-width video,
+      .grid section .full-width .video-wrap,
+      .grid section .full-width .over-video {
         padding: 0;
         line-height: 1; }
-      .grid section.full-width div, .grid section.full-width figcaption, .grid section.full-width p,
-      .grid section .full-width div,
+      .grid section.full-width .video-wrap,
+      .grid section .full-width .video-wrap {
+        margin: 0; }
+      .grid section.full-width .over-video,
+      .grid section .full-width .over-video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5); }
+      .grid section.full-width figcaption, .grid section.full-width p,
       .grid section .full-width figcaption,
       .grid section .full-width p {
         position: absolute;
@@ -846,6 +860,23 @@ body {
             .grid section .oversized .sidestory-right,
             .grid section .has-sidestory .sidestory-right {
               left: auto; } }
+    .grid section .textoverlay {
+      background: black; }
+      .grid section .textoverlay img {
+        opacity: 0.5; }
+      .grid section .textoverlay .overlay-content {
+        position: absolute;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        text-align: center;
+        width: 100%;
+        color: white;
+        font-size: 3.1em;
+        line-height: 1.05em;
+        font-weight: bold;
+        font-style: italic; }
     .grid section blockquote {
       grid-column-start: 4; }
 
@@ -858,6 +889,14 @@ body {
     -o-transition: 0.3s all ease;
     transition: 0.3s all ease; }
 
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 98; }
+
 .overlay {
   display: none;
   background: white;
@@ -865,12 +904,13 @@ body {
   width: 70%;
   max-height: 70%;
   overflow: auto;
-  border: 10px solid #747D84;
+  border: 0px solid #747D84;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%); }
+  transform: translate(-50%, -50%);
+  z-index: 99; }
   @media screen and (max-width: 600px) {
     .overlay {
       width: 90%;
@@ -887,3 +927,102 @@ body {
     z-index: 100; }
     .overlay .close:hover {
       text-decoration: none; }
+
+.slider-wrap {
+  width: 100%;
+  position: relative;
+  margin: 10px 0; }
+  .slider-wrap .navigator {
+    position: absolute;
+    top: 50%;
+    font-size: 0;
+    width: 35px;
+    height: 35px;
+    -webkit-transform: translateY(-50%) rotate(45deg);
+    -ms-transform: translateY(-50%) rotate(45deg);
+    transform: translateY(-50%) rotate(45deg);
+    cursor: pointer; }
+    .slider-wrap .navigator.toggle-next {
+      right: 30px;
+      -webkit-box-shadow: 6px -6px 6px rgba(0, 0, 0, 0.3);
+      box-shadow: 6px -6px 6px rgba(0, 0, 0, 0.3);
+      border-top: 3px solid #FDFDFD;
+      border-right: 3px solid #FDFDFD; }
+      .slider-wrap .navigator.toggle-next:hover {
+        border-color: rgba(253, 253, 253, 0.5); }
+    .slider-wrap .navigator.toggle-prev {
+      left: 30px;
+      -webkit-box-shadow: -6px 6px 6px rgba(0, 0, 0, 0.3);
+      box-shadow: -6px 6px 6px rgba(0, 0, 0, 0.3);
+      border-bottom: 3px solid #FDFDFD;
+      border-left: 3px solid #FDFDFD; }
+      .slider-wrap .navigator.toggle-prev:hover {
+        border-color: rgba(253, 253, 253, 0.5); }
+
+.slider {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding: 56.25% 0 0 0;
+  display: block; }
+  .slider div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%; }
+  .slider div {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    -webkit-transition: .3s all ease;
+    -o-transition: .3s all ease;
+    transition: .3s all ease; }
+    .slider div.active {
+      opacity: 1; }
+    .slider div img {
+      display: none; }
+
+.video-wrap {
+  margin: 10px 0;
+  position: relative; }
+
+.video {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding: 56.25% 0 0 0;
+  display: block; }
+  .video iframe, .video video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%; }
+
+#scrollspy {
+  height: 20px;
+  margin: 0;
+  top: 0px;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  background: blue;
+  z-index: 10000; }
+
+#scrollbar {
+  height: 100%;
+  width: 0px;
+  position: absolute;
+  background: red;
+  z-index: 9999; }
+
+.scrollspy {
+  width: auto;
+  height: 100%;
+  position: absolute; }

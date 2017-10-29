@@ -1,0 +1,19 @@
+#scrollspy {
+  height: 50px;
+  margin: 0;
+  top: 0px;
+  position: fixed;
+  width: 100%;
+  background: blue; }
+
+#scrollbar {
+  height: 100%;
+  width: 0px;
+  position: absolute;
+  background: red;
+  z-index: 9999; }
+
+.scrollspy {
+  width: auto;
+  height: 100%;
+  position: absolute; }
