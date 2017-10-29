@@ -6,6 +6,7 @@
     <!-- make sure scaling is good for responsive content -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/main.css" rel="stylesheet">
+    <link href="css/prism.css" rel="stylesheet">
     <title>Heinz - the storytelling framework</title>
 </head>
 
@@ -19,9 +20,40 @@
     </header>
     <main class="main grid">
         <section class="box">
-            <h1>Titel</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <h1>Heinz</h1>
+            <h2>the storytelling butler</h2>
+            <p>lightweight, modern, and powerful front-end framework for fast and easy multimedia storytelling.
+            </p>
+            <p>Made with ❤︎ in Switzerland @ HTW Chur.</p>
+        </section>
+        <section class="box">
+            <h1>General Structure</h1>
+            <p>heinz uses CSS-Grids for the overall layout. To get started we recommend using our minimalistic template.</p>
+            <pre><code class="language-markup">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+    &lt;head&gt;
+        &lt;meta charset="utf-8"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+        &lt;link href="css/main.css" rel="stylesheet"&gt;
+        &lt;title&gt;Heinz - the storytelling framework&lt;/title&gt;
+    &lt;/head&gt;
+
+    &lt;body&gt;
+        &lt;header class="head"&gt;
+        &lt;/header&gt;
+        &lt;main class="main grid"&gt;
+            &lt;section class="box"&gt;
+            &lt;/section&gt;
+        &lt;/main&gt;
+        &lt;footer class="foot box"&gt;
+        &lt;/footer&gt;
+
+        &lt;script src="js/jquery-3.2.1.js"&gt;&lt;/script&gt;
+        &lt;script src="js/heinz.min.js"&gt;&lt;/script&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+            </code></pre>
         </section>
         <section class="fullscreen grid" id="Welcome" style="background-image: url('img/val-vesa-276473.jpg')">
             <div class="item-span-8 item-offset-2">
@@ -302,6 +334,7 @@
 
     <script src="js/jquery-3.2.1.js"></script>
     <script src="js/heinz.min.js"></script>
+    <script src="js/prism.js"></script>
 </body>
 
 </html>

@@ -109,13 +109,13 @@
         + section{
             border-top: 1px solid darken(white, 5%);
         }
-        padding: $gutter 0;
+        padding: $gutter*2 0;
 
         &:first-of-type{
-            padding-top: $gutter * 12;
+            padding-top: $gutter * $column-count/2;
         }
         &:last-of-type{
-            padding-bottom: $gutter * 12;
+            padding-bottom: $gutter * $column-count/2;
         }
 
         @extend .item-span-md-#{$section-span};
@@ -238,7 +238,7 @@
                 font-style: $textoverlay-font-style;
             }
         }
-        h1, h2, h3, h4, h5, h6, p, img, .content-wide, .slider-wrap, .video-wrap{
+        h1, h2, h3, h4, h5, h6, p, img, .content-wide, .slider-wrap, .video-wrap, pre{
             @extend .item-span-#{$section-content-span};
             @extend .item-offset-#{($section-span - $section-content-span)/2};
 

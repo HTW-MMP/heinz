@@ -277,32 +277,32 @@ h1 {
   font-size: 3em;
   line-height: 1.05;
   color: #747D84;
-  margin-bottom: 2.5rem; }
+  margin: 2.5rem 0; }
 
 h2 {
   font-size: 2.25em;
   line-height: 1.25;
-  margin-bottom: 1.25rem; }
+  margin: 1.25rem 0; }
 
 h3 {
   font-size: 1.75em;
   line-height: 1.25;
-  margin-bottom: 1.25rem; }
+  margin: 1.25rem 0; }
 
 h4 {
   font-size: 1.125em;
   line-height: 1.22;
-  margin-bottom: .5rem;
+  margin: .5rem 0;
   font-weight: normal; }
 
 h5 {
   font-size: 1.1em;
-  margin-bottom: .3rem;
+  margin: .3rem 0;
   font-weight: normal; }
 
 h6 {
   font-size: 1em;
-  margin-bottom: .25rem;
+  margin: .25rem 0;
   font-weight: normal; }
 
 a, .backtotop,
@@ -453,7 +453,7 @@ body {
   .grid .item-span-lg-5 {
     grid-column-start: auto;
     grid-column-end: span 12; }
-  .grid .item-span-6, .grid section .oversized div, .grid section .oversized figcaption, .grid section .oversized p, .grid section .has-sidestory div, .grid section .has-sidestory figcaption, .grid section .has-sidestory p, .grid section h1, .grid section h2, .grid section h3, .grid section h4, .grid section h5, .grid section h6, .grid section p, .grid section img, .grid section .content-wide, .grid section .slider-wrap, .grid section .video-wrap {
+  .grid .item-span-6, .grid section .oversized div, .grid section .oversized figcaption, .grid section .oversized p, .grid section .has-sidestory div, .grid section .has-sidestory figcaption, .grid section .has-sidestory p, .grid section h1, .grid section h2, .grid section h3, .grid section h4, .grid section h5, .grid section h6, .grid section p, .grid section img, .grid section .content-wide, .grid section .slider-wrap, .grid section .video-wrap, .grid section pre {
     grid-column-start: auto;
     grid-column-end: span 6; }
   .grid .item-span-sm-6,
@@ -469,7 +469,7 @@ body {
   .grid .item-span-lg-7 {
     grid-column-start: auto;
     grid-column-end: span 12; }
-  .grid .item-span-8, .grid section .oversized, .grid section .has-sidestory, .grid section h1.large, .grid section h2.large, .grid section h3.large, .grid section h4.large, .grid section h5.large, .grid section h6.large, .grid section p.large, .grid section img.large, .grid section .content-wide.large, .grid section .slider-wrap.large, .grid section .video-wrap.large {
+  .grid .item-span-8, .grid section .oversized, .grid section .has-sidestory, .grid section h1.large, .grid section h2.large, .grid section h3.large, .grid section h4.large, .grid section h5.large, .grid section h6.large, .grid section p.large, .grid section img.large, .grid section .content-wide.large, .grid section .slider-wrap.large, .grid section .video-wrap.large, .grid section pre.large {
     grid-column-start: auto;
     grid-column-end: span 8; }
   .grid .item-span-sm-8,
@@ -509,13 +509,13 @@ body {
   .grid .item-span-lg-12 {
     grid-column-start: auto;
     grid-column-end: span 12; }
-  .grid .item-offset-0, .grid section.full-width, .grid section .full-width, .grid section.full-width figure, .grid section.full-width iframe, .grid section.full-width video, .grid section.full-width .video-wrap, .grid section.full-width .over-video, .grid section .full-width figure, .grid section .full-width iframe, .grid section .full-width video, .grid section .full-width .video-wrap, .grid section .full-width .over-video, .grid section h1.large, .grid section h2.large, .grid section h3.large, .grid section h4.large, .grid section h5.large, .grid section h6.large, .grid section p.large, .grid section img.large, .grid section .content-wide.large, .grid section .slider-wrap.large, .grid section .video-wrap.large {
+  .grid .item-offset-0, .grid section.full-width, .grid section .full-width, .grid section.full-width figure, .grid section.full-width iframe, .grid section.full-width video, .grid section.full-width .video-wrap, .grid section.full-width .over-video, .grid section .full-width figure, .grid section .full-width iframe, .grid section .full-width video, .grid section .full-width .video-wrap, .grid section .full-width .over-video, .grid section h1.large, .grid section h2.large, .grid section h3.large, .grid section h4.large, .grid section h5.large, .grid section h6.large, .grid section p.large, .grid section img.large, .grid section .content-wide.large, .grid section .slider-wrap.large, .grid section .video-wrap.large, .grid section pre.large {
     grid-column-start: 1; }
   .grid .item-offset-sm-1,
   .grid .item-offset-md-1,
   .grid .item-offset-lg-1 {
     grid-column-start: auto; }
-  .grid .item-offset-1, .grid section .oversized div, .grid section .oversized figcaption, .grid section .oversized p, .grid section .has-sidestory div, .grid section .has-sidestory figcaption, .grid section .has-sidestory p, .grid section h1, .grid section h2, .grid section h3, .grid section h4, .grid section h5, .grid section h6, .grid section p, .grid section img, .grid section .content-wide, .grid section .slider-wrap, .grid section .video-wrap {
+  .grid .item-offset-1, .grid section .oversized div, .grid section .oversized figcaption, .grid section .oversized p, .grid section .has-sidestory div, .grid section .has-sidestory figcaption, .grid section .has-sidestory p, .grid section h1, .grid section h2, .grid section h3, .grid section h4, .grid section h5, .grid section h6, .grid section p, .grid section img, .grid section .content-wide, .grid section .slider-wrap, .grid section .video-wrap, .grid section pre {
     grid-column-start: 2; }
   .grid .item-offset-sm-2,
   .grid .item-offset-md-2, .grid section, .grid section.full-width figcaption, .grid section.full-width p, .grid section .full-width figcaption, .grid section .full-width p,
@@ -769,15 +769,15 @@ body {
     background-size: cover;
     background-position: center center; }
   .grid section {
-    padding: 10px 0;
+    padding: 20px 0;
     display: grid;
     grid-template-columns: repeat(8, 1fr); }
     .grid section + section {
       border-top: 1px solid #f2f2f2; }
     .grid section:first-of-type {
-      padding-top: 120px; }
+      padding-top: 60px; }
     .grid section:last-of-type {
-      padding-bottom: 120px; }
+      padding-bottom: 60px; }
     .grid section.full-width,
     .grid section .full-width {
       padding: 0;
