@@ -9,7 +9,7 @@
     <title>Heinz - the storytelling framework</title>
 </head>
 
-<body>
+<body class="boxed">
     <!-- header section -->
     <header class="head">
         <nav class="menu">
@@ -106,7 +106,7 @@
                 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             <blockquote>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                <span></span>
+                <span>- some smart person</span>
             </blockquote>
 
             <h1>Heading 1</h1>
@@ -145,35 +145,49 @@
             <h1>Grid</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
                 irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <div class="has-sidestory">
-                <div class="content">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                </div>
-                <div class="sidestory sidestory-left">
-                    this is the sidestory left
-                </div>
+        </section>
+        <section class="has-sidestory">
+            <div class="content box">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                    aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </div>
-            <div class="has-sidestory">
-                <div class="content">
-                    <figure class="content-wide">
-                        <img src="img/meduana-6917.jpg" alt="Image width of content">
-                        <figcaption>
-                            Image with content-width, <a href="https://unsplash.com/photos/PdnseHuDFZU"> source</a>
-                        </figcaption>
-                    </figure>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                </div>
-                <div class="sidestory sidestory-right">
-                    <h2>About this image</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    <br>
-                    <p class="text-center">
-                        <span class="toggle" data-toggle-overlay="overlay-1">More in the sidestory</span>
-                    </p>
-                </div>
+            <div class="sidestory sidestory-left box">
+                this is the sidestory left
             </div>
+
+        </section>
+        <section class="has-sidestory">
+            <div class="content box">
+                <figure class="content-wide">
+                    <img src="img/meduana-6917.jpg" alt="Image width of content">
+                    <figcaption>
+                        Image with content-width, <a href="https://unsplash.com/photos/PdnseHuDFZU"> source</a>
+                    </figcaption>
+                </figure>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                    aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+            <div class="sidestory sidestory-right box">
+                <h2>About this image</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <br>
+                <p class="text-center">
+                    <span class="toggle" data-toggle-overlay="overlay-1">More in the sidestory</span>
+                </p>
+            </div>
+        </section>
+        <section class="has-sidestory">
+            <div class="sidestory sidestory-left box">
+                <p>sidestory left</p>
+            </div>
+            <div class="content box">
+                <p>content</p>
+            </div>
+            <div class="sidestory sidestory-right box">
+                <p>sidestory right</p>
+            </div>
+        </section>
+        <section class="box">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
                 irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
@@ -199,6 +213,12 @@
                 <span class="navigator toggle-next">next</span>
                 <span class="navigator toggle-prev">prev</span>
             </div>
+
+            <h1>Audio</h1>
+            <audio controls>
+                <source src="media/SampleAudio_0.4mb.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+            </audio>
 
             <h1>Video</h1>
             <!-- responsive video needs video-wrap and video (because paddinghack does not like to be used in grid) -->

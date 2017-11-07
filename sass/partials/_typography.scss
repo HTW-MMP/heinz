@@ -161,6 +161,11 @@ blockquote{
     padding-right: $gutter * 2;
     margin-bottom: 1.25rem;
     margin-top: 1.25rem;
+
+    span{
+        display: block;
+        font-size: .7em;
+    }
 }
 // helper classes for text
 .text{
