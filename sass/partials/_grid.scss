@@ -109,7 +109,7 @@
         + section{
             border-top: 1px solid darken(white, 5%);
         }
-        padding: $gutter*2 0;
+        padding: $gutter*4 0;
 
         &:first-of-type{
             padding-top: $gutter * $column-count/2;
@@ -166,7 +166,7 @@
             @extend .item-span-#{$section-span};
             display: grid;
             grid-template-columns: repeat(#{$section-span}, 1fr);
-            margin: $gutter 0;
+            margin: 1.25rem 0;
             position: relative;
 
             img{
@@ -251,6 +251,11 @@
         blockquote{
             @extend .item-span-#{$section-quote-span};
             grid-column-start: 4;
+
+            @media screen and (max-width: $blockquote-break){
+                grid-column-start: 2;
+                grid-column-end: span 6;
+            }
         }
     }
 }

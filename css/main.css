@@ -163,14 +163,18 @@ section.box {
   margin: 100px 0; }
 
 figure {
-  padding-bottom: 5px; }
+  padding-bottom: 5px;
+  margin: 1.25rem 0; }
 
 html, body {
   font-family: "Libre Baskerville", "Times New Roman", serif;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: normal;
-  line-height: 1.375;
+  line-height: 1.5;
   color: #747D84; }
+  @media screen and (max-width: 800px) {
+    html, body {
+      font-size: 16px; } }
 
 p {
   text-align: justify;
@@ -278,16 +282,25 @@ h1 {
   line-height: 1.05;
   color: #747D84;
   margin: 2.5rem 0; }
+  @media screen and (max-width: 800px) {
+    h1 {
+      font-size: 2.5em; } }
 
 h2 {
   font-size: 2.25em;
   line-height: 1.25;
   margin: 1.25rem 0; }
+  @media screen and (max-width: 800px) {
+    h2 {
+      font-size: 2em; } }
 
 h3 {
   font-size: 1.75em;
   line-height: 1.25;
   margin: 1.25rem 0; }
+  @media screen and (max-width: 800px) {
+    h3 {
+      font-size: 1.5em; } }
 
 h4 {
   font-size: 1.125em;
@@ -769,7 +782,7 @@ body {
     background-size: cover;
     background-position: center center; }
   .grid section {
-    padding: 20px 0;
+    padding: 40px 0;
     display: grid;
     grid-template-columns: repeat(8, 1fr); }
     .grid section + section {
@@ -813,7 +826,7 @@ body {
     .grid section .has-sidestory {
       display: grid;
       grid-template-columns: repeat(8, 1fr);
-      margin: 10px 0;
+      margin: 1.25rem 0;
       position: relative; }
       .grid section .oversized .sidestory,
       .grid section .has-sidestory .sidestory {
@@ -879,6 +892,10 @@ body {
         font-style: italic; }
     .grid section blockquote {
       grid-column-start: 4; }
+      @media screen and (max-width: 700px) {
+        .grid section blockquote {
+          grid-column-start: 2;
+          grid-column-end: span 6; } }
 
 .overlay-open {
   overflow: hidden; }
@@ -1120,7 +1137,8 @@ body {
     list-style-type: none;
     position: relative;
     background: #968572;
-    margin: 0; }
+    margin: 0;
+    z-index: 10001; }
     @media screen and (max-width: 600px) {
       .menu > ul {
         position: fixed;
@@ -1133,8 +1151,7 @@ body {
         transform: translateX(-300px);
         -webkit-transition: .3s all ease;
         -o-transition: .3s all ease;
-        transition: .3s all ease;
-        z-index: 10001; }
+        transition: .3s all ease; }
         .menu > ul.active {
           -webkit-transform: translateX(0);
           -ms-transform: translateX(0);

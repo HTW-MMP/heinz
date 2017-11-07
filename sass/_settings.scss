@@ -29,10 +29,11 @@ $monospace: $code-font-name, 'Courier', monospace !default;
 
 // Text settings
 $main-font: $serif !default;
-$main-font-size: 16px !default;
-$main-line-height: 1.375 !default;
+$main-font-size: 18px !default;
+$main-line-height: 1.5 !default;
 $main-font-weight: normal !default;
 $main-font-color: $main-blue;
+$font-break: 800px;
 
 $headings-font: $sans-serif !default;
 $headings-font-weight: 300;
@@ -64,6 +65,7 @@ $blockquote-border-position: right !default;
 $blockquote-border-width: 3px !default;
 $blockquote-border-color: currentColor !default;
 $blockquote-text-align: right !default;
+$blockquote-break: 700px;
 
 $boxed-layout: true !default;
 $background-color: darken(white, 5%) !default;
