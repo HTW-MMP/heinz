@@ -21,28 +21,23 @@
 <ul>
 <li><a href="#introduction">Introduction</a>  <ul>
 <li><a href="#quick-start">Quick start</a></li>
-<li><a href="#whats-included">What&#39;s included</a><ul>
-<li><a href="#customize-it">Customize It</a></li>
-</ul>
-</li>
+<li><a href="#whats-included">What&#39;s included</a></li>
 </ul>
 </li>
 <li><a href="#documentation">Documentation</a><ul>
 <li><a href="#layout">Layout</a><ul>
-<li><a href="#responsive">Responsive</a></li>
 <li><a href="#grid">CSS Grid</a></li>
 </ul>
 </li>
 <li><a href="#components">Components</a><ul>
+<li><a href="#navigation">Navigation</a></li>
+<li><a href="#progress-bar">Progress Bar</a></li>
 <li><a href="#text">Text</a></li>
 <li><a href="#image">Image</a></li>
 <li><a href="#video">Video</a></li>
 <li><a href="#audio">Audio</a></li>
 <li><a href="#slider">Slider</a></li>
-<li><a href="#overlay">Overlay</a></li>
-<li><a href="#collapse">Collapse</a></li>
-<li><a href="#navigation">Navigation</a></li>
-<li><a href="#progress-bar">Progress Bar</a></li>
+<li><a href="#sidestory">Sidestory</a></li>
 </ul>
 </li>
 </ul>
@@ -51,11 +46,11 @@
 <li><a href="#copyright-and-license">Copyright and License</a></li>
 </ul>
 <hr>
-<p>#Introduction</p>
+<h1 id="introduction">Introduction</h1>
 <h2 id="quick-start">Quick Start</h2>
 <ol>
 <li>Download the latest release on <a href="https://getheinz.com/download">getheinz.com/download</a> into your Project Folder.</li>
-<li>Open your index.html File.</li>
+<li>Open your <code>index.html</code> File.</li>
 <li><p>Copy-paste the stylesheet <code>&lt;link&gt;</code> into your <code>&lt;head&gt;</code> before all other stylesheets to load our CSS:</p>
 <pre><code> &lt;link rel=&quot;stylesheet&quot; href=&quot;css/heinz.css&quot;&gt;
 </code></pre></li>
@@ -70,7 +65,8 @@
 <p>Be sure to have your pages set up with the latest design and development standards. That means using an HTML5 doctype and including a viewport meta tag for proper responsive behaviors. Put it all together and your pages should look like this:</p>
 <pre><code>
 </code></pre><h2 id="what-s-included">What&#39;s included</h2>
-<p>Within the download you&#39;ll find the following directories and files, logically grouping common assets and providing both compiled and minified variations. You&#39;ll see something like this:</p>
+<p>Within the download you&#39;ll find the following directories and files, logically grouping common assets and providing both compiled and minified variations. We provide compiled CSS and JS (<code>heinz.*</code>), as well as compiled and minified CSS and JS (<code>heinz.min.*</code>).</p>
+<p>You&#39;ll see something like this:</p>
 <p>Basic version for simple usecase:</p>
 <pre><code>heinz/
 ├── css/
@@ -79,7 +75,7 @@
 └── js/
     ├── heinz.js
     └── heinz.min.js
-</code></pre><p>Sass Version for Code Masters:</p>
+</code></pre><p>For Code Masters we created a Sass Version. You can get it <a href="https://www.google.com">here</a>.</p>
 <pre><code>heinz/
 ├── sass/
 │   ├── heinz.scss
@@ -90,22 +86,158 @@
 └── js/
     ├── heinz.js
     └── heinz.min.js
-</code></pre><p>We provide compiled CSS and JS (<code>heinz.*</code>), as well as compiled and minified CSS and JS (<code>heinz.min.*</code>).</p>
-<hr>
-<p>#Documentation</p>
+</code></pre><hr>
+<h1 id="documentation">Documentation</h1>
 <h2 id="layout">Layout</h2>
 <h3 id="responsive">Responsive</h3>
+<p>Heinz is fully responsive on all devices.</p>
 <h3 id="grid">Grid</h3>
+<p>The box-layout you can remove if you want so. How it&#39;s done you&#39;ll see in the following video: <a href="https://www.google.com">click here</a>.</p>
+<p>Combined Grid</p>
 <h2 id="components">Components</h2>
-<h3 id="text">Text</h3>
-<h3 id="image">Image</h3>
-<h3 id="video">Video</h3>
-<h3 id="audio">Audio</h3>
-<h3 id="slider">Slider</h3>
-<h3 id="overlay">Overlay</h3>
-<h3 id="collapse">Collapse</h3>
 <h3 id="navigation">Navigation</h3>
-<h3 id="progress-bar">Progress Bar</h3>
+<p>Heinz offers you a navigation on top of your page. On the left side you can fill in your logo and title of the page. The logo you can change it by filling in the source <code>&lt;img src=&quot;&gt;&quot;</code>. Your title you enter between <code>&lt;span&gt;&lt;/span&gt;</code>.</p>
+<pre><code>&lt;a href=&quot;#&quot; class=&quot;branding&quot;&gt;
+    &lt;img src=&quot;img/&quot;&gt;
+    &lt;span&gt;&lt;/span&gt;
+&lt;/a&gt;
+</code></pre><p>On the right side of your navigation you find a dropdown menu. It works as a simple list. You can add or remove single items by using <code>&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item&lt;/a&gt;&lt;/li&gt;</code>. There&#39;s also a dropdown included. You can find it within the item called &quot;Parent&quot;. You can change the title and add or remove single dropdown items.</p>
+<pre><code>&lt;li class=&quot;dropdown&quot;&gt;
+    &lt;span&gt;parent&lt;/span&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Child&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Child&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Child&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/li&gt;
+</code></pre><h3 id="progressbar">Progressbar</h3>
+<p>There&#39;s a progressbar placed directly on the bottom of the navigation. It is splited similar to the sections. So for every section you have a chapter in the progressbar. The titles are choosen from the sections, adapted to the first title in it. If you don&#39;t want those titles, you can remove them by deleting <code>display-titles</code> in the class.</p>
+<pre><code>&lt;div class=&quot;scrollspy-wrapper display-titles&quot;&gt;
+</code></pre><h3 id="text">Text</h3>
+<p><strong>Title</strong></p>
+<p>Heinz offers you a nice range of modified titles. Choose them by using <code>&lt;h1&gt;&lt;/h1&gt;</code>, <code>&lt;h2&gt;&lt;/h2&gt;</code>, <code>&lt;h3&gt;&lt;/h3&gt;</code>, <code>&lt;h4&gt;&lt;/h4&gt;</code>, <code>&lt;h5&gt;&lt;/h5&gt;</code> and <code>&lt;h6&gt;&lt;/h6&gt;</code>.</p>
+<p>If you&#39;d like to have numbered titles you can add <code>numbered box</code> to your section class.</p>
+<p><code>&lt;section class=&quot;text-styles numbered box&quot;&gt;</code></p>
+<p><strong>Textstyle</strong></p>
+<p>We prepared lot of different stylings for your running text. To get a general idea here&#39;s a list about all the styles.</p>
+<ul>
+<li>text-lead <code>&lt;p class=&quot;text-lead&quot;&gt;</code></li>
+<li>text-left <code>&lt;p class=&quot;text-left&quot;&gt;&lt;/p&gt;</code></li>
+<li>text-right <code>&lt;p class=&quot;text-right&quot;&gt;&lt;/p&gt;</code></li>
+<li>text center <code>&lt;p class=&quot;text-center&quot;&gt;&lt;/p&gt;</code></li>
+<li>text-justify <code>&lt;p class=&quot;text-justifyn&quot;&gt;&lt;/p&gt;</code></li>
+<li>text-hyphen <code>&lt;p class=&quot;text-hyphen&quot;&gt;&lt;/p&gt;</code></li>
+<li>text-no-hyphen <code>&lt;p class=&quot;text-no-hyphen&quot;&gt;&lt;/p&gt;</code></li>
+<li>text-small <code>&lt;p class=&quot;text-small&quot;&gt;&lt;/p&gt;</code></li>
+<li>text-muted <code>&lt;p class=&quot;text-muted&quot;&gt;&lt;/p&gt;</code></li>
+<li>text-highlighted <code>&lt;p class=&quot;text-highlighted&quot;&gt;&lt;/p&gt;</code></li>
+</ul>
+<p>For using them in your work, copy the code, paste it into the body of your <code>index.html</code> and enter your text between the brackets.</p>
+<p><strong>Blockquote</strong></p>
+<p>For using a blockquote, enter the following code. Fill in your text between <code>&lt;blockquote&gt;</code> and <code>&lt;span&gt;</code>.</p>
+<pre><code>&lt;blockquote&gt;
+
+    &lt;span&gt;&lt;/span&gt;
+&lt;/blockquote&gt;
+</code></pre><h3 id="image">Image</h3>
+<p>You can add four different kinds of images:</p>
+<p><strong>Image content-width</strong></p>
+<p>Copy the code and paste it into the <code>&lt;body&gt;</code> in your <code>index.html</code>. Add the source of your picture into <code>&lt;img src=&quot;&quot;&gt;</code>.</p>
+<pre><code>&lt;figure class=&quot;content-wide&quot;&gt;
+    &lt;img src=&quot;&quot; alt=&quot;&quot;&gt;
+    &lt;figcaption&gt;
+        Quellenangabe, &lt;a href=&quot;&quot;&gt;source&lt;/a&gt;
+    &lt;/figcaption&gt;
+&lt;/figure&gt;
+</code></pre><p><strong>Oversized image</strong></p>
+<p>Copy the code and paste it into the <code>&lt;body&gt;</code> in your <code>index.html</code>. Add the source of your picture into <code>&lt;img src=&quot;&quot;&gt;</code>.</p>
+<pre><code>&lt;figure class=&quot;oversized&quot;&gt;
+    &lt;img src=&quot;&quot; alt=&quot;&quot;&gt;
+    &lt;figcaption&gt;
+        Quellenangabe, &lt;a href=&quot;&quot;&gt;source&lt;/a&gt;
+    &lt;/figcaption&gt;
+&lt;/figure&gt;
+</code></pre><p><strong>Oversized image with textoverlay</strong></p>
+<p>Copy the code and paste it into the <code>&lt;body&gt;</code> in your <code>index.html</code>. Add the source of your picture into <code>&lt;img src=&quot;&quot;&gt;</code>.</p>
+<pre><code>&lt;div class=&quot;oversized textoverlay&quot;&gt;
+    &lt;img src=&quot;&quot; alt=&quot;&quot;&gt;
+    &lt;div class=&quot;overlay-content&quot;&gt;This is overlay text&lt;/div&gt;
+&lt;/div&gt;
+</code></pre><p><strong>Full width image</strong></p>
+<p>Copy the code and paste it into the <code>&lt;body&gt;</code> in your <code>index.html</code>. Add the source of your picture into <code>&lt;img src=&quot;&quot;&gt;</code>.</p>
+<pre><code>&lt;section class=&quot;full-width&quot;&gt;
+    &lt;figure&gt;
+        &lt;img src=&quot;&quot; alt=&quot;image full width&quot;&gt;
+        &lt;figcaption&gt;
+            full width image &lt;a href=&quot;&quot;&gt; source&lt;/a&gt;
+        &lt;/figcaption&gt;
+    &lt;/figure&gt;
+&lt;/section&gt;
+</code></pre><h3 id="video">Video</h3>
+<p>There are three kinds of video players you can embed into your <code>index.html</code>. Two are normal <strong>players</strong>, one with content width and the other is oversized. Both you can start and stop with the play button. Enter the soucre into <code>src=&quot;&quot;</code>. You can add links from the web or use local stored videos.
+Responsive video needs video-wrap and video, because paddinghack does not like to be used in grid.</p>
+<p> <strong>player content-width</strong></p>
+<pre><code>&lt;div class=&quot;video-wrap&quot;&gt;
+    &lt;div class=&quot;video&quot;&gt;
+        &lt;iframe width=&quot;854&quot; height=&quot;480&quot; src=&quot;&quot; frameborder=&quot;0&quot; gesture=&quot;media&quot; allowfullscreen&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre><p><strong>player oversized</strong></p>
+<p>Adding class large will make video bigger. Enter the soucre into <code>src=&quot;&quot;</code>. You can add links from the web or use local stored videos.
+Responsive video needs video-wrap and video, because paddinghack does not like to be used in grid.</p>
+<pre><code>&lt;div class=&quot;video-wrap large&quot;&gt;
+    &lt;div class=&quot;video&quot;&gt;
+        &lt;iframe width=&quot;854&quot; height=&quot;480&quot; src=&quot;&quot; frameborder=&quot;0&quot; gesture=&quot;media&quot; allowfullscreen&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre><p><strong>background-video</strong></p>
+<p>The other one is a display filling <strong>background-video</strong>. Autoplay, loop and muted inclued by default through URL attributes. There&#39;s an over-video container that darkens video and adds a grid where you can put textoverlay. You can remove it by delete class <code>over-video grid</code> and its content. Enter the soucre into <code>src=&quot;&quot;</code>. You can add links from the web or use local stored videos.
+Responsive video needs video-wrap and video, because paddinghack does not like to be used in grid.</p>
+<pre><code>&lt;section class=&quot;full-width&quot;&gt;
+    &lt;div class=&quot;video-wrap&quot;&gt;
+        &lt;div class=&quot;video&quot;&gt;&gt;
+            &lt;iframe src=&quot;&quot;&gt;&lt;/iframe&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;over-video grid&quot;&gt;
+        &lt;div class=&quot;item-span-8 item-offset-2&quot;&gt;
+            &lt;h1 class=&quot;text-white&quot;&gt;TItel&lt;/h1&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/section&gt;
+</code></pre><h3 id="audio">Audio</h3>
+<p>For insert audio files, copy the following html and css. Paste it into the body of your <code>index.html</code>. Enter your audio source according to the file type into <code>&lt;source src=&quot;&quot;&gt;</code>.</p>
+<pre><code>&lt;audio class=&quot;audio&quot; controls&gt;
+  &lt;source src=&quot;&quot; type=&quot;audio/ogg&quot;&gt;
+  &lt;source src=&quot;&quot; type=&quot;audio/mpeg&quot;&gt;
+  &lt;source src=&quot;&quot; type=&quot;audio/wav&quot;&gt;
+&lt;/audio&gt;
+</code></pre><h3 id="slider">Slider</h3>
+<p>We offer you fully prepared sliders in two sizes. Content width and oversized. The Slider has images as background-image and also navigators in spans. Those are enabled automatically in js. You just have to copy the html into your index.html and enter the URL <code>src=&quot;img/&quot;</code> of you background-image.</p>
+<p><strong>Slider content-width</strong></p>
+<pre><code>&lt;div class=&quot;slider-wrap&quot;&gt;
+    &lt;div class=&quot;slider&quot;&gt;
+        &lt;div style=&quot;background-image: url(img/)&quot;&gt;&lt;img src=&quot;img/&quot; alt=&quot;slide 1&quot;&gt;&lt;/div&gt;
+        &lt;div style=&quot;background-image: url(img/)&quot;&gt;&lt;img src=&quot;img/.jpg&quot; alt=&quot;slide 2&quot;&gt;&lt;/div&gt;
+        &lt;div style=&quot;background-image: url(img/)&quot;&gt;&lt;img src=&quot;img/.jpg&quot; alt=&quot;slide 3&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;span class=&quot;navigator toggle-next&quot;&gt;next&lt;/span&gt;
+    &lt;span class=&quot;navigator toggle-prev&quot;&gt;prev&lt;/span&gt;
+&lt;/div&gt;
+</code></pre><p><strong>Slider oversized</strong></p>
+<p>Adding class large makes slider bigger.</p>
+<pre><code>&lt;div class=&quot;slider-wrap large&quot;&gt;
+    &lt;div class=&quot;slider&quot;&gt;
+        &lt;div style=&quot;background-image: url(img/)&quot;&gt;&lt;img src=&quot;img/&quot; alt=&quot;slide 1&quot;&gt;&lt;/div&gt;
+        &lt;div style=&quot;background-image: url(img/)&quot;&gt;&lt;img src=&quot;img/&quot; alt=&quot;slide 2&quot;&gt;&lt;/div&gt;
+        &lt;div style=&quot;background-image: url(img/)&quot;&gt;&lt;img src=&quot;img/&quot; alt=&quot;slide 3&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;span class=&quot;navigator toggle-next&quot;&gt;next&lt;/span&gt;
+    &lt;span class=&quot;navigator toggle-prev&quot;&gt;prev&lt;/span&gt;
+&lt;/div&gt;
+</code></pre><h3 id="sidestory">Sidestory</h3>
+<p>Erkennbar an der Box auf der Seite. Bei Klick öffnet sich Overlay.
+ist in einer eigener section called sidestory</p>
 <hr>
 <h1 id="creators">Creators</h1>
 <ul>
