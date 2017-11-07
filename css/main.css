@@ -137,7 +137,7 @@ body {
   -webkit-transition: 0.3s all ease;
   -o-transition: 0.3s all ease;
   transition: 0.3s all ease;
-  background: #f2f2f2; }
+  background: #CCCFD0; }
   body header,
   body main,
   body footer {
@@ -1028,7 +1028,7 @@ body {
   position: relative;
   left: 0;
   width: 100%;
-  background: #968572; }
+  background: #747D84; }
   .scrollspy-wrapper.display-titles {
     height: 20px; }
     @media screen and (max-width: 500px) {
@@ -1055,15 +1055,15 @@ body {
     height: 100%;
     width: 0px;
     position: absolute;
-    background: black; }
+    background: #968572; }
 
 .menu {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background: #968572;
-  color: white;
+  background: #747D84;
+  color: #e6e6e6;
   z-index: 10000;
   font-family: "Work Sans", "Calibri", sans-serif;
   text-transform: uppercase;
@@ -1093,7 +1093,7 @@ body {
     cursor: pointer;
     display: none; }
     .menu .nav-toggle path {
-      fill: white; }
+      fill: #e6e6e6; }
     .menu .nav-toggle:hover path {
       fill: rgba(255, 255, 255, 0.8); }
     @media screen and (max-width: 600px) {
@@ -1127,7 +1127,7 @@ body {
     .menu .branding img {
       max-width: 30px; }
   .menu a, .menu .backtotop, .menu span {
-    color: white;
+    color: #e6e6e6;
     cursor: pointer; }
     .menu a:hover, .menu .backtotop:hover, .menu span:hover {
       color: rgba(255, 255, 255, 0.8); }
@@ -1136,7 +1136,7 @@ body {
     list-style: none;
     list-style-type: none;
     position: relative;
-    background: #968572;
+    background: #747D84;
     margin: 0;
     z-index: 10001; }
     @media screen and (max-width: 600px) {
@@ -1163,7 +1163,7 @@ body {
         .menu > ul li {
           display: block; } }
     .menu > ul ul {
-      background: #968572;
+      background: #747D84;
       position: absolute;
       padding: 5px;
       width: 100%;
