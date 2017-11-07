@@ -108,3 +108,20 @@ $video-ratio-width: 16;
 $video-ratio-height: 9;
 
 $video-overlay-background: rgba(black, .5);
+
+$menu-bg: $main-brown;
+$menu-color: white;
+$menu-hover-color: rgba(white, .8);
+$menu-logo-max-width: 30px;
+$nav-toggle-max-width: 40px;
+$hamburger-color: $menu-color;
+$hambuger-hover-color: $menu-hover-color;
+
+$menu-collapse: 600px;
+
+$scrollspy-height-titles: 20px;
+$scrollspy-height: 7px;
+$scrollspy-section-bg: rgba(white, .3);
+$scrollspy-background: $menu-bg;
+$scrollspy-progress: black;
+$scrollspy-title-collapse: 500px;
