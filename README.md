@@ -16,10 +16,12 @@
 # Table of Contents
 - [Introduction](#introduction)  
    - [Quick start](#quick-start)
+   - [Starter template](#starter-template)
    - [What's included](#whats-included)
 - [Documentation](#documentation)
   - [Layout](#layout)
-    - [CSS Grid](#grid)
+    - [Responsive](#responsive)
+    - [Grid](#grid)
   - [Components](#components)
     - [Navigation](#navigation)
     - [Progress Bar](#progress-bar)
@@ -106,9 +108,9 @@ Heinz is fully responsive on all devices.
 
 ### Grid
 
-The box-layout you can remove if you want so. How it's done you'll see in the following video: [click here](https://www.google.com).
+The box-layout you can remove if you don't like the style. You just have to add the class *xxxxx* in `<body>`.
 
-Combined Grid
+*Combined Grid?* Wir verwenden ein CSS grid. 12-er grid.  Grid kann auch ausserhalb der sections verwendet werden. Parent class grid geben. Es kann festgelegt werden wie viele items ein einer length dreein sollen. Large, Medium, Small. Kürzel definiert wann 100%
 
 
 ## Components
@@ -117,11 +119,11 @@ Combined Grid
 
 ### Navigation
 
-Heinz offers you a navigation on top of your page. On the left side you can fill in your logo and title of the page. The logo you can change it by filling in the source `<img src=">"`. Your title you enter between `<span></span>`.
+Heinz offers you a navigation on top of your page. On the left side you can fill in your logo and title of the page. The logo you can change by filling in the source `<img src=">"`. Your title you enter between `<span></span>`.
 
 ```
 <a href="#" class="branding">
-    <img src="img/">
+    <img src="">
     <span></span>
 </a>
 ```
@@ -154,7 +156,7 @@ There's a progressbar placed directly on the bottom of the navigation. It is spl
 
 **Title**
 
-Heinz offers you a nice range of modified titles. Choose them by using `<h1></h1>`, `<h2></h2>`, `<h3></h3>`, `<h4></h4>`, `<h5></h5>` and `<h6></h6>`.
+Heinz offers you a range of modified titles. Choose them by using `<h1></h1>`, `<h2></h2>`, `<h3></h3>`, `<h4></h4>`, `<h5></h5>` and `<h6></h6>`.
 
 If you'd like to have numbered titles you can add `numbered box` to your section class.
 
@@ -166,7 +168,7 @@ If you'd like to have numbered titles you can add `numbered box` to your section
 
 We prepared lot of different stylings for your running text. To get a general idea here's a list about all the styles.
 
-- text-lead `<p class="text-lead">`
+- text-lead `<p class="text-lead"></p>`
 - text-left `<p class="text-left"></p>`
 - text-right `<p class="text-right"></p>`
 - text center `<p class="text-center"></p>`
@@ -177,11 +179,10 @@ We prepared lot of different stylings for your running text. To get a general id
 - text-muted `<p class="text-muted"></p>`
 - text-highlighted `<p class="text-highlighted"></p>`
 
-For using them in your work, copy the code, paste it into the body of your `index.html` and enter your text between the brackets.
 
 **Blockquote**
 
-For using a blockquote, enter the following code. Fill in your text between `<blockquote>` and `<span>`.
+For using a blockquote, enter the following code. Fill in your text between `<blockquote>` and `<span>`. The source you can add into `<span></span>`.
 
 ```
 <blockquote>
