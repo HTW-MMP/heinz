@@ -39,7 +39,7 @@ body{
     }
 
     // if boxed layout, add a background color to body and another background to box.
-    @if $boxed-layout{
+    &.boxed{
         background: $background-color;
 
         .box {

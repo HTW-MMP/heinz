@@ -106,9 +106,6 @@
     }
 
     section{
-        + section{
-            border-top: 1px solid darken(white, 5%);
-        }
         padding: $gutter*4 0;
 
         &:first-of-type{
@@ -138,6 +135,7 @@
                 @extend .item-offset-0;
                 padding: 0;
                 line-height: 1;
+                margin: 0;
             }
 
             .video-wrap{
@@ -152,7 +150,7 @@
                 background: $video-overlay-background;
             }
 
-            figcaption, p{
+            figcaption, p, iframe, audio, pre, code{
                 @extend .item-span-md-#{$section-content-span};
                 @extend .item-offset-md-#{($section-span - $section-content-span)};
                 position: absolute;;
@@ -161,12 +159,69 @@
             }
         }
 
-        .oversized,
-        .has-sidestory{
+        &.has-sidestory{
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat($column-count, 1fr);
+            @extend .item-span-md-#{$column-count};
+            @extend .item-offset-0;
+            position: relative;
+            .box{
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+            .content{
+                @extend .item-span-md-#{$section-span};
+                @extend .item-offset-md-#{($column-count - $section-span)/2};
+                grid-row-start: 1;
+                display: grid;
+                grid-template-columns: repeat(#{$section-span}, 1fr);
+
+                @media screen and (max-width: $breakpoint-m-to-s){
+                    grid-column-start: auto;
+                    grid-column-end: span 12;
+                    padding: $gutter*2 0;
+                }
+
+            }
+
+            .sidestory{
+                @extend .item-span-md-#{($section-span - $section-content-span)};
+                grid-row-start: 1;
+                align-self: center;
+                padding: $gutter * 2;
+                z-index: 10;
+                box-shadow: 0 0 20px rgba(black, .1);
+
+                @media screen and (max-width: $breakpoint-m-to-s){
+                    grid-column-start: auto;
+                    grid-column-end: span 12;
+                    grid-row-start: auto;
+
+                    box-shadow: 0 0 0 0 transparent;
+                    background: $background-color;
+
+                    h1, h2, h3, h4, h5, h6{
+                        text-align: left;
+                    }
+                }
+
+                &-left{
+                    // grid-column-start: 2;
+                    @extend .item-offset-md-#{($column-count - $section-span)/2 - 1};
+                }
+
+                &-right{
+                    @extend .item-offset-md-#{$section-span+1};
+                }
+            }
+        }
+
+        .oversized {
             @extend .item-span-#{$section-span};
             display: grid;
             grid-template-columns: repeat(#{$section-span}, 1fr);
-            margin: 1.25rem 0;
+            padding: 1.25rem 0;
             position: relative;
 
             img{
@@ -175,48 +230,6 @@
             div, figcaption, p{
                 @extend .item-span-#{$section-content-span};
                 @extend .item-offset-#{($section-span - $section-content-span)/2};
-            }
-
-            .sidestory{
-                @extend .item-span-md-#{($section-span - $section-content-span)};
-                background: $container-background-color;
-                padding: $gutter * 2;
-                top: 0;
-                width: 100%;
-                position: absolute;
-
-                @media screen and (max-width: $breakpoint-l-to-m){
-                    width: 150%;
-                }
-
-                @media screen and (max-width: $breakpoint-m-to-s){
-                    width: 100%;
-                    top: auto;
-                    position: relative;
-                    grid-column-start: ($section-span - $section-content-span);
-                    grid-column-end: span $section-content-span;
-                }
-
-                &-left{
-                    left: 0;
-                    transform: translate(-50%);
-
-                    @media screen and (max-width: $breakpoint-l-to-m){
-                        transform: translate(-67%);
-                    }
-
-                    @media screen and (max-width: $breakpoint-m-to-s){
-                        left: auto;
-                        transform: translate(0%);
-                    }
-                }
-
-                &-right{
-                    left: 350%;
-                    @media screen and (max-width: $breakpoint-m-to-s){
-                        left: auto;
-                    }
-                }
             }
         }
 
@@ -238,7 +251,7 @@
                 font-style: $textoverlay-font-style;
             }
         }
-        h1, h2, h3, h4, h5, h6, p, img, .content-wide, .slider-wrap, .video-wrap, pre{
+        h1, h2, h3, h4, h5, h6, p, img, .content-wide, .slider-wrap, .video-wrap, pre, audio, iframe {
             @extend .item-span-#{$section-content-span};
             @extend .item-offset-#{($section-span - $section-content-span)/2};
 

@@ -136,8 +136,7 @@ body {
   height: auto;
   -webkit-transition: 0.3s all ease;
   -o-transition: 0.3s all ease;
-  transition: 0.3s all ease;
-  background: #CCCFD0; }
+  transition: 0.3s all ease; }
   body header,
   body main,
   body footer {
@@ -147,8 +146,10 @@ body {
     margin-right: auto !important;
     -webkit-box-sizing: border-box;
     box-sizing: border-box; }
-  body .box {
-    background: white; }
+  body.boxed {
+    background: #CCCFD0; }
+    body.boxed .box {
+      background: white; }
 
 .box {
   margin: 10px;
@@ -347,6 +348,9 @@ blockquote {
   padding-right: 20px;
   margin-bottom: 1.25rem;
   margin-top: 1.25rem; }
+  blockquote span {
+    display: block;
+    font-size: .7em; }
 
 .text-black {
   color: black; }
@@ -438,7 +442,7 @@ body {
     grid-column-start: auto;
     grid-column-end: span 2; }
   .grid .item-span-sm-2,
-  .grid .item-span-md-2, .grid section .oversized .sidestory, .grid section .has-sidestory .sidestory,
+  .grid .item-span-md-2, .grid section.has-sidestory .sidestory,
   .grid .item-span-lg-2 {
     grid-column-start: auto;
     grid-column-end: span 12; }
@@ -466,11 +470,11 @@ body {
   .grid .item-span-lg-5 {
     grid-column-start: auto;
     grid-column-end: span 12; }
-  .grid .item-span-6, .grid section .oversized div, .grid section .oversized figcaption, .grid section .oversized p, .grid section .has-sidestory div, .grid section .has-sidestory figcaption, .grid section .has-sidestory p, .grid section h1, .grid section h2, .grid section h3, .grid section h4, .grid section h5, .grid section h6, .grid section p, .grid section img, .grid section .content-wide, .grid section .slider-wrap, .grid section .video-wrap, .grid section pre {
+  .grid .item-span-6, .grid section .oversized div, .grid section .oversized figcaption, .grid section .oversized p, .grid section h1, .grid section h2, .grid section h3, .grid section h4, .grid section h5, .grid section h6, .grid section p, .grid section img, .grid section .content-wide, .grid section .slider-wrap, .grid section .video-wrap, .grid section pre, .grid section audio, .grid section iframe {
     grid-column-start: auto;
     grid-column-end: span 6; }
   .grid .item-span-sm-6,
-  .grid .item-span-md-6, .grid section.full-width figcaption, .grid section.full-width p, .grid section .full-width figcaption, .grid section .full-width p,
+  .grid .item-span-md-6, .grid section.full-width figcaption, .grid section.full-width p, .grid section.full-width iframe, .grid section.full-width audio, .grid section.full-width pre, .grid section.full-width code, .grid section .full-width figcaption, .grid section .full-width p, .grid section .full-width iframe, .grid section .full-width audio, .grid section .full-width pre, .grid section .full-width code,
   .grid .item-span-lg-6 {
     grid-column-start: auto;
     grid-column-end: span 12; }
@@ -482,11 +486,11 @@ body {
   .grid .item-span-lg-7 {
     grid-column-start: auto;
     grid-column-end: span 12; }
-  .grid .item-span-8, .grid section .oversized, .grid section .has-sidestory, .grid section h1.large, .grid section h2.large, .grid section h3.large, .grid section h4.large, .grid section h5.large, .grid section h6.large, .grid section p.large, .grid section img.large, .grid section .content-wide.large, .grid section .slider-wrap.large, .grid section .video-wrap.large, .grid section pre.large {
+  .grid .item-span-8, .grid section .oversized, .grid section h1.large, .grid section h2.large, .grid section h3.large, .grid section h4.large, .grid section h5.large, .grid section h6.large, .grid section p.large, .grid section img.large, .grid section .content-wide.large, .grid section .slider-wrap.large, .grid section .video-wrap.large, .grid section pre.large, .grid section audio.large, .grid section iframe.large {
     grid-column-start: auto;
     grid-column-end: span 8; }
   .grid .item-span-sm-8,
-  .grid .item-span-md-8, .grid section, .grid section .oversized img, .grid section .has-sidestory img,
+  .grid .item-span-md-8, .grid section, .grid section.has-sidestory .content, .grid section .oversized img,
   .grid .item-span-lg-8 {
     grid-column-start: auto;
     grid-column-end: span 12; }
@@ -518,20 +522,20 @@ body {
     grid-column-start: auto;
     grid-column-end: span 12; }
   .grid .item-span-sm-12,
-  .grid .item-span-md-12, .grid section.full-width, .grid section .full-width, .grid section.full-width figure, .grid section.full-width iframe, .grid section.full-width video, .grid section.full-width .video-wrap, .grid section.full-width .over-video, .grid section .full-width figure, .grid section .full-width iframe, .grid section .full-width video, .grid section .full-width .video-wrap, .grid section .full-width .over-video,
+  .grid .item-span-md-12, .grid section.full-width, .grid section .full-width, .grid section.full-width figure, .grid section.full-width iframe, .grid section.full-width video, .grid section.full-width .video-wrap, .grid section.full-width .over-video, .grid section .full-width figure, .grid section .full-width iframe, .grid section .full-width video, .grid section .full-width .video-wrap, .grid section .full-width .over-video, .grid section.has-sidestory,
   .grid .item-span-lg-12 {
     grid-column-start: auto;
     grid-column-end: span 12; }
-  .grid .item-offset-0, .grid section.full-width, .grid section .full-width, .grid section.full-width figure, .grid section.full-width iframe, .grid section.full-width video, .grid section.full-width .video-wrap, .grid section.full-width .over-video, .grid section .full-width figure, .grid section .full-width iframe, .grid section .full-width video, .grid section .full-width .video-wrap, .grid section .full-width .over-video, .grid section h1.large, .grid section h2.large, .grid section h3.large, .grid section h4.large, .grid section h5.large, .grid section h6.large, .grid section p.large, .grid section img.large, .grid section .content-wide.large, .grid section .slider-wrap.large, .grid section .video-wrap.large, .grid section pre.large {
+  .grid .item-offset-0, .grid section.full-width, .grid section .full-width, .grid section.full-width figure, .grid section.full-width iframe, .grid section.full-width video, .grid section.full-width .video-wrap, .grid section.full-width .over-video, .grid section .full-width figure, .grid section .full-width iframe, .grid section .full-width video, .grid section .full-width .video-wrap, .grid section .full-width .over-video, .grid section.has-sidestory, .grid section h1.large, .grid section h2.large, .grid section h3.large, .grid section h4.large, .grid section h5.large, .grid section h6.large, .grid section p.large, .grid section img.large, .grid section .content-wide.large, .grid section .slider-wrap.large, .grid section .video-wrap.large, .grid section pre.large, .grid section audio.large, .grid section iframe.large {
     grid-column-start: 1; }
   .grid .item-offset-sm-1,
-  .grid .item-offset-md-1,
+  .grid .item-offset-md-1, .grid section.has-sidestory .sidestory-left,
   .grid .item-offset-lg-1 {
     grid-column-start: auto; }
-  .grid .item-offset-1, .grid section .oversized div, .grid section .oversized figcaption, .grid section .oversized p, .grid section .has-sidestory div, .grid section .has-sidestory figcaption, .grid section .has-sidestory p, .grid section h1, .grid section h2, .grid section h3, .grid section h4, .grid section h5, .grid section h6, .grid section p, .grid section img, .grid section .content-wide, .grid section .slider-wrap, .grid section .video-wrap, .grid section pre {
+  .grid .item-offset-1, .grid section .oversized div, .grid section .oversized figcaption, .grid section .oversized p, .grid section h1, .grid section h2, .grid section h3, .grid section h4, .grid section h5, .grid section h6, .grid section p, .grid section img, .grid section .content-wide, .grid section .slider-wrap, .grid section .video-wrap, .grid section pre, .grid section audio, .grid section iframe {
     grid-column-start: 2; }
   .grid .item-offset-sm-2,
-  .grid .item-offset-md-2, .grid section, .grid section.full-width figcaption, .grid section.full-width p, .grid section .full-width figcaption, .grid section .full-width p,
+  .grid .item-offset-md-2, .grid section, .grid section.full-width figcaption, .grid section.full-width p, .grid section.full-width iframe, .grid section.full-width audio, .grid section.full-width pre, .grid section.full-width code, .grid section .full-width figcaption, .grid section .full-width p, .grid section .full-width iframe, .grid section .full-width audio, .grid section .full-width pre, .grid section .full-width code, .grid section.has-sidestory .content,
   .grid .item-offset-lg-2 {
     grid-column-start: auto; }
   .grid .item-offset-2 {
@@ -573,7 +577,7 @@ body {
   .grid .item-offset-8 {
     grid-column-start: 9; }
   .grid .item-offset-sm-9,
-  .grid .item-offset-md-9,
+  .grid .item-offset-md-9, .grid section.has-sidestory .sidestory-right,
   .grid .item-offset-lg-9 {
     grid-column-start: auto; }
   .grid .item-offset-9 {
@@ -659,7 +663,7 @@ body {
     .grid .item-span-md-1 {
       grid-column-start: auto;
       grid-column-end: span 1; }
-    .grid .item-span-md-2, .grid section .oversized .sidestory, .grid section .has-sidestory .sidestory {
+    .grid .item-span-md-2, .grid section.has-sidestory .sidestory {
       grid-column-start: auto;
       grid-column-end: span 2; }
     .grid .item-span-md-3 {
@@ -671,13 +675,13 @@ body {
     .grid .item-span-md-5 {
       grid-column-start: auto;
       grid-column-end: span 5; }
-    .grid .item-span-md-6, .grid section.full-width figcaption, .grid section.full-width p, .grid section .full-width figcaption, .grid section .full-width p {
+    .grid .item-span-md-6, .grid section.full-width figcaption, .grid section.full-width p, .grid section.full-width iframe, .grid section.full-width audio, .grid section.full-width pre, .grid section.full-width code, .grid section .full-width figcaption, .grid section .full-width p, .grid section .full-width iframe, .grid section .full-width audio, .grid section .full-width pre, .grid section .full-width code {
       grid-column-start: auto;
       grid-column-end: span 6; }
     .grid .item-span-md-7 {
       grid-column-start: auto;
       grid-column-end: span 7; }
-    .grid .item-span-md-8, .grid section, .grid section .oversized img, .grid section .has-sidestory img {
+    .grid .item-span-md-8, .grid section, .grid section.has-sidestory .content, .grid section .oversized img {
       grid-column-start: auto;
       grid-column-end: span 8; }
     .grid .item-span-md-9 {
@@ -689,14 +693,14 @@ body {
     .grid .item-span-md-11 {
       grid-column-start: auto;
       grid-column-end: span 11; }
-    .grid .item-span-md-12, .grid section.full-width, .grid section .full-width, .grid section.full-width figure, .grid section.full-width iframe, .grid section.full-width video, .grid section.full-width .video-wrap, .grid section.full-width .over-video, .grid section .full-width figure, .grid section .full-width iframe, .grid section .full-width video, .grid section .full-width .video-wrap, .grid section .full-width .over-video {
+    .grid .item-span-md-12, .grid section.full-width, .grid section .full-width, .grid section.full-width figure, .grid section.full-width iframe, .grid section.full-width video, .grid section.full-width .video-wrap, .grid section.full-width .over-video, .grid section .full-width figure, .grid section .full-width iframe, .grid section .full-width video, .grid section .full-width .video-wrap, .grid section .full-width .over-video, .grid section.has-sidestory {
       grid-column-start: auto;
       grid-column-end: span 12; }
     .grid .item-offset-md-0 {
       grid-column-start: 1; }
-    .grid .item-offset-md-1 {
+    .grid .item-offset-md-1, .grid section.has-sidestory .sidestory-left {
       grid-column-start: 2; }
-    .grid .item-offset-md-2, .grid section, .grid section.full-width figcaption, .grid section.full-width p, .grid section .full-width figcaption, .grid section .full-width p {
+    .grid .item-offset-md-2, .grid section, .grid section.full-width figcaption, .grid section.full-width p, .grid section.full-width iframe, .grid section.full-width audio, .grid section.full-width pre, .grid section.full-width code, .grid section .full-width figcaption, .grid section .full-width p, .grid section .full-width iframe, .grid section .full-width audio, .grid section .full-width pre, .grid section .full-width code, .grid section.has-sidestory .content {
       grid-column-start: 3; }
     .grid .item-offset-md-3 {
       grid-column-start: 4; }
@@ -710,7 +714,7 @@ body {
       grid-column-start: 8; }
     .grid .item-offset-md-8 {
       grid-column-start: 9; }
-    .grid .item-offset-md-9 {
+    .grid .item-offset-md-9, .grid section.has-sidestory .sidestory-right {
       grid-column-start: 10; }
     .grid .item-offset-md-10 {
       grid-column-start: 11; }
@@ -785,8 +789,6 @@ body {
     padding: 40px 0;
     display: grid;
     grid-template-columns: repeat(8, 1fr); }
-    .grid section + section {
-      border-top: 1px solid #f2f2f2; }
     .grid section:first-of-type {
       padding-top: 60px; }
     .grid section:last-of-type {
@@ -804,7 +806,8 @@ body {
       .grid section .full-width .video-wrap,
       .grid section .full-width .over-video {
         padding: 0;
-        line-height: 1; }
+        line-height: 1;
+        margin: 0; }
       .grid section.full-width .video-wrap,
       .grid section .full-width .video-wrap {
         margin: 0; }
@@ -816,63 +819,57 @@ body {
         width: 100%;
         height: 100%;
         background: rgba(0, 0, 0, 0.5); }
-      .grid section.full-width figcaption, .grid section.full-width p,
+      .grid section.full-width figcaption, .grid section.full-width p, .grid section.full-width iframe, .grid section.full-width audio, .grid section.full-width pre, .grid section.full-width code,
       .grid section .full-width figcaption,
-      .grid section .full-width p {
+      .grid section .full-width p,
+      .grid section .full-width iframe,
+      .grid section .full-width audio,
+      .grid section .full-width pre,
+      .grid section .full-width code {
         position: absolute;
         bottom: 10px;
         left: 0; }
-    .grid section .oversized,
-    .grid section .has-sidestory {
+    .grid section.has-sidestory {
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      position: relative; }
+      .grid section.has-sidestory .box {
+        margin-top: 0;
+        margin-bottom: 0; }
+      .grid section.has-sidestory .content {
+        grid-row-start: 1;
+        display: grid;
+        grid-template-columns: repeat(8, 1fr); }
+        @media screen and (max-width: 960px) {
+          .grid section.has-sidestory .content {
+            grid-column-start: auto;
+            grid-column-end: span 12;
+            padding: 20px 0; } }
+      .grid section.has-sidestory .sidestory {
+        grid-row-start: 1;
+        -webkit-align-self: center;
+        -ms-flex-item-align: center;
+        align-self: center;
+        padding: 20px;
+        z-index: 10;
+        -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); }
+        @media screen and (max-width: 960px) {
+          .grid section.has-sidestory .sidestory {
+            grid-column-start: auto;
+            grid-column-end: span 12;
+            grid-row-start: auto;
+            -webkit-box-shadow: 0 0 0 0 transparent;
+            box-shadow: 0 0 0 0 transparent;
+            background: #CCCFD0; }
+            .grid section.has-sidestory .sidestory h1, .grid section.has-sidestory .sidestory h2, .grid section.has-sidestory .sidestory h3, .grid section.has-sidestory .sidestory h4, .grid section.has-sidestory .sidestory h5, .grid section.has-sidestory .sidestory h6 {
+              text-align: left; } }
+    .grid section .oversized {
       display: grid;
       grid-template-columns: repeat(8, 1fr);
-      margin: 1.25rem 0;
+      padding: 1.25rem 0;
       position: relative; }
-      .grid section .oversized .sidestory,
-      .grid section .has-sidestory .sidestory {
-        background: white;
-        padding: 20px;
-        top: 0;
-        width: 100%;
-        position: absolute; }
-        @media screen and (max-width: 1260px) {
-          .grid section .oversized .sidestory,
-          .grid section .has-sidestory .sidestory {
-            width: 150%; } }
-        @media screen and (max-width: 960px) {
-          .grid section .oversized .sidestory,
-          .grid section .has-sidestory .sidestory {
-            width: 100%;
-            top: auto;
-            position: relative;
-            grid-column-start: 2;
-            grid-column-end: span 6; } }
-        .grid section .oversized .sidestory-left,
-        .grid section .has-sidestory .sidestory-left {
-          left: 0;
-          -webkit-transform: translate(-50%);
-          -ms-transform: translate(-50%);
-          transform: translate(-50%); }
-          @media screen and (max-width: 1260px) {
-            .grid section .oversized .sidestory-left,
-            .grid section .has-sidestory .sidestory-left {
-              -webkit-transform: translate(-67%);
-              -ms-transform: translate(-67%);
-              transform: translate(-67%); } }
-          @media screen and (max-width: 960px) {
-            .grid section .oversized .sidestory-left,
-            .grid section .has-sidestory .sidestory-left {
-              left: auto;
-              -webkit-transform: translate(0%);
-              -ms-transform: translate(0%);
-              transform: translate(0%); } }
-        .grid section .oversized .sidestory-right,
-        .grid section .has-sidestory .sidestory-right {
-          left: 350%; }
-          @media screen and (max-width: 960px) {
-            .grid section .oversized .sidestory-right,
-            .grid section .has-sidestory .sidestory-right {
-              left: auto; } }
     .grid section .textoverlay {
       background: black; }
       .grid section .textoverlay img {
@@ -1055,7 +1052,7 @@ body {
     height: 100%;
     width: 0px;
     position: absolute;
-    background: #968572; }
+    background: #65A3D9; }
 
 .menu {
   position: fixed;
@@ -1067,6 +1064,8 @@ body {
   z-index: 10000;
   font-family: "Work Sans", "Calibri", sans-serif;
   text-transform: uppercase;
+  -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;

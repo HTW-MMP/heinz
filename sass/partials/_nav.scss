@@ -8,6 +8,7 @@
     z-index: 10000;
     font-family: $headings-font;
     text-transform: uppercase;
+    box-shadow: 0 0 30px rgba(black, .3);
 
     @include flexbox(row, wrap, space-between, center);
 
