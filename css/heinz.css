@@ -1685,6 +1685,38 @@ body .foot {
   display: block;
 }
 
+.logo-img {
+  margin: 2rem 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.logo-img img {
+  max-height: 115px;
+}
+
+.logo-img.item-span-3 img {
+  max-height: 90px;
+}
+
 .area-1 {
   background: #F5C7CA;
   -webkit-box-shadow: inset 0px 0px 5px #de454f;
