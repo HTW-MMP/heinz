@@ -56,11 +56,9 @@
 5. And that’s about it — you’re about to come down the stretch and have your very own multimedia story. If you’re unsure about the general structure, keep reading for an example page template.
 
 ## Starter template
-Be sure to have your pages set up with the latest design and development standards. That means using an HTML5 doctype and including a viewport meta tag for proper responsive behaviors. Put it all together and your pages should look like this:
+Be sure to have your pages set up with the latest design and development standards. That means using an HTML5 doctype and including a viewport meta tag for proper responsive behaviors.
 
-```
 
-```
 
 ## What's included
 
@@ -108,10 +106,17 @@ Heinz is fully responsive on all devices.
 
 ### Grid
 
-The box-layout you can remove if you don't like the style. You just have to add the class *xxxxx* in `<body>`.
+The box-layout you can remove if you don't like the style. Then you've the whole page in the same color. No more grey box. You just have to remove the class `boxed` in `<body>`.
 
-*Combined Grid?* Wir verwenden ein CSS grid. 12-er grid.  Grid kann auch ausserhalb der sections verwendet werden. Parent class grid geben. Es kann festgelegt werden wie viele items ein einer length dreein sollen. Large, Medium, Small. Kürzel definiert wann 100%
+Heinz is created on a 12-box grid. By default it uses the combined grid. There are also other prepared grids which you can use. We offer a large, medium and small. You can see them on the end of the page. The shortcut in the classes defines the choosen grid. For example:
 
+- large = item-span-lg-3
+- medium = item-span-md-4
+- small = item-span-sm-6
+
+With the grid you can define how many items you'd have in a row. You can also use it without the section-tag.
+
+If you want to design the grid differently, use the Sass Version for advanced transformation. You can get it [here](https://www.google.com).
 
 ## Components
 
@@ -119,7 +124,10 @@ The box-layout you can remove if you don't like the style. You just have to add 
 
 ### Navigation
 
-Heinz offers you a navigation on top of your page. On the left side you can fill in your logo and title of the page. The logo you can change by filling in the source `<img src=">"`. Your title you enter between `<span></span>`.
+Heinz offers you a navigation on top of your page.
+
+
+On the left side you can fill in your logo and title of the page. The logo you can change by filling in the source `<img src=">"`. Your title you enter between `<span></span>`.
 
 ```
 <a href="#" class="branding">
@@ -128,7 +136,8 @@ Heinz offers you a navigation on top of your page. On the left side you can fill
 </a>
 ```
 
-On the right side of your navigation you find a dropdown menu. It works as a simple list. You can add or remove single items by using `<li><a href="#">Item</a></li>`. There's also a dropdown included. You can find it within the item called "Parent". You can change the title and add or remove single dropdown items.
+On the right side of the navbar you find a dropdown menu. It works as a simple list. You can add or remove single items by using `<li><a href="#">Item</a></li>`. There's also a dropdown included. You can find it within the item called "Parent".
+
 
 ```
 <li class="dropdown">
@@ -158,7 +167,7 @@ There's a progressbar placed directly on the bottom of the navigation. It is spl
 
 Heinz offers you a range of modified titles. Choose them by using `<h1></h1>`, `<h2></h2>`, `<h3></h3>`, `<h4></h4>`, `<h5></h5>` and `<h6></h6>`.
 
-If you'd like to have numbered titles you can add `numbered box` to your section class.
+If you'd like to have numbered titles you can add `numbered` to your section class.
 
 `<section class="text-styles numbered box">`
 
@@ -251,8 +260,9 @@ Copy the code and paste it into the `<body>` in your `index.html`. Add the sourc
 </section>
 ```
 
+
 ### Video
-There are three kinds of video players you can embed into your `index.html`. Two are normal **players**, one with content width and the other is oversized. Both you can start and stop with the play button. Enter the soucre into `src=""`. You can add links from the web or use local stored videos.
+There are three kinds of video players you can embed into your `index.html`. Two are normal **players**, one with content width and the one oversized. Both you can start and stop with the play button. Enter the soucre into `src=""`. You can add links from the web or use local stored videos.
 Responsive video needs video-wrap and video, because paddinghack does not like to be used in grid.
 
 
@@ -266,6 +276,7 @@ Responsive video needs video-wrap and video, because paddinghack does not like t
     </div>
 </div>
 ```
+
 
 **player oversized**
 
@@ -283,7 +294,7 @@ Responsive video needs video-wrap and video, because paddinghack does not like t
 
 **background-video**
 
-The other one is a display filling **background-video**. Autoplay, loop and muted inclued by default through URL attributes. There's an over-video container that darkens video and adds a grid where you can put textoverlay. You can remove it by delete class `over-video grid` and its content. Enter the soucre into `src=""`. You can add links from the web or use local stored videos.
+The third one is a display filling **background-video**. Autoplay, loop and muted inclued by default through URL attributes. There's an over-video container that darkens video and adds a grid where you can put textoverlay. You can remove it by delete class `over-video grid` and its content. Enter the soucre into `src=""`. You can add links from the web or use local stored videos.
 Responsive video needs video-wrap and video, because paddinghack does not like to be used in grid.
 
 
@@ -296,7 +307,7 @@ Responsive video needs video-wrap and video, because paddinghack does not like t
     </div>
     <div class="over-video grid">
         <div class="item-span-8 item-offset-2">
-            <h1 class="text-white">TItel</h1>
+            <h1 class="text-white">Titel</h1>
         </div>
     </div>
 </section>
@@ -305,23 +316,22 @@ Responsive video needs video-wrap and video, because paddinghack does not like t
 
 ### Audio
 
-For insert audio files, copy the following html and css. Paste it into the body of your `index.html`. Enter your audio source according to the file type into `<source src="">`.
+For insert audio files, copy the following html. Paste it into the body of your `index.html`. Enter your audio source according to the file type into `<source src="">` and the type of your audio file into `type=""`. Unfortunately you can't customize the your audio, because it's not supported by browsers.
 
 
 ```
-<audio class="audio" controls>
-  <source src="" type="audio/ogg">
-  <source src="" type="audio/mpeg">
-  <source src="" type="audio/wav">
+<audio controls>
+    <source src="" type="audio/">
+        Your browser does not support the audio element.
 </audio>
 ```
 
 ### Slider
 
-We offer you fully prepared sliders in two sizes. Content width and oversized. The Slider has images as background-image and also navigators in spans. Those are enabled automatically in js. You just have to copy the html into your index.html and enter the URL `src="img/"` of you background-image.
+We offer you fully prepared sliders in two sizes. Content width and oversized. The Slider has images as background-image and also navigators in spans. Those are enabled automatically in js. You just have to copy the html into your index.html and enter the URL `src="img/"` of you background-images.
+
 
 **Slider content-width**
-
 
 ```
 <div class="slider-wrap">
@@ -338,7 +348,6 @@ We offer you fully prepared sliders in two sizes. Content width and oversized. T
 **Slider oversized**
 
 Adding class large makes slider bigger.
-
 
 ```
 <div class="slider-wrap large">
@@ -357,8 +366,40 @@ Adding class large makes slider bigger.
 
 ### Sidestory
 
-Erkennbar an der Box auf der Seite. Bei Klick öffnet sich Overlay.
-ist in einer eigener section called sidestory
+You can add an additional sidestory to your website. It's a small box on the side of your container. We prepared one for the left side and one for the right side. By clicking the link in the box, an overlay opens where you can add your additional story. The background will be blurred then.
+
+In the box you can add title and lead and most important is the link to the overlay, which you can name however you want. You'll see it in the following html code.
+
+If you want the sidestory on the left side change `sidestory-right` to `sidestory-left`.
+
+Add the code to your body and see how it works.
+
+```
+<section class="has-sidestory">
+<div class="sidestory sidestory-right box">
+    <h2>Title</h2>
+    <p>Lead.</p>
+    <br>
+    <p class="text-center">
+        <span class="toggle" data-toggle-overlay="overlay-1">Link to overlay</span>
+    </p>
+</div>
+</section>
+```
+
+For creating the content of the overlay you need the following code. You can insert it right after your sidestory or at the end of your `<body>` for a better overview, it doesn't matter.
+
+You can add all kinds of components mentioned into the `<section></section>` of the overlay overlay. It can be as long as you want.
+
+
+```
+<div class="overlay grid" id="overlay-1">
+    <section>
+        <span class="toggle close">x</span>
+        <h1>Title</h1>
+    </section>
+</div>
+```
 
 
 
