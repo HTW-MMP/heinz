@@ -106,19 +106,22 @@ h4{
     font-size: 1.125em;
     line-height: 1.22;
     margin: .5rem 0;
-    font-weight: normal;
+    font-weight: 500;
+    margin-top: 1.5rem;
 }
 
 h5{
     font-size: 1.1em;
     margin: .3rem 0;
-    font-weight: normal;
+    font-weight: 500;
+    margin-top: 1.5rem;
 }
 
 h6{
     font-size: 1em;
     margin: .25rem 0;
-    font-weight: normal;
+    font-weight: 500;
+    margin-top: 1.5rem;
 }
 
 
@@ -202,6 +205,7 @@ blockquote{
     &-highlighted{
         background: $text-highlighted-color;
         color: black-or-white($text-highlighted-color);
+        padding: 3px 0 1px 0;
     }
 
     &-small{
@@ -213,7 +217,11 @@ blockquote{
     }
 
     &-lead{
-        font-weight: bold;
+        font-family: $headings-font;
+        line-height: 1.375;
+        text-align: left;
+        font-size: 1.1em;
+        font-weight: 300;
         margin-bottom: 1.25rem;
     }
 }

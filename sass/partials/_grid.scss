@@ -104,12 +104,15 @@
         background-size: $fullscreen-background-size;
         background-position: $fullscreen-background-position;
     }
-
+    .foot{
+        @extend .item-span-md-#{$section-span};
+        @extend .item-offset-md-#{($column-count - $section-span)/2};
+    }
     section{
-        padding: $gutter*4 0;
+        padding: $gutter*6 0;
 
-        &:first-of-type{
-            padding-top: $gutter * $column-count/2;
+        &:first-of-type:not(.fullscreen):not(.full-width){
+            padding-top: $gutter * 10;
         }
         &:last-of-type{
             padding-bottom: $gutter * $column-count/2;
@@ -129,7 +132,8 @@
             @extend .item-span-md-#{$column-count};
             @extend .item-offset-0;
             position: relative;
-
+            margin: 0;
+            
             figure, iframe, video, .video-wrap, .over-video{
                 @extend .item-span-md-#{$column-count};
                 @extend .item-offset-0;
@@ -150,7 +154,7 @@
                 background: $video-overlay-background;
             }
 
-            figcaption, p, iframe, audio, pre, code{
+            figcaption, p, iframe, audio, pre, code, ul{
                 @extend .item-span-md-#{$section-content-span};
                 @extend .item-offset-md-#{($section-span - $section-content-span)};
                 position: absolute;;
@@ -223,6 +227,7 @@
             grid-template-columns: repeat(#{$section-span}, 1fr);
             padding: 1.25rem 0;
             position: relative;
+            margin-bottom: 2rem;
 
             img{
                 @extend .item-span-md-#{$section-span};
@@ -234,6 +239,8 @@
         }
 
         .textoverlay{
+            padding: 0;
+            margin: $gutter * 3 0;
             background: $textoverlay-background;
             img{
                 opacity: $textoverlay-image-opacity;
@@ -251,9 +258,10 @@
                 font-style: $textoverlay-font-style;
             }
         }
-        h1, h2, h3, h4, h5, h6, p, img, .content-wide, .slider-wrap, .video-wrap, pre, audio, iframe {
+        h1, h2, h3, h4, h5, h6, p, img, .content-wide, .slider-wrap, .video-wrap, pre, audio, iframe, ul {
             @extend .item-span-#{$section-content-span};
             @extend .item-offset-#{($section-span - $section-content-span)/2};
+            width: 100%;
 
             &.large{
                 @extend .item-span-#{$section-span};
@@ -263,7 +271,7 @@
 
         blockquote{
             @extend .item-span-#{$section-quote-span};
-            grid-column-start: 4;
+            grid-column-start: 3;
 
             @media screen and (max-width: $blockquote-break){
                 grid-column-start: 2;

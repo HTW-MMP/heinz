@@ -34,7 +34,7 @@
     }
 
     display: grid;
-    $grid-template-rows: $rows;
+    grid-template-rows: $rows;
     grid-template-columns: $columns;
     grid-template-areas: unquote($a);
 
@@ -45,7 +45,7 @@
     }
 }
 // @include gridCreator(
-//     "auto auto auto", 
+//     "auto auto auto",
 //     "auto auto auto",
 //     (area-1, area-2, area-3, area-4, area-5, area-6),
 //     'area-1 area-2 area-3',

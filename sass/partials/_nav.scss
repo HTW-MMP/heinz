@@ -9,8 +9,16 @@
     font-family: $headings-font;
     text-transform: uppercase;
     box-shadow: 0 0 30px rgba(black, .3);
-
     @include flexbox(row, wrap, space-between, center);
+
+    &.boxed{
+        justify-content: center;
+    }
+
+    .bar{
+        width: $section-span / $column-count * 100%;
+        @include flexbox(row, wrap, space-between, center);
+    }
 
     .nav-toggle{
         max-width: $nav-toggle-max-width;
@@ -36,6 +44,7 @@
         display: inline-block;
         padding: $gutter/2 $gutter;
         @include flexbox(row, wrap, space-between, center);
+
         span{
             padding: $gutter/2;
         }
@@ -52,7 +61,7 @@
         }
     }
 
-    > ul{
+    ul{
         padding: 0 $gutter;
         list-style: none;
         list-style-type: none;

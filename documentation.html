@@ -2,23 +2,24 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <!-- make sure scaling is good for responsive content -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="css/main.css" rel="stylesheet">
-  <link href="css/prism.css" rel="stylesheet" />
-  <title>Heinz - Documentation</title>
+    <meta charset="utf-8">
+    <!-- make sure scaling is good for responsive content -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/heinz.min.css" rel="stylesheet">
+    <link href="css/prism.css" rel="stylesheet" />
+    <title>Heinz - Documentation</title>
 </head>
 
 <body class="boxed">
-  <!-- header section -->
-  <header class="head">
-    <nav class="menu">
-      <a href="#" class="branding">
+    <!-- header section -->
+    <header class="head">
+        <nav class="menu boxed">
+            <div class="bar">
+                <a href="#" class="branding">
                 <img src="img/logo.jpg">
                 <span>Heinz - the storytelling Butler</span>
             </a>
-      <span class="nav-toggle">
+                <span class="nav-toggle">
                 <svg version="1.1" id="hamburger" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
             	 viewBox="0 0 77.3 67.6" style="enable-background:new 0 0 77.3 67.6;" xml:space="preserve">
                     <path d="M73.4,37.6H3.8c-2.1,0-3.8-1.7-3.8-3.8l0,0C0,31.7,1.7,30,3.8,30h69.7c2.1,0,3.8,1.7,3.8,3.8l0,0 C77.3,35.9,75.6,37.6,73.4,37.6z"/>
@@ -26,38 +27,36 @@
                     <path d="M73.4,67.6H3.8c-2.1,0-3.8-1.7-3.8-3.8l0,0C0,61.7,1.7,60,3.8,60h69.7c2.1,0,3.8,1.7,3.8,3.8l0,0 C77.3,65.9,75.6,67.6,73.4,67.6z"/>
                 </svg>
             </span>
-      <ul>
-        <li><span class="nav-toggle">close</span></li>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Documentation</a></li>
-        <li><a href="/docSass.html">Sass</a></li>
-      </ul>
-      <!-- <div class="scrollspy display-titles"> -->
-      <div class="scrollspy-wrapper display-titles">
-        <div class="scrollbar"></div>
-      </div>
-    </nav>
-  </header>
-  <!--  main section has class grid, in the grid there are secions, if section needs background, add class box -->
-  <main class="main grid">
-    <section class="box">
+                <ul>
+                    <li><span class="nav-toggle">close</span></li>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="documentation.html">Documentation</a></li>
+                    <li><a href="/docSass.html">Sass</a></li>
+                </ul>
+            </div>
+            <div class="scrollspy-wrapper">
+                <div class="scrollbar"></div>
+            </div>
+        </nav>
+    </header>
+    <!--  main section has class grid, in the grid there are secions, if section needs background, add class box -->
+    <main class="main grid">
+        <section class="box">
+            <h1>Heinz</h1>
+            <h2>the storytelling butler</h2>
+            <p>lightweight, modern, and powerful front-end framework for fast and easy multimedia storytelling.
+            </p>
+            <p>Made with ❤︎ in Switzerland @ HTW Chur.</p>
+            <h1>General Structure</h1>
+            <p>Heinz uses CSS-Grids for the overall layout. To get started we recommend using our minimalistic template.</p>
 
-
-      <h1>Heinz</h1>
-      <h2>the storytelling butler</h2>
-      <p>lightweight, modern, and powerful front-end framework for fast and easy multimedia storytelling.
-      </p>
-      <p>Made with ❤︎ in Switzerland @ HTW Chur.</p>
-      <h1>General Structure</h1>
-      <p>Heinz uses CSS-Grids for the overall layout. To get started we recommend using our minimalistic template.</p>
-
-      <pre><code class="language-markup">
+            <pre><code class="language-markup">
       &lt;!DOCTYPE html&gt;
       &lt;html lang="en"&gt;
       &lt;head&gt;
       &lt;meta charset="utf-8"&gt;
       &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
-      &lt;link href="css/main.css" rel="stylesheet"&gt;
+      &lt;link href="css/heinz.min.css" rel="stylesheet"&gt;
       &lt;title&gt;Heinz - the storytelling framework&lt;/title&gt;
       &lt;/head&gt;
 
@@ -76,39 +75,40 @@
       &lt;/body&gt;
       &lt;/html&gt;</code></pre>
 
-    </section>
+        </section>
 
 
-    <!--  numbered class creates headings with numbers -->
-    <section class="box">
+        <!--  numbered class creates headings with numbers -->
+        <section class="box">
 
 
-      <h1>Introduction</h1>
-      <h2 id="quick-start">Quick Start</h2>
-      <p>
-        <ul>
-          <li>Download the latest release on <a href="https://getheinz.com/download">getheinz.com/download</a> into your Project Folder.</li>
-          <li>Open your index.html file.</li>
-          <li>
-            <p>Copy-paste the stylesheet link into your <code class="language-markup">&lt;head&gt;</code> before all other stylesheets to load our CSS:</p>
-            <pre><code class="language-markup">&lt;link rel=&quot;stylesheet&quot; href=&quot;css/heinz.css&quot;&gt;</code></pre></li>
-          <li>
-            <p>Add the optional JavaScript near the end of your page, right before the closing <code class="language-markup"></body></code> tag. Be sure to place jQuery first, as our JavaScript depends on that.</p>
-            <pre><code class="language-markup">&lt;script src=&quot;js/jquery-3.2.1.min.js&quot;&gt;&lt;/script&gt;&lt;script src=&quot;js/heinz.js&quot;&gt;&lt;/script&gt;</code></pre></li>
-          <li>
-            <p>And that’s about it — you’re about to come down the stretch and have your very own multimedia story. If you’re unsure about the general structure, keep reading for an example page template.</p>
-          </li>
-        </ul>
-      </p>
-      <h2 id="starter-template">Starter template</h2>
-      <p>Be sure to have your pages set up with the latest design and development standards. That means using an HTML5 doctype and including a viewport meta tag for proper responsive behaviors.</p>
-      <h2 id="what-s-included">What's included</h2>
-      <p>Within the download you'll find the following directories and files, logically grouping common assets and providing both compiled and minified variations. We provide compiled CSS and JS (heinz.*), as well as compiled and minified CSS and JS (heinz.min.*).</p>
-      <p>You'll see something like this:</p>
-      <p>Basic version for simple usecase:</p>
+            <h1>Introduction</h1>
+            <h2 id="quick-start">Quick Start</h2>
+            <ul>
+                <li>Download the latest release on <a href="https://getheinz.com/download">getheinz.com/download</a> into your Project Folder.</li>
+                <li>Open your index.html file.</li>
+                <li>
+                    <p>Copy-paste the stylesheet link into your <code class="language-markup">&lt;head&gt;</code> before all other stylesheets to load our CSS:</p>
+                    <pre><code class="language-markup">&lt;link rel=&quot;stylesheet&quot; href=&quot;css/heinz.css&quot;&gt;</code></pre></li>
+                <li>
+                    <p>Add the optional JavaScript near the end of your page, right before the closing <code class="language-markup">&lt;/body&gt;</code> tag. Be sure to place jQuery first, as our JavaScript depends on that.</p>
+                    <pre><code class="language-markup">&lt;script src=&quot;js/jquery-3.2.1.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;js/heinz.js&quot;&gt;&lt;/script&gt;</code></pre></li>
+                <li>
+                    <p>And that’s about it — you’re about to come down the stretch and have your very own multimedia story. If you’re unsure about the general structure, keep reading for an example page template.</p>
+                </li>
+            </ul>
+            <h2 id="starter-template">Starter template</h2>
+            <p>Be sure to have your pages set up with the latest design and development standards. That means using an HTML5 doctype and including a viewport meta tag for proper responsive behaviors.</p>
+            <h2 id="what-s-included">What's included</h2>
+            <p>Within the download you'll find the following directories and files, logically grouping common assets and providing both compiled and minified variations. We provide compiled CSS and JS (heinz.*), as well as compiled and minified CSS and JS
+                (heinz.min.*).
+            </p>
+            <p>You'll see something like this:</p>
+            <p>Basic version for simple usecase:</p>
 
 
-      <pre><code class="language-markup">
+            <pre><code class="language-markup">
         heinz/
                 ├── css/
                 │   ├── heinz.css
@@ -119,10 +119,10 @@
                 </code></pre>
 
 
-      <p>For Code Masters we created a Sass Version. You can get it <a href="https://www.google.com">here</a>.</p>
+            <p>For Code Masters we created a Sass Version. You can get it <a href="https://www.google.com">here</a>.</p>
 
 
-      <pre><code class="language-markup">
+            <pre><code class="language-markup">
         heinz/
                 ├── sass/
                 │   ├── heinz.scss
@@ -135,58 +135,42 @@
                     └── heinz.min.js
                 </code></pre>
 
-    </section>
-    <section class="box">
+        </section>
+        <section class="box">
 
 
-      <h1 id="documentation">Documentation</h1>
-      <h2 id="layout">Layout</h2>
-      <h3 id="responsive">Responsive</h3>
-      <p>Heinz is fully responsive on all devices.</p>
-      <h3 id="grid">Grid</h3>
-      <p>The box-layout you can remove if you don't like the style. Then you've the whole page in the same color. No more grey box. You just have to remove the class <code class="language-markup">boxed</code> in body.</p>
-      <p>Heinz is created on a 12-box grid. By default it uses the combined grid. There are also other prepared grids which you can use. We offer a large, medium and small. You can see them on the end of the page. The shortcut in the classes defines the
-        choosen grid. For example:</p>
+            <h1 id="documentation">Documentation</h1>
+            <h2 id="layout">Layout</h2>
+            <h3 id="responsive">Responsive</h3>
+            <p>Heinz is fully responsive on all devices.</p>
+            <h3 id="grid">Grid</h3>
+            <p>If you don't like the gray background and boxed look of the design, you can simply remove the <code class="language-markup">boxed</code> CSS class from the body tag and achieve a flat white look.</p>
+            <p>Heinz is created using a 12-column grid. You can define a separate grid outside of our prepared layout, just make sure to add a class of <code class="language-markup">grid</code> to your parent.</p>
+            <p>The Children of the grid can vary in width. The class <code class="language-markup">item-span-suffix-columnNumbers</code> defines the behaviour of the item. There are different classes to help you manage the breakpoints. the <code class="language-markup">-lg</code>                suffix describes the item-span up until the breakpoint for medium screen size, <code class="language-markup">-md</code> up until the small breakpoint <code class="language-markup">-sm</code> up until extra small. To create a fully responsive
+                layout, it is recommended to combine the classes. As an example to create a grid that has 4 items in a row on large screens, 3 items on medium, 2 on small and 1 on extra small, you'd apply 3 clases to your grid item.</p>
 
+            <pre><code class="language-markup">&lt;div class=&quot;item-span-lg-3 item-span-md-4 item-span-sm-6&quot;&gt;&lt;/div&gt;</code></pre>
 
-      <p>
-        <ul>
-          <li>large = item-span-lg-3</li>
-          <li>medium = item-span-md-4</li>
-          <li>small = item-span-sm-6</li>
-        </ul>
-      </p>
+            <p>At the end of this documentation you'll find examples for all the grids.</p>
+        </section>
 
+        <section class="box">
+            <h2 id="components">Components</h2>
+            <h3 id="navigation">Navigation</h3>
+            <p>Heinz offers you a navigation on top of your page.</p>
+            <p>On the left side you can fill in your logo and title of the page. The logo you can change by filling in the source <code class="language-markup"> img src=""</code>. Your title you enter between span.</p>
 
-      <p>With the grid you can define how many items you'd have in a row. You can also use it without the section-tag.</p>
-      <p>If you want to design the grid differently, use the Sass Version for advanced transformation. You can get it <a href="https://www.google.com">here</a>.</p>
-
-      <p>At the end of this documentation you'll find examples for all the grids.</p>
-
-
-
-
-
-
-    </section>
-
-    <section class="box">
-      <h2 id="components">Components</h2>
-      <h3 id="navigation">Navigation</h3>
-      <p>Heinz offers you a navigation on top of your page.</p>
-      <p>On the left side you can fill in your logo and title of the page. The logo you can change by filling in the source <code class="language-markup"> img src=""</code>. Your title you enter between span.</p>
-
-      <pre><code class="language-markup">
+            <pre><code class="language-markup">
         &lt;a href=&quot;#&quot; class=&quot;branding&quot;&gt;
           &lt;img src=&quot;&quot;&gt;
           &lt;span&gt;&lt;/span&gt;
         &lt;/a&gt;
       </code></pre>
 
-      <p>On the right side of the navbar you find a dropdown menu. It works as a simple list. You can add or remove single items by using <code class="language-markup">&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item&lt;/a&gt;&lt;/li&gt;</code>. There's also a
-        dropdown included. You can find it within the item called Parent.
-      </p>
-      <pre><code class="language-markup">
+            <p>On the right side of the navbar you find a dropdown menu. It works as a simple list. You can add or remove single items by using <code class="language-markup">&lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item&lt;/a&gt;&lt;/li&gt;</code>. There's
+                also a dropdown included. You can find it within the item called Parent.
+            </p>
+            <pre><code class="language-markup">
         &lt;li class=&quot;dropdown&quot;&gt;
           &lt;span&gt;parent&lt;/span&gt;
           &lt;ul&gt;
@@ -197,88 +181,89 @@
       &lt;/li&gt;
     </code></pre>
 
-      <h3 id="progressbar">Progressbar</h3>
-      <p>There's a progressbar placed directly on the bottom of the navigation. It is splited similar to the sections. Every section gives a new chapter in the progressbar. The titles are choosen from the sections, adapted to the first title in it. If you
-        don't want those titles, you can remove them by deleting <code class="language-markup">display-titles</code> in the class.</p>
-      <pre><code class="language-markup">&lt;div class=&quot;scrollspy-wrapper display-titles&quot;&gt;</code></pre>
+            <h3 id="progressbar">Progressbar</h3>
+            <p>There's a progressbar placed directly on the bottom of the navigation. It is splited similar to the sections. Every section gives a new chapter in the progressbar. The titles are choosen from the sections, adapted to the first title in it.
+                If you don't want those titles, you can remove them by deleting <code class="language-markup">display-titles</code> in the class.</p>
+            <pre><code class="language-markup">&lt;div class=&quot;scrollspy-wrapper display-titles&quot;&gt;</code></pre>
 
-      </code>
-      </pre>
-
-
-      <h3 id="text">Text</h3>
-      <p><strong>Title</strong></p>
-      <p>Heinz offers you a range of modified titles.</p>
-
-      <h1>Überschrift mit h1</h1>
-      <h2>Überschrift mit h2</h2>
-      <h3>Überschrift mit h3</h3>
-      <h4>Überschrift mit h4</h4>
-      <h5>Überschrift mit h5</h5>
-      <h6>Überschrift mit h6</h6>
-
-      <p>If you'd like to have numbered titles you can add <code class="language-markup">numbered</code> to your section class.</p>
-
-      <p><code class="language-markup">&lt;section class=&quot;text-styles numbered box&quot;&gt;</code></p>
-      <p><strong>Textstyle</strong></p>
-
-      <p>We prepared lot of different stylings for your running text. To get a general idea here's a list about all the styles.</p>
+            </code>
+            </pre>
 
 
+            <h3 id="text">Text</h3>
+            <p><strong>Title</strong></p>
+            <p>Heinz offers you a range of modified titles.</p>
 
-<ul>
-      <li>text-lead <code class="language-markup">&lt;p class=&quot;text-lead&quot;&gt;&lt;/p&gt;</code></li>
-      <li>text-left <code class="language-markup">&lt;p class=&quot;text-left&quot;&gt;&lt;/p&gt;</code></li>
-      <li>text-right <code class="language-markup">&lt;p class=&quot;text-right&quot;&gt;&lt;/p&gt;</code></li>
-      <li>text center <code class="language-markup">&lt;p class=&quot;text-center&quot;&gt;&lt;/p&gt;</code></li>
+            <h1>Überschrift mit h1</h1>
+            <h2>Überschrift mit h2</h2>
+            <h3>Überschrift mit h3</h3>
+            <h4>Überschrift mit h4</h4>
+            <h5>Überschrift mit h5</h5>
+            <h6>Überschrift mit h6</h6>
 
+            <p>If you'd like to have numbered titles you can add <code class="language-markup">numbered</code> to your section class.</p>
 
-      <li>text-justify <code class="language-markup">&lt;p class=&quot;text-justifyn&quot;&gt;&lt;/p&gt;</code></li>
-      <li>text-hyphen <code class="language-markup">&lt;p class=&quot;text-hyphen&quot;&gt;&lt;/p&gt;</code></li>
-      <li>text-no-hyphen <code class="language-markup">&lt;p class=&quot;text-no-hyphen&quot;&gt;&lt;/p&gt;</code></li>
-      <li>text-small <code class="language-markup">&lt;p class=&quot;text-small&quot;&gt;&lt;/p&gt;</code></li>
-      <li>text-muted <code class="language-markup">&lt;p class=&quot;text-muted&quot;&gt;&lt;/p&gt;</code></li>
-      <li>text-highlighted <code class="language-markup">&lt;p class=&quot;text-highlighted&quot;&gt;&lt;/p&gt;</code></li>
-      </ul>
+            <p><code class="language-markup">&lt;section class=&quot;text-styles numbered box&quot;&gt;</code></p>
+            <p><strong>Textstyle</strong></p>
 
-
-      <p><strong>Blockquote</strong></p>
-
-      <p>For using a blockquote, enter the following code. Fill in your text between <code class="language-markup">&lt;blockquote&gt;</code> and <code class="language-markup">&lt;span&gt;</code>. The source you can add into <code class="language-markup">&lt;span&gt;&lt;/span&gt;</code></p>
-
-      <pre><code class="language-markup">&lt;blockquote&gt;&lt;span&gt;&lt;/span&gt;&lt;/blockquote&gt;</code></pre>
-
-      <blockquote></p>
-        This is how a blockquote can look like.
-    <span>Creators of Heinz</span>
-    </blockquote>
+            <p>We prepared lot of different stylings for your running text. To get a general idea here's a list about all the styles.</p>
 
 
 
+            <ul>
+                <li>text-lead <code class="language-markup">&lt;p class=&quot;text-lead&quot;&gt;&lt;/p&gt;</code></li>
+                <li>text-left <code class="language-markup">&lt;p class=&quot;text-left&quot;&gt;&lt;/p&gt;</code></li>
+                <li>text-right <code class="language-markup">&lt;p class=&quot;text-right&quot;&gt;&lt;/p&gt;</code></li>
+                <li>text center <code class="language-markup">&lt;p class=&quot;text-center&quot;&gt;&lt;/p&gt;</code></li>
 
-        <h3 id="image">Images</h3>
-        <p>You can add four different kinds of images:</p>
-        <p><strong>Image content-width</strong></p>
+
+                <li>text-justify <code class="language-markup">&lt;p class=&quot;text-justifyn&quot;&gt;&lt;/p&gt;</code></li>
+                <li>text-hyphen <code class="language-markup">&lt;p class=&quot;text-hyphen&quot;&gt;&lt;/p&gt;</code></li>
+                <li>text-no-hyphen <code class="language-markup">&lt;p class=&quot;text-no-hyphen&quot;&gt;&lt;/p&gt;</code></li>
+                <li>text-small <code class="language-markup">&lt;p class=&quot;text-small&quot;&gt;&lt;/p&gt;</code></li>
+                <li>text-muted <code class="language-markup">&lt;p class=&quot;text-muted&quot;&gt;&lt;/p&gt;</code></li>
+                <li>text-highlighted <code class="language-markup">&lt;p class=&quot;text-highlighted&quot;&gt;&lt;/p&gt;</code></li>
+            </ul>
 
 
-        <p>Copy the code and paste it into the <code class="language-markup">&lt;body&gt;</code>. Add the source of your picture into <code class="language-markup">&lt;img src=&quot;&quot;&gt;</code>.</p>
-        <pre><code class="language-markup">&lt;figure class=&quot;content-wide&quot;&gt;
+            <p><strong>Blockquote</strong></p>
+
+            <p>For using a blockquote, enter the following code. Fill in your text between <code class="language-markup">&lt;blockquote&gt;</code> and <code class="language-markup">&lt;span&gt;</code>. The source you can add into <code class="language-markup">&lt;span&gt;&lt;/span&gt;</code></p>
+
+            <pre><code class="language-markup">&lt;blockquote&gt;&lt;span&gt;&lt;/span&gt;&lt;/blockquote&gt;</code></pre>
+
+            <blockquote>
+                </p>
+                This is how a blockquote can look like.
+                <span>Creators of Heinz</span>
+            </blockquote>
+
+
+
+
+            <h3 id="image">Images</h3>
+            <p>You can add four different kinds of images:</p>
+            <p><strong>Image content-width</strong></p>
+
+
+            <p>Copy the code and paste it into the <code class="language-markup">&lt;body&gt;</code>. Add the source of your picture into <code class="language-markup">&lt;img src=&quot;&quot;&gt;</code>.</p>
+            <pre><code class="language-markup">&lt;figure class=&quot;content-wide&quot;&gt;
         &lt;img src=&quot;&quot; alt=&quot;&quot;&gt;
         &lt;figcaption&gt;
             Quellenangabe, &lt;a href=&quot;&quot;&gt;source&lt;/a&gt;
         &lt;/figcaption&gt;
     &lt;/figure&gt;</code></pre>
 
-        <figure class="content-wide">
-          <img src="img/mountains.jpg" alt="Image width of content">
-          <figcaption>
-            Image with content-width, <a href="https://unsplash.com/photos/gdE-5Oui1Y0"> source</a>
-          </figcaption>
-        </figure>
+            <figure class="content-wide">
+                <img src="img/mountains.jpg" alt="Image width of content">
+                <figcaption>
+                    Image with content-width, <a href="https://unsplash.com/photos/gdE-5Oui1Y0"> source</a>
+                </figcaption>
+            </figure>
 
-        <p><strong>Oversized image</strong></p>
-        <p>Copy the code and paste it into the <code class="language-markup">&lt;body&gt;</code>. Add the source of your picture into <code class="language-markup">&lt;img src=&quot;&quot;&gt;</code>.</p>
-        <pre><code class="language-markup">&lt;figure class=&quot;oversized&quot;&gt;
+            <p><strong>Oversized image</strong></p>
+            <p>Copy the code and paste it into the <code class="language-markup">&lt;body&gt;</code>. Add the source of your picture into <code class="language-markup">&lt;img src=&quot;&quot;&gt;</code>.</p>
+            <pre><code class="language-markup">&lt;figure class=&quot;oversized&quot;&gt;
         &lt;img src=&quot;&quot; alt=&quot;&quot;&gt;
         &lt;figcaption&gt;
             Quellenangabe, &lt;a href=&quot;&quot;&gt;source&lt;/a&gt;
@@ -287,34 +272,34 @@
     </code></pre>
 
 
-        <figure class="oversized">
-          <img src="img/mountains.jpg" alt="Oversized">
-          <figcaption>
-            Image with content-width, <a href="https://unsplash.com/photos/gdE-5Oui1Y0"> source</a>
-          </figcaption>
-        </figure>
+            <figure class="oversized">
+                <img src="img/mountains.jpg" alt="Oversized">
+                <figcaption>
+                    Image with content-width, <a href="https://unsplash.com/photos/gdE-5Oui1Y0"> source</a>
+                </figcaption>
+            </figure>
 
 
-        <p><strong>Oversized image with textoverlay</strong></p>
-        <p>Copy the code and paste it into the <code class="language-markup">&lt;body&gt;</code>. Add the source of your picture into <code class="language-markup">&lt;img src=&quot;&quot;&gt;</code>.</p>
-        <pre><code class="language-markup">&lt;div class=&quot;oversized textoverlay&quot;&gt;
+            <p><strong>Oversized image with textoverlay</strong></p>
+            <p>Copy the code and paste it into the <code class="language-markup">&lt;body&gt;</code>. Add the source of your picture into <code class="language-markup">&lt;img src=&quot;&quot;&gt;</code>.</p>
+            <pre><code class="language-markup">&lt;div class=&quot;oversized textoverlay&quot;&gt;
         &lt;img src=&quot;&quot; alt=&quot;&quot;&gt;
         &lt;div class=&quot;overlay-content&quot;&gt;This is overlay text&lt;/div&gt;
     &lt;/div&gt;</code></pre>
 
 
-        <div class="oversized textoverlay">
-          <img src="img/clouds.jpg" alt="image oversized">
-          <div class="overlay-content">This is overlay text</div>
-        </div>
+            <div class="oversized textoverlay">
+                <img src="img/clouds.jpg" alt="image oversized">
+                <div class="overlay-content">This is overlay text</div>
+            </div>
 
 
 
 
-        <p><strong>Full width image</strong></p>
-        <p>Copy the code and paste it into the <code class="language-markup">&lt;body&gt;</code>.
-          <p>Take care, for adding a full-width image you create a new section. Close the preceding section, add the code for the full width image and start a new section for the following code. Add the source of your picture into <code class="language-markup">&lt;img src=&quot;&quot;&gt;</code>.</p>
-          <pre><code class="language-markup">&lt;section class=&quot;full-width&quot;&gt;
+            <p><strong>Full width image</strong></p>
+            <p>Copy the code and paste it into the <code class="language-markup">&lt;body&gt;</code>.
+                <p>Take care, for adding a full-width image you create a new section. Close the preceding section, add the code for the full width image and start a new section for the following code. Add the source of your picture into <code class="language-markup">&lt;img src=&quot;&quot;&gt;</code>.</p>
+                <pre><code class="language-markup">&lt;section class=&quot;full-width&quot;&gt;
         &lt;figure&gt;
             &lt;img src=&quot;&quot; alt=&quot;image full width&quot;&gt;
             &lt;figcaption&gt;
@@ -322,46 +307,46 @@
             &lt;/figcaption&gt;
         &lt;/figure&gt;
     &lt;/section&gt;</code></pre>
-    </section>
+        </section>
 
-    <section class="full-width">
-      <figure>
-        <img src="img/clouds.jpg" alt="image full width">
-        <figcaption>
-          full width image <a href="https://unsplash.com/photos/viNPa2F7fnw"> source</a>
-        </figcaption>
-      </figure>
-    </section>
-
-
-    <section class="box">
-
-      <h3 id="video">Video</h3>
-      <p>There are three kinds of video players. Two are normal <strong>players</strong>, one with content width and the one oversized. Both you can start and stop with the play button. Enter the soucre into
-        <code class="language-markup">src=&quot;&quot;</code>. You can add links from the web or use local stored videos. Responsive video needs video-wrap and video, because paddinghack does not like to be used in grid.</p>
+        <section class="full-width">
+            <figure>
+                <img src="img/clouds.jpg" alt="image full width">
+                <figcaption>
+                    full width image <a href="https://unsplash.com/photos/viNPa2F7fnw"> source</a>
+                </figcaption>
+            </figure>
+        </section>
 
 
-      <p> <strong>player content-width</strong></p>
-      <pre><code class="language-markup">&lt;div class=&quot;video-wrap&quot;&gt;
+        <section class="box">
+
+            <h3 id="video">Video</h3>
+            <p>There are three kinds of video players. Two are normal <strong>players</strong>, one with content width and the one oversized. Both you can start and stop with the play button. Enter the soucre into
+                <code class="language-markup">src=&quot;&quot;</code>. You can add links from the web or use local stored videos. Responsive video needs video-wrap and video, because paddinghack does not like to be used in grid.</p>
+
+
+            <p> <strong>player content-width</strong></p>
+            <pre><code class="language-markup">&lt;div class=&quot;video-wrap&quot;&gt;
     &lt;div class=&quot;video&quot;&gt;
         &lt;iframe width=&quot;854&quot; height=&quot;480&quot; src=&quot;&quot; frameborder=&quot;0&quot; gesture=&quot;media&quot; allowfullscreen&gt;&lt;/iframe&gt;
     &lt;/div&gt;
 &lt;/div&gt;</code></pre>
 
 
-      <div class="video-wrap">
-        <div class="video">
-          <iframe width="854" height="480" src="https://www.youtube.com/embed/6gCd3VUOYWs?ecver=1" frameborder="0" gesture="media" allowfullscreen></iframe>
-        </div>
-      </div>
+            <div class="video-wrap">
+                <div class="video">
+                    <iframe width="854" height="480" src="https://www.youtube.com/embed/6gCd3VUOYWs?ecver=1" frameborder="0" gesture="media" allowfullscreen></iframe>
+                </div>
+            </div>
 
 
 
-      <p><strong>player oversized</strong></p>
-      <p>Adding class large will make video bigger. Enter the soucre into <code class="language-markup">src=&quot;&quot;</code>. You can add links from the web or use local stored videos. Responsive video needs video-wrap and video, because paddinghack does
-        not like to be used in grid.</p>
+            <p><strong>player oversized</strong></p>
+            <p>Adding class large will make video bigger. Enter the soucre into <code class="language-markup">src=&quot;&quot;</code>. You can add links from the web or use local stored videos. Responsive video needs video-wrap and video, because paddinghack
+                does not like to be used in grid.</p>
 
-      <pre><code class="language-markup">&lt;div class=&quot;video-wrap large&quot;&gt;
+            <pre><code class="language-markup">&lt;div class=&quot;video-wrap large&quot;&gt;
     &lt;div class=&quot;video&quot;&gt;
         &lt;iframe width=&quot;854&quot; height=&quot;480&quot; src=&quot;&quot; frameborder=&quot;0&quot; gesture=&quot;media&quot; allowfullscreen&gt;&lt;/iframe&gt;
     &lt;/div&gt;
@@ -369,17 +354,17 @@
 
 
 
-      <p><strong>background-video</strong></p>
-      <p>The third one is a display filling <strong>background-video</strong>. Autoplay, loop and muted inclued by default through URL attributes. There's an over-video container that darkens video and adds a grid where you can put textoverlay. You can remove
-        it by delete class <code class="language-markup">over-video grid</code> and its content. Enter the soucre into <code class="language-markup">src=&quot;&quot;</code>. You can add links from the web or use local stored videos. Responsive video needs
-        video-wrap and video, because paddinghack does not like to be used in grid.
+            <p><strong>background-video</strong></p>
+            <p>The third one is a display filling <strong>background-video</strong>. Autoplay, loop and muted inclued by default through URL attributes. There's an over-video container that darkens video and adds a grid where you can put textoverlay. You
+                can remove it by delete class <code class="language-markup">over-video grid</code> and its content. Enter the soucre into <code class="language-markup">src=&quot;&quot;</code>. You can add links from the web or use local stored videos.
+                Responsive video needs video-wrap and video, because paddinghack does not like to be used in grid.
 
-        <p>Take care, for adding a background-video you create a new section. Close the preceding section, add the code for the background-video and start a new section for the following code.
+                <p>Take care, for adding a background-video you create a new section. Close the preceding section, add the code for the background-video and start a new section for the following code.
 
-        </p>
+                </p>
 
 
-        <pre><code class="language-markup">&lt;section class=&quot;full-width&quot;&gt;
+                <pre><code class="language-markup">&lt;section class=&quot;full-width&quot;&gt;
     &lt;div class=&quot;video-wrap&quot;&gt;
         &lt;div class=&quot;video&quot;&gt;&gt;
             &lt;iframe src=&quot;&quot;&gt;&lt;/iframe&gt;
@@ -392,54 +377,54 @@
     &lt;/div&gt;
 &lt;/section&gt;</code></pre>
 
-    </section>
+        </section>
 
 
-    <section class="full-width">
-      <div class="video-wrap">
-        <div class="video">
-          <!--  video is set to autoplay and mute and loop through URL attributes, maybe build some kind of simpler way and create all that html through JS? -->
-          <iframe src="https://www.youtube.com/embed/6gCd3VUOYWs?ecver=1&autoplay=1&mute=1&controls=0&loop=1&playlist=6gCd3VUOYWs&modestbranding=1"></iframe>
-        </div>
-      </div>
-      <div class="over-video grid">
-        <div class="item-span-8 item-offset-2">
-          <h1 class="text-white">TItel</h1>
-        </div>
-      </div>
-    </section>
+        <section class="full-width">
+            <div class="video-wrap">
+                <div class="video">
+                    <!--  video is set to autoplay and mute and loop through URL attributes, maybe build some kind of simpler way and create all that html through JS? -->
+                    <iframe src="https://www.youtube.com/embed/6gCd3VUOYWs?ecver=1&autoplay=1&mute=1&controls=0&loop=1&playlist=6gCd3VUOYWs&modestbranding=1"></iframe>
+                </div>
+            </div>
+            <div class="over-video grid">
+                <div class="item-span-8 item-offset-2">
+                    <h1 class="text-white">TItel</h1>
+                </div>
+            </div>
+        </section>
 
 
-    <section class="box">
+        <section class="box">
 
 
-      <h3 id="audio">Audio</h3>
+            <h3 id="audio">Audio</h3>
 
-      <p>For insert audio files, copy the following html. Enter your audio source according to the file type into <code class="language-markup">&lt;source src=&quot;&quot;&gt;</code> and the type of your audio file
-        into <code class="language-markup">type=&quot;&quot;</code>. Unfortunately you can't customize the your audio, because it's not supported by browsers.</p>
+            <p>For insert audio files, copy the following html. Enter your audio source according to the file type into <code class="language-markup">&lt;source src=&quot;&quot;&gt;</code> and the type of your audio file into <code class="language-markup">type=&quot;&quot;</code>.
+                Unfortunately you can't customize the your audio, because it's not supported by browsers.</p>
 
 
 
-      <pre><code class="language-markup">&lt;audio controls&gt;
+            <pre><code class="language-markup">&lt;audio controls&gt;
           &lt;source src=&quot;&quot; type=&quot;audio/&quot;&gt;
               Your browser does not support the audio element.
       &lt;/audio&gt;</code></pre>
 
-      <audio controls>
+            <audio controls>
                 <source src="media/SampleAudio_0.4mb.mp3" type="audio/mpeg">
                     Your browser does not support the audio element.
             </audio>
 
 
-      <h3 id="slider">Slider</h3>
+            <h3 id="slider">Slider</h3>
 
-      <p>We offer you fully prepared sliders in two sizes. Content width and oversized. The Slider has images as background-image and also navigators in spans. Those are enabled automatically in js. You just have to copy the html into your index.html and
-        enter the URL <code class="language-markup">src=&quot;img/&quot;</code> of you background-images.</p>
+            <p>We offer you fully prepared sliders in two sizes. Content width and oversized. The Slider has images as background-image and also navigators in spans. Those are enabled automatically in js. You just have to copy the html into your index.html
+                and enter the URL <code class="language-markup">src=&quot;img/&quot;</code> of you background-images.</p>
 
 
-      <p><strong>Slider content-width</strong></p>
+            <p><strong>Slider content-width</strong></p>
 
-      <pre><code class="language-markup">&lt;div class=&quot;slider-wrap&quot;&gt;
+            <pre><code class="language-markup">&lt;div class=&quot;slider-wrap&quot;&gt;
           &lt;div class=&quot;slider&quot;&gt;
               &lt;div style=&quot;background-image: url(img/)&quot;&gt;&lt;img src=&quot;img/&quot; alt=&quot;slide 1&quot;&gt;&lt;/div&gt;
               &lt;div style=&quot;background-image: url(img/)&quot;&gt;&lt;img src=&quot;img/.jpg&quot; alt=&quot;slide 2&quot;&gt;&lt;/div&gt;
@@ -450,21 +435,21 @@
       &lt;/div&gt;</code></pre>
 
 
-      <div class="slider-wrap">
-        <div class="slider">
-          <div style="background-image: url(img/clouds.jpg)"><img src="img/clouds.jpg" alt="slide 1"></div>
-          <div style="background-image: url(img/mountains.jpg)"><img src="img/mountains.jpg" alt="slide 2"></div>
-          <div style="background-image: url(img/wheel.jpg)"><img src="img/wheel.jpg" alt="slide 3"></div>
-        </div>
-        <span class="navigator toggle-next">next</span>
-        <span class="navigator toggle-prev">prev</span>
-      </div>
+            <div class="slider-wrap">
+                <div class="slider">
+                    <div style="background-image: url(img/clouds.jpg)"><img src="img/clouds.jpg" alt="slide 1"></div>
+                    <div style="background-image: url(img/mountains.jpg)"><img src="img/mountains.jpg" alt="slide 2"></div>
+                    <div style="background-image: url(img/wheel.jpg)"><img src="img/wheel.jpg" alt="slide 3"></div>
+                </div>
+                <span class="navigator toggle-next">next</span>
+                <span class="navigator toggle-prev">prev</span>
+            </div>
 
-      <p><strong>Slider oversized</strong></p>
+            <p><strong>Slider oversized</strong></p>
 
-      <p>Adding class large makes slider bigger.</p>
+            <p>Adding class large makes slider bigger.</p>
 
-      <pre><code class="language-markup">&lt;div class=&quot;slider-wrap large&quot;&gt;
+            <pre><code class="language-markup">&lt;div class=&quot;slider-wrap large&quot;&gt;
           &lt;div class=&quot;slider&quot;&gt;
               &lt;div style=&quot;background-image: url(img/)&quot;&gt;&lt;img src=&quot;img/&quot; alt=&quot;slide 1&quot;&gt;&lt;/div&gt;
               &lt;div style=&quot;background-image: url(img/)&quot;&gt;&lt;img src=&quot;img/&quot; alt=&quot;slide 2&quot;&gt;&lt;/div&gt;
@@ -474,65 +459,65 @@
           &lt;span class=&quot;navigator toggle-prev&quot;&gt;prev&lt;/span&gt;
       &lt;/div&gt;</code></pre>
 
-      <div class="slider-wrap large">
-        <div class="slider">
-          <div style="background-image: url(img/clouds.jpg)"><img src="img/clouds.jpg" alt="slide 1"></div>
-          <div style="background-image: url(img/mountains.jpg)"><img src="img/mountains.jpg" alt="slide 2"></div>
-          <div style="background-image: url(img/wheel.jpg)"><img src="img/wheel.jpg" alt="slide 3"></div>
-        </div>
-        <span class="navigator toggle-next">next</span>
-        <span class="navigator toggle-prev">prev</span>
-      </div>
+            <div class="slider-wrap large">
+                <div class="slider">
+                    <div style="background-image: url(img/clouds.jpg)"><img src="img/clouds.jpg" alt="slide 1"></div>
+                    <div style="background-image: url(img/mountains.jpg)"><img src="img/mountains.jpg" alt="slide 2"></div>
+                    <div style="background-image: url(img/wheel.jpg)"><img src="img/wheel.jpg" alt="slide 3"></div>
+                </div>
+                <span class="navigator toggle-next">next</span>
+                <span class="navigator toggle-prev">prev</span>
+            </div>
 
 
-    </section>
+        </section>
 
 
 
 
-    <section class="box">
+        <section class="box">
 
-      <h3 id="sidestory">Sidestory</h3>
+            <h3 id="sidestory">Sidestory</h3>
 
-    </section>
-
-
-    <section class="has-sidestory">
-      <div class="content box">
-        <p>You can add an additional sidestory to your website. It's a small box on the side of your container. We prepared one for the left side and one for the right side. By clicking the link in the box, an overlay opens where you can add your additional
-          story. The background will be blurred then.</p>
-
-        <p>Take care, for adding a sidestory you create a new section. Close the preceding section, add the code for the sidestory and start a new section for the following code.
-
-          <p>In the box you can add title and lead and most important is the link to the overlay, which you can name however you want. You'll see it in the following html code.</p>
-
-      </div>
-      <div class="sidestory sidestory-right box">
-        <h2>Title</h2>
-        <p>Lead</p>
-        <br>
-        <p class="text-center">
-          <span class="toggle" data-toggle-overlay="overlay-1">Open Sidestory</span>
-        </p>
-      </div>
-    </section>
-
-    <section class="has-sidestory">
-      <div class="content box">
-        <p>If you want the sidestory on the left side change <code class="language-markup">sidestory-right</code> to <code class="language-markup">sidestory-left</code>.</p>
-
-      </div>
-      <div class="sidestory sidestory-left box">
-        this is the sidestory left
-      </div>
-
-    </section>
-
-    <section class="box">
+        </section>
 
 
-      <p>Add the code to your body and see how it works.</p>
-      <pre><code class="language-markup">&lt;section class=&quot;has-sidestory&quot;&gt;
+        <section class="has-sidestory">
+            <div class="content box">
+                <p>You can add an additional sidestory to your website. It's a small box on the side of your container. We prepared one for the left side and one for the right side. By clicking the link in the box, an overlay opens where you can add your
+                    additional story. The background will be blurred then.</p>
+
+                <p>Take care, for adding a sidestory you create a new section. Close the preceding section, add the code for the sidestory and start a new section for the following code.
+
+                    <p>In the box you can add title and lead and most important is the link to the overlay, which you can name however you want. You'll see it in the following html code.</p>
+
+            </div>
+            <div class="sidestory sidestory-right box">
+                <h2>Title</h2>
+                <p>Lead</p>
+                <br>
+                <p class="text-center">
+                    <span class="toggle" data-toggle-overlay="overlay-1">Open Sidestory</span>
+                </p>
+            </div>
+        </section>
+
+        <section class="has-sidestory">
+            <div class="content box">
+                <p>If you want the sidestory on the left side change <code class="language-markup">sidestory-right</code> to <code class="language-markup">sidestory-left</code>.</p>
+
+            </div>
+            <div class="sidestory sidestory-left box">
+                this is the sidestory left
+            </div>
+
+        </section>
+
+        <section class="box">
+
+
+            <p>Add the code to your body and see how it works.</p>
+            <pre><code class="language-markup">&lt;section class=&quot;has-sidestory&quot;&gt;
     &lt;div class=&quot;sidestory sidestory-right box&quot;&gt;
         &lt;h2&gt;Title&lt;/h2&gt;
         &lt;p&gt;Lead.&lt;/p&gt;
@@ -545,139 +530,141 @@
 
 
 
-      <p>For creating the content of the overlay you need the following code. You must insert it after the <code class="language-markup">&lt;main&gt;</code>-tag.</p>
-      <p>You can add all kinds of components mentioned into the section of the overlay. It can be as long as you want.</p>
+            <p>For creating the content of the overlay you need the following code. You must insert it after the <code class="language-markup">&lt;main&gt;</code>-tag.</p>
+            <p>You can add all kinds of components mentioned into the section of the overlay. It can be as long as you want.</p>
 
 
-      <pre><code class="language-markup">&lt;div class=&quot;overlay grid&quot; id=&quot;overlay-1&quot;&gt;
+            <pre><code class="language-markup">&lt;div class=&quot;overlay grid&quot; id=&quot;overlay-1&quot;&gt;
         &lt;section&gt;
             &lt;span class=&quot;toggle close&quot;&gt;x&lt;/span&gt;
             &lt;h1&gt;Title&lt;/h1&gt;
         &lt;/section&gt;
     &lt;/div&gt;</code></pre>
 
-      <h1 id="creators">Creators</h1>
-      <p>
-        <ul>
-          <li>Myriam Frisano</li>
-          <li>Sebastian Hubacher</li>
-          <li>Nadia Etter</li>
-          <li>Pascal Lüthi</li>
-          <li>Kyle Smith</li>
-          <li>Kim Schläpfer</li>
-        </ul>
-      </p>
-      <h1 id="copyright-and-license">Copyright and License</h1>
-      <p>Heinz is released under MIT.</p>
+            <h1 id="creators">Creators</h1>
+            <p>
+                <ul>
+                    <li>Myriam Frisano</li>
+                    <li>Sebastian Hubacher</li>
+                    <li>Nadia Etter</li>
+                    <li>Pascal Lüthi</li>
+                    <li>Kyle Smith</li>
+                    <li>Kim Schläpfer</li>
+                </ul>
+            </p>
+            <h1 id="copyright-and-license">Copyright and License</h1>
+            <p>Heinz is released under MIT.</p>
 
 
-    </section>
+        </section>
 
-    <section class="box">
-      <h3>Grids:</h3>
-    </section>
-    <section class="box">
-      <div style="border: 1px solid black" class="item-span-9">.item-span-9</div>
-      <div style="border: 1px solid black" class="item-span-8">.item-span-8</div>
-      <div style="border: 1px solid black" class="item-span-7">.item-span-7</div>
-      <div style="border: 1px solid black" class="item-span-6">.item-span-6</div>
-      <div style="border: 1px solid black" class="item-span-5">.item-span-5</div>
-      <div style="border: 1px solid black" class="item-span-4">.item-span-4</div>
-      <div style="border: 1px solid black" class="item-span-3">.item-span-3</div>
-      <div style="border: 1px solid black" class="item-span-2">.item-span-2</div>
-      <div style="border: 1px solid black" class="item-span-1">.item-span-1</div>
-    </section>
-    <section class="full-width">
-      <h1 class="item-span-12">Static Grid</h1>
-      <div class="item-span-12 box">item span 12</div>
-      <div class="item-span-11 box">item span 11</div>
-      <div class="item-span-10 box">item span 10</div>
-      <div class="item-span-9 box">item span 9</div>
-      <div class="item-span-8 box">item span 8</div>
-      <div class="item-span-7 box">item span 7</div>
-      <div class="item-span-6 box">item span 6</div>
-      <div class="item-span-5 box">item span 5</div>
-      <div class="item-span-4 box">item span 4</div>
-      <div class="item-span-3 box">item span 3</div>
-      <div class="item-span-2 box">item span 2</div>
-      <div class="item-span-1 box">item span 1</div>
+        <section class="box">
+            <h3>Grids:</h3>
+        </section>
+        <section class="box">
+            <div style="border: 1px solid black" class="item-span-9">.item-span-9</div>
+            <div style="border: 1px solid black" class="item-span-8">.item-span-8</div>
+            <div style="border: 1px solid black" class="item-span-7">.item-span-7</div>
+            <div style="border: 1px solid black" class="item-span-6">.item-span-6</div>
+            <div style="border: 1px solid black" class="item-span-5">.item-span-5</div>
+            <div style="border: 1px solid black" class="item-span-4">.item-span-4</div>
+            <div style="border: 1px solid black" class="item-span-3">.item-span-3</div>
+            <div style="border: 1px solid black" class="item-span-2">.item-span-2</div>
+            <div style="border: 1px solid black" class="item-span-1">.item-span-1</div>
+        </section>
+        <section class="full-width">
+            <h1 class="item-span-12">Static Grid</h1>
+            <div class="item-span-12 box">item span 12</div>
+            <div class="item-span-11 box">item span 11</div>
+            <div class="item-span-10 box">item span 10</div>
+            <div class="item-span-9 box">item span 9</div>
+            <div class="item-span-8 box">item span 8</div>
+            <div class="item-span-7 box">item span 7</div>
+            <div class="item-span-6 box">item span 6</div>
+            <div class="item-span-5 box">item span 5</div>
+            <div class="item-span-4 box">item span 4</div>
+            <div class="item-span-3 box">item span 3</div>
+            <div class="item-span-2 box">item span 2</div>
+            <div class="item-span-1 box">item span 1</div>
 
-      <h1 class="item-span-lg-12">Large Grid</h1>
-      <div class="item-span-lg-12 box">item span 12</div>
-      <div class="item-span-lg-11 box">item span 11</div>
-      <div class="item-span-lg-10 box">item span 10</div>
-      <div class="item-span-lg-9 box">item span 9</div>
-      <div class="item-span-lg-8 box">item span 8</div>
-      <div class="item-span-lg-7 box">item span 7</div>
-      <div class="item-span-lg-6 box">item span 6</div>
-      <div class="item-span-lg-5 box">item span 5</div>
-      <div class="item-span-lg-4 box">item span 4</div>
-      <div class="item-span-lg-3 box">item span 3</div>
-      <div class="item-span-lg-2 box">item span 2</div>
-      <div class="item-span-lg-1 box">item span 1</div>
+            <h1 class="item-span-lg-12">Large Grid</h1>
+            <div class="item-span-lg-12 box">item span 12</div>
+            <div class="item-span-lg-11 box">item span 11</div>
+            <div class="item-span-lg-10 box">item span 10</div>
+            <div class="item-span-lg-9 box">item span 9</div>
+            <div class="item-span-lg-8 box">item span 8</div>
+            <div class="item-span-lg-7 box">item span 7</div>
+            <div class="item-span-lg-6 box">item span 6</div>
+            <div class="item-span-lg-5 box">item span 5</div>
+            <div class="item-span-lg-4 box">item span 4</div>
+            <div class="item-span-lg-3 box">item span 3</div>
+            <div class="item-span-lg-2 box">item span 2</div>
+            <div class="item-span-lg-1 box">item span 1</div>
 
-      <h1 class="item-span-md-12">Medium Grid</h1>
-      <div class="item-span-md-12 box">item span 12</div>
-      <div class="item-span-md-11 box">item span 11</div>
-      <div class="item-span-md-10 box">item span 10</div>
-      <div class="item-span-md-9 box">item span 9</div>
-      <div class="item-span-md-8 box">item span 8</div>
-      <div class="item-span-md-7 box">item span 7</div>
-      <div class="item-span-md-6 box">item span 6</div>
-      <div class="item-span-md-5 box">item span 5</div>
-      <div class="item-span-md-4 box">item span 4</div>
-      <div class="item-span-md-3 box">item span 3</div>
-      <div class="item-span-md-2 box">item span 2</div>
-      <div class="item-span-md-1 box">item span 1</div>
+            <h1 class="item-span-md-12">Medium Grid</h1>
+            <div class="item-span-md-12 box">item span 12</div>
+            <div class="item-span-md-11 box">item span 11</div>
+            <div class="item-span-md-10 box">item span 10</div>
+            <div class="item-span-md-9 box">item span 9</div>
+            <div class="item-span-md-8 box">item span 8</div>
+            <div class="item-span-md-7 box">item span 7</div>
+            <div class="item-span-md-6 box">item span 6</div>
+            <div class="item-span-md-5 box">item span 5</div>
+            <div class="item-span-md-4 box">item span 4</div>
+            <div class="item-span-md-3 box">item span 3</div>
+            <div class="item-span-md-2 box">item span 2</div>
+            <div class="item-span-md-1 box">item span 1</div>
 
-      <h1 class="item-span-sm-12">Small Grid</h1>
-      <div class="item-span-sm-12 box">item span 12</div>
-      <div class="item-span-sm-11 box">item span 11</div>
-      <div class="item-span-sm-10 box">item span 10</div>
-      <div class="item-span-sm-9 box">item span 9</div>
-      <div class="item-span-sm-8 box">item span 8</div>
-      <div class="item-span-sm-7 box">item span 7</div>
-      <div class="item-span-sm-6 box">item span 6</div>
-      <div class="item-span-sm-5 box">item span 5</div>
-      <div class="item-span-sm-4 box">item span 4</div>
-      <div class="item-span-sm-3 box">item span 3</div>
-      <div class="item-span-sm-2 box">item span 2</div>
-      <div class="item-span-sm-1 box">item span 1</div>
+            <h1 class="item-span-sm-12">Small Grid</h1>
+            <div class="item-span-sm-12 box">item span 12</div>
+            <div class="item-span-sm-11 box">item span 11</div>
+            <div class="item-span-sm-10 box">item span 10</div>
+            <div class="item-span-sm-9 box">item span 9</div>
+            <div class="item-span-sm-8 box">item span 8</div>
+            <div class="item-span-sm-7 box">item span 7</div>
+            <div class="item-span-sm-6 box">item span 6</div>
+            <div class="item-span-sm-5 box">item span 5</div>
+            <div class="item-span-sm-4 box">item span 4</div>
+            <div class="item-span-sm-3 box">item span 3</div>
+            <div class="item-span-sm-2 box">item span 2</div>
+            <div class="item-span-sm-1 box">item span 1</div>
 
 
-      <h1 class="item-span-12">Combined</h1>
-      <div class="box item-span-lg-3 item-span-md-4 item-span-sm-6">item-span-lg-3 item-span-md-4 item-span-sm-6</div>
-      <div class="box item-span-lg-3 item-span-md-4 item-span-sm-6">item-span-lg-3 item-span-md-4 item-span-sm-6</div>
-      <div class="box item-span-lg-3 item-span-md-4 item-span-sm-6">item-span-lg-3 item-span-md-4 item-span-sm-6</div>
-      <div class="box item-span-lg-3 item-span-md-4 item-span-sm-6">item-span-lg-3 item-span-md-4 item-span-sm-6</div>
-      <div class="box item-span-lg-3 item-span-md-4 item-span-sm-6">item-span-lg-3 item-span-md-4 item-span-sm-6</div>
-      <div class="box item-span-lg-3 item-span-md-4 item-span-sm-6">item-span-lg-3 item-span-md-4 item-span-sm-6</div>
-      <div class="box item-span-lg-3 item-span-md-4 item-span-sm-6">item-span-lg-3 item-span-md-4 item-span-sm-6</div>
-      <div class="box item-span-lg-3 item-span-md-4 item-span-sm-6">item-span-lg-3 item-span-md-4 item-span-sm-6</div>
-    </section>
-  </main>
-  <div class="overlay grid" id="overlay-1">
-    <section>
-      <span class="toggle close">x</span>
-      <h1>Title in h1</h1>
-      <p>In this example we just added an image with content-wide. How you can add this picture you learn in chapter "Images"</p>
-      <figure class="content-wide">
-        <img src="img/mountains.jpg" alt="Image width of content">
-        <figcaption>
-          Image with content-width, <a href="https://unsplash.com/photos/gdE-5Oui1Y0"> source</a>
-        </figcaption>
-      </figure>
-    </section>
-  </div>
+            <h1 class="item-span-12">Combined</h1>
+            <div class="box item-span-lg-3 item-span-md-4 item-span-sm-6">item-span-lg-3 item-span-md-4 item-span-sm-6</div>
+            <div class="box item-span-lg-3 item-span-md-4 item-span-sm-6">item-span-lg-3 item-span-md-4 item-span-sm-6</div>
+            <div class="box item-span-lg-3 item-span-md-4 item-span-sm-6">item-span-lg-3 item-span-md-4 item-span-sm-6</div>
+            <div class="box item-span-lg-3 item-span-md-4 item-span-sm-6">item-span-lg-3 item-span-md-4 item-span-sm-6</div>
+            <div class="box item-span-lg-3 item-span-md-4 item-span-sm-6">item-span-lg-3 item-span-md-4 item-span-sm-6</div>
+            <div class="box item-span-lg-3 item-span-md-4 item-span-sm-6">item-span-lg-3 item-span-md-4 item-span-sm-6</div>
+            <div class="box item-span-lg-3 item-span-md-4 item-span-sm-6">item-span-lg-3 item-span-md-4 item-span-sm-6</div>
+            <div class="box item-span-lg-3 item-span-md-4 item-span-sm-6">item-span-lg-3 item-span-md-4 item-span-sm-6</div>
+        </section>
+    </main>
+    <div class="overlay grid" id="overlay-1">
+        <section>
+            <span class="toggle close">x</span>
+            <h1>Title in h1</h1>
+            <p>In this example we just added an image with content-wide. How you can add this picture you learn in chapter "Images"</p>
+            <figure class="content-wide">
+                <img src="img/mountains.jpg" alt="Image width of content">
+                <figcaption>
+                    Image with content-width, <a href="https://unsplash.com/photos/gdE-5Oui1Y0"> source</a>
+                </figcaption>
+            </figure>
+        </section>
+    </div>
 
-  <footer class="foot box">
-    footer
-    <span class="backtotop">Back To Top</span>
-  </footer>
+    <footer class="grid">
+        <div class="foot">
+            <p>
+                &copy; Heinz &middot; 2017 &middot; <span class="backtotop">Back To Top</span></p>
+        </div>
+    </footer>
 
-  <script src="js/jquery-3.2.1.js"></script>
-  <script src="js/heinz.min.js"></script>
-  <script src="js/prism.js"></script>
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/heinz.min.js"></script>
+    <script src="js/prism.js"></script>
 </body>
 
 </html>

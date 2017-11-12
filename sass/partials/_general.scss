@@ -61,9 +61,20 @@ section.box{
 
 .main{
     margin: 100px 0; // CHECK
+
+    &.no-margin{
+        margin: 0;
+    }
 }
 
 figure{
     padding-bottom: $gutter / 2; // adds some margin before images
     margin: 1.25rem 0;
+}
+
+footer{
+    margin-top: $gutter * 3;
+    margin-bottom: $gutter * 2;
+    padding: 5px;
+    font-style: italic;
 }

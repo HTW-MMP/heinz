@@ -2,22 +2,24 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <!-- make sure scaling is good for responsive content -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="css/main.css" rel="stylesheet">
-  <title>Heinz - Sass</title>
+    <meta charset="utf-8">
+    <!-- make sure scaling is good for responsive content -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/heinz.min.css" rel="stylesheet">
+    <link href="css/prism.css" rel="stylesheet" />
+    <title>Heinz - Documentation</title>
 </head>
 
 <body class="boxed">
-  <!-- header section -->
-  <header class="head">
-    <nav class="menu">
-      <a href="#" class="branding">
+    <!-- header section -->
+    <header class="head">
+        <nav class="menu boxed">
+            <div class="bar">
+                <a href="#" class="branding">
                 <img src="img/logo.jpg">
                 <span>Heinz - the storytelling Butler</span>
             </a>
-      <span class="nav-toggle">
+                <span class="nav-toggle">
                 <svg version="1.1" id="hamburger" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
             	 viewBox="0 0 77.3 67.6" style="enable-background:new 0 0 77.3 67.6;" xml:space="preserve">
                     <path d="M73.4,37.6H3.8c-2.1,0-3.8-1.7-3.8-3.8l0,0C0,31.7,1.7,30,3.8,30h69.7c2.1,0,3.8,1.7,3.8,3.8l0,0 C77.3,35.9,75.6,37.6,73.4,37.6z"/>
@@ -25,40 +27,141 @@
                     <path d="M73.4,67.6H3.8c-2.1,0-3.8-1.7-3.8-3.8l0,0C0,61.7,1.7,60,3.8,60h69.7c2.1,0,3.8,1.7,3.8,3.8l0,0 C77.3,65.9,75.6,67.6,73.4,67.6z"/>
                 </svg>
             </span>
-            <ul>
-                <li><span class="nav-toggle">close</span></li>
-                <li><a href="#">Home</a></li>
-                <li><a href="/documentation.html">Documentation</a></li>
-                <li><a href="#">Sass</a></li>
-            </ul>
-      <!-- <div class="scrollspy display-titles"> -->
-    </nav>
-  </header>
-  <!--  main section has class grid, in the grid there are secions, if section needs background, add class box -->
-  <main class="main grid">
-    <section class="box">
+                <ul>
+                    <li><span class="nav-toggle">close</span></li>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="documentation.html">Documentation</a></li>
+                    <li><a href="/docSass.html">Sass</a></li>
+                </ul>
+            </div>
+            <div class="scrollspy-wrapper display-titles">
+                <div class="scrollbar"></div>
+            </div>
+        </nav>
+    </header>
+    <!--  main section has class grid, in the grid there are secions, if section needs background, add class box -->
+    <main class="main grid numbered">
+        <section class="box" data-section-title="Intro">
+            <h1>Advanced Uses for Heinz</h1>
+            <p class="text-lead">Heinz was built using Sass which enables a lot of powerful customization options. This Page guides you through the process of adjusting the framework to your needs.</p>
 
+            <p>Heinz was built for modern browsers using modern tools. We personally really like working with the <a href="https://prepros.io/" target="_blank">Prepros Program</a> which offers a GUI for common command-line tools.</p>
+            <p>Heinz comes with a prepros file included, which will ensure that all compiling is done correctly and no tool is forgotten.</p>
+            <p>However, if you prefer working with other build-tools or just run the tasks manually, you are very welcome to do that. If you are at that stage of advanced you most probably won't need any help from us anyways. So why are you still reading? Go check our code directly.</p>
+        </section>
+        <section class="box" data-section-title="Sass">
+            <h1>Simple Adjustments with Sass</h1>
+            <p>All important settings that you might want to customize have been made using Sass Variables. There is a Settings Partial within the Sass folder which contains all of our settings. You can go ahead and play in there, but we wouldn't recommend
+                that.</p>
+            <p>Our recommendation is to keep all the defaults in case you want to roll back on something and use the overwrite partial we provided.</p>
+            <p>Overwriting is very simple. You want to open up the Settings file for referencing, copy the variable name into the overwrite file and then just include your new value.</p>
+            <p>As an example if you'd like to change the background color, switch the headings and main text font and change the menu background color, you'd do something like this.</p>
+            <pre><code class="language-scss">$main-font: $sans-serif;
+$headings-font: $serif;
+$background-color: #eee;
+$menu-bg: black;</code></pre>
+        </section>
+        <section class="box">
+            <h1>Custom Grid</h1>
+            <p>There is an additonal empty partial called custom which is the perfect place to add additional Sass Code. Heinz icludes a powerful Grid Mixin, which helps you create a fun layout in no time. You know, in case you want to go a bit crazy.</p>
+            <p>Let's say you want to build a custom Grid like this. You could totally do this to a body tag as well and have a full-screen grid. <a href="customgrid.html" target="_blank">like here.</a></p>
+            <div class="customgrid item-span-8">
+                <div class="area-1"></div>
+                <div class="area-2"></div>
+                <div class="area-3"></div>
+                <div class="area-4"></div>
+                <div class="area-5"></div>
+                <div class="area-6"></div>
+                <div class="area-7"></div>
+            </div>
+            <p></p><p>Building this is super simple. Start by writing some HTML. To keep this simple I'm just working with a bunch of div tags.</p>
+            <pre><code class="language-markup">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
 
-      <h1>Sass</h1>
-      <h2>the storytelling butler</h2>
-      <p>Here we'll explain you how the Sass Version for advanced works. The following Video contains xxxxxxxx</p>
+&lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+    &lt;link href="css/heinz.min.css" rel="stylesheet"&gt;
+    &lt;title&gt;Heinz - Documentation&lt;/title&gt;
+&lt;/head&gt;
 
-      <div class="video-wrap">
-        <div class="video">
-          <iframe width="854" height="480" src="https://www.youtube.com/embed/6gCd3VUOYWs?ecver=1" frameborder="0" gesture="media" allowfullscreen></iframe>
+&lt;body class="customgrid"&gt;
+    &lt;div class="area-1"&gt;&lt;/div&gt;
+    &lt;div class="area-2"&gt;&lt;/div&gt;
+    &lt;div class="area-3"&gt;&lt;/div&gt;
+    &lt;div class="area-4"&gt;&lt;/div&gt;
+    &lt;div class="area-5"&gt;&lt;/div&gt;
+    &lt;div class="area-6"&gt;&lt;/div&gt;
+    &lt;div class="area-7"&gt;&lt;/div&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;</code></pre>
+
+            <p>Next is building the Sass. The Grid Creator is a mixin, that takes 4 values. The rows, the columns, the list of elements and the grid layout.</p>
+            <p>In the example we are working with a simple 4x4 layout, that breaks into a 2x5 grid.</p>
+            <p>Adding this Sass to the _custom.scss partial file, we'll start with two variables. One of them is the breakpoint at which we want our layout to break and the other is a list of colors. This example uses some background colors and stretches all grid items, to fill the full screen. Accomplishing this is just a few lines of SCSS.</p>
+            <pre><code class="language-scss">$breakpoint: 850px;
+
+$grid-colors: #F5C7CA, #E779AE, #3759A0, #A0CEEC, #EBEBEB, #D7E6E8, #D6D3EE;
+
+@each $c in $grid-colors {
+    $i: index($grid-colors, $c);
+    .area-#{$i} {
+        background: $c;
+        box-shadow: inset 0px 0px 5px darken($c, 30%);
+    }
+}
+
+.customgrid{
+    width: 100%;
+    height: 100vh;
+    align-items: stretch;
+}</code></pre>
+
+            <p>Now for the actual Grid Part. We're using auto sizing for our grid items in this example, passing the list of items will assign the area to the container with the class of the same name in the HTML. So make sure you use those area names as your class names, in order for this to work. The amount of classes is variable, you can pass an empty list too, which is what we do, when we call the gridCreator mixing again, for our media query. Then just build the layout, and you're done.</p>
+
+            <pre><code class="language-scss">.customgrid{
+    width: 100%;
+    height: 100vh;
+    align-items: stretch;
+
+    @include gridCreator(
+        auto auto auto auto,
+        auto auto auto auto,
+        (area-1, area-2, area-3, area-4, area-5, area-6, area-7),
+        'area-1 area-2 area-3 area-3',
+        'area-4 area-2 area-3 area-3',
+        'area-4 area-5 area-5 area-6',
+        'area-7 area-7 area-7 area-6');
+
+    @media screen and (max-width: $breakpoint){
+        @include gridCreator(
+            auto auto auto auto auto,
+            auto auto,
+            (),
+            'area-1 area-2',
+            'area-3 area-3',
+            'area-4 area-5',
+            'area-6 area-5',
+            'area-7 area-7');
+    }
+}</code></pre>
+
+            <p>The possibilities of this are infinite and will help in creating some very interesting looks with ease.</p>
+
+        </section>
+    </main>
+
+    <footer class="grid">
+        <div class="foot">
+            <p>
+                &copy; Heinz &middot; 2017 &middot; <span class="backtotop">Back To Top</span></p>
         </div>
-      </div>
+    </footer>
 
-    </section>
-  </main>
-
-  <footer class="foot box">
-  footer
-    <span class="backtotop">Back To Top</span>
-  </footer>
-
-  <script src="js/jquery-3.2.1.js"></script>
-  <script src="js/heinz.min.js"></script>
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/heinz.min.js"></script>
+    <script src="js/prism.js"></script>
 </body>
 
 </html>

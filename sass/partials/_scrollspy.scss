@@ -1,5 +1,6 @@
 .scrollspy-wrapper{
     height: $scrollspy-height;
+    // @include flexbox(row, wrap, space-between, center);
 
     &.display-titles{
         height: $scrollspy-height-titles;
@@ -18,25 +19,31 @@
     }
 
     margin:0;
-    // top: 42px;
     position: relative;
     left: 0;
-//     position: fixed;
     width: 100%;
     background: $menu-bg;
-    // z-index: 999;
 
     .scrollspy {
         width: auto;
         height: 100%;
         position: absolute;
-        background: rgba(white, .3);
-        // z-index:99999;
         cursor: pointer;
-        padding-right: -5px;
         white-space: nowrap;
         color: white;
         font-size: 0;
+        padding: 0 $gutter/2;
+        box-sizing: border-box;
+
+        &:after{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: calc(100% - 7px);
+            background: rgba(white, .3);
+        }
     }
 
     .scrollbar {

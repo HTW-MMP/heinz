@@ -6,6 +6,9 @@
 // settings
 @import "settings";
 
+// Overwriting Variables
+@import "overwrite";
+
 // Webfonts
 @import "partials/fontloader";
 
@@ -22,8 +25,4 @@
 @import "partials/backtotop";
 @import "partials/scrollspy";
 @import "partials/nav";
-
-// Dumpster, to be sorted out
-@import "partials/tobetakencareof";
-
-// @import "partials/gridplayground";
+@import "partials/custom";

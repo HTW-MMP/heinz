@@ -1,3 +1,4 @@
+// Slider 
 $('.slider').each(function() {
     $(this).children('div').first().addClass('active');
 });
