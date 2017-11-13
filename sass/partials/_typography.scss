@@ -142,6 +142,19 @@ a,
             text-decoration: underline;
         }
     }
+
+    &.btn{
+        border-radius: $gutter*2;
+        padding: $gutter/1.5 $gutter*4;
+        border: 2px solid currentColor;
+        margin: auto $gutter;
+        line-height: 3;
+        white-space: nowrap;
+
+        @media screen and (max-width: 600px){
+            padding: $gutter/1.5 $gutter*2;
+        }
+    }
 }
 
 blockquote{

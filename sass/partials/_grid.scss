@@ -133,7 +133,7 @@
             @extend .item-offset-0;
             position: relative;
             margin: 0;
-            
+
             figure, iframe, video, .video-wrap, .over-video{
                 @extend .item-span-md-#{$column-count};
                 @extend .item-offset-0;
@@ -154,7 +154,7 @@
                 background: $video-overlay-background;
             }
 
-            figcaption, p, iframe, audio, pre, code, ul{
+            figcaption, p, iframe, audio, ul{
                 @extend .item-span-md-#{$section-content-span};
                 @extend .item-offset-md-#{($section-span - $section-content-span)};
                 position: absolute;;
@@ -221,7 +221,7 @@
             }
         }
 
-        .oversized {
+        .oversized, pre {
             @extend .item-span-#{$section-span};
             display: grid;
             grid-template-columns: repeat(#{$section-span}, 1fr);
@@ -231,6 +231,9 @@
 
             img{
                 @extend .item-span-md-#{$section-span};
+            }
+            code{
+                padding: 0 $gutter;
             }
             div, figcaption, p{
                 @extend .item-span-#{$section-content-span};
@@ -258,7 +261,7 @@
                 font-style: $textoverlay-font-style;
             }
         }
-        h1, h2, h3, h4, h5, h6, p, img, .content-wide, .slider-wrap, .video-wrap, pre, audio, iframe, ul {
+        h1, h2, h3, h4, h5, h6, p, img, .content-wide, .slider-wrap, .video-wrap, audio, iframe, ul {
             @extend .item-span-#{$section-content-span};
             @extend .item-offset-#{($section-span - $section-content-span)/2};
             width: 100%;

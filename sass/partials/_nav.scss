@@ -88,6 +88,7 @@
         li{
             list-style: none;
             display: inline-block;
+            padding: 0 $gutter;
 
             @media screen and (max-width: $menu-collapse){
                 display: block;

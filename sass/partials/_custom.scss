@@ -1,3 +1,43 @@
+.welcome{
+    @include flexbox(row, wrap, center, center);
+}
+.logo-wrap{
+    max-width: 500px;
+    width: 80%;
+    margin: 2rem auto;
+}
+.heinz-logo{
+    @include paddinghack(100%, 614.93, 252.39, svg);
+}
+#heinz_logo{
+    .cls-1 {
+        font-size: 140.92px;
+        font-family: $serif;
+    }
+    .cls-1,
+    .cls-3,
+    .cls-7 {
+        fill: $bright-blue;
+    }
+    .cls-2 {
+        fill: none;
+        stroke: $bright-blue;
+        stroke-miterlimit: 10;
+    }
+    .cls-3 {
+        font-size: 40.65px;
+        font-family: $sans-serif;
+    }
+    .cls-4 {
+        letter-spacing: -0.03em;
+    }
+    .cls-5 {
+        letter-spacing: -0.03em;
+    }
+    .cls-6 {
+        letter-spacing: -0.02em;
+    }
+}
 .logo-img{
     margin: 2rem 0;
     @include flexbox(row, wrap, center, center);
@@ -11,6 +51,8 @@
         }
     }
 }
+
+
 $breakpoint: 850px;
 
 $grid-colors: #F5C7CA, #E779AE, #3759A0, #A0CEEC, #EBEBEB, #D7E6E8, #D6D3EE;

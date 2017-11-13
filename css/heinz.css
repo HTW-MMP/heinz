@@ -447,6 +447,23 @@ a:hover, .backtotop:hover,
   color: #968572;
 }
 
+a.btn, .btn.backtotop,
+.toggle.btn {
+  border-radius: 20px;
+  padding: 6.66667px 40px;
+  border: 2px solid currentColor;
+  margin: auto 10px;
+  line-height: 3;
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 600px) {
+  a.btn, .btn.backtotop,
+  .toggle.btn {
+    padding: 6.66667px 20px;
+  }
+}
+
 blockquote {
   font-family: "Libre Baskerville", "Times New Roman", serif;
   font-style: italic;
@@ -508,7 +525,7 @@ blockquote span {
 
 .text-highlighted {
   background: #65A3D9;
-  color: black;
+  color: white;
   padding: 3px 0 1px 0;
 }
 
@@ -639,13 +656,13 @@ body .foot {
   grid-column-end: span 12;
 }
 
-.grid .item-span-6, .grid section .oversized div, .grid section .oversized figcaption, .grid section .oversized p, .grid section h1, .grid section h2, .grid section h3, .grid section h4, .grid section h5, .grid section h6, .grid section p, .grid section img, .grid section .content-wide, .grid section .slider-wrap, .grid section .video-wrap, .grid section pre, .grid section audio, .grid section iframe, .grid section ul {
+.grid .item-span-6, .grid section .oversized div, .grid section .oversized figcaption, .grid section .oversized p, .grid section pre div, .grid section pre figcaption, .grid section pre p, .grid section h1, .grid section h2, .grid section h3, .grid section h4, .grid section h5, .grid section h6, .grid section p, .grid section img, .grid section .content-wide, .grid section .slider-wrap, .grid section .video-wrap, .grid section audio, .grid section iframe, .grid section ul {
   grid-column-start: auto;
   grid-column-end: span 6;
 }
 
 .grid .item-span-sm-6,
-.grid .item-span-md-6, .grid section.full-width figcaption, .grid section.full-width p, .grid section.full-width iframe, .grid section.full-width audio, .grid section.full-width pre, .grid section.full-width code, .grid section.full-width ul, .grid section .full-width figcaption, .grid section .full-width p, .grid section .full-width iframe, .grid section .full-width audio, .grid section .full-width pre, .grid section .full-width code, .grid section .full-width ul,
+.grid .item-span-md-6, .grid section.full-width figcaption, .grid section.full-width p, .grid section.full-width iframe, .grid section.full-width audio, .grid section.full-width ul, .grid section .full-width figcaption, .grid section .full-width p, .grid section .full-width iframe, .grid section .full-width audio, .grid section .full-width ul,
 .grid .item-span-lg-6 {
   grid-column-start: auto;
   grid-column-end: span 12;
@@ -663,13 +680,13 @@ body .foot {
   grid-column-end: span 12;
 }
 
-.grid .item-span-8, .grid section .oversized, .grid section h1.large, .grid section h2.large, .grid section h3.large, .grid section h4.large, .grid section h5.large, .grid section h6.large, .grid section p.large, .grid section img.large, .grid section .content-wide.large, .grid section .slider-wrap.large, .grid section .video-wrap.large, .grid section pre.large, .grid section audio.large, .grid section iframe.large, .grid section ul.large {
+.grid .item-span-8, .grid section .oversized, .grid section pre, .grid section h1.large, .grid section h2.large, .grid section h3.large, .grid section h4.large, .grid section h5.large, .grid section h6.large, .grid section p.large, .grid section img.large, .grid section .content-wide.large, .grid section .slider-wrap.large, .grid section .video-wrap.large, .grid section audio.large, .grid section iframe.large, .grid section ul.large {
   grid-column-start: auto;
   grid-column-end: span 8;
 }
 
 .grid .item-span-sm-8,
-.grid .item-span-md-8, .grid .foot, .grid section, .grid section.has-sidestory .content, .grid section .oversized img,
+.grid .item-span-md-8, .grid .foot, .grid section, .grid section.has-sidestory .content, .grid section .oversized img, .grid section pre img,
 .grid .item-span-lg-8 {
   grid-column-start: auto;
   grid-column-end: span 12;
@@ -723,7 +740,7 @@ body .foot {
   grid-column-end: span 12;
 }
 
-.grid .item-offset-0, .grid section.full-width, .grid section .full-width, .grid section.full-width figure, .grid section.full-width iframe, .grid section.full-width video, .grid section.full-width .video-wrap, .grid section.full-width .over-video, .grid section .full-width figure, .grid section .full-width iframe, .grid section .full-width video, .grid section .full-width .video-wrap, .grid section .full-width .over-video, .grid section.has-sidestory, .grid section h1.large, .grid section h2.large, .grid section h3.large, .grid section h4.large, .grid section h5.large, .grid section h6.large, .grid section p.large, .grid section img.large, .grid section .content-wide.large, .grid section .slider-wrap.large, .grid section .video-wrap.large, .grid section pre.large, .grid section audio.large, .grid section iframe.large, .grid section ul.large {
+.grid .item-offset-0, .grid section.full-width, .grid section .full-width, .grid section.full-width figure, .grid section.full-width iframe, .grid section.full-width video, .grid section.full-width .video-wrap, .grid section.full-width .over-video, .grid section .full-width figure, .grid section .full-width iframe, .grid section .full-width video, .grid section .full-width .video-wrap, .grid section .full-width .over-video, .grid section.has-sidestory, .grid section h1.large, .grid section h2.large, .grid section h3.large, .grid section h4.large, .grid section h5.large, .grid section h6.large, .grid section p.large, .grid section img.large, .grid section .content-wide.large, .grid section .slider-wrap.large, .grid section .video-wrap.large, .grid section audio.large, .grid section iframe.large, .grid section ul.large {
   grid-column-start: 1;
 }
 
@@ -733,12 +750,12 @@ body .foot {
   grid-column-start: auto;
 }
 
-.grid .item-offset-1, .grid section .oversized div, .grid section .oversized figcaption, .grid section .oversized p, .grid section h1, .grid section h2, .grid section h3, .grid section h4, .grid section h5, .grid section h6, .grid section p, .grid section img, .grid section .content-wide, .grid section .slider-wrap, .grid section .video-wrap, .grid section pre, .grid section audio, .grid section iframe, .grid section ul {
+.grid .item-offset-1, .grid section .oversized div, .grid section .oversized figcaption, .grid section .oversized p, .grid section pre div, .grid section pre figcaption, .grid section pre p, .grid section h1, .grid section h2, .grid section h3, .grid section h4, .grid section h5, .grid section h6, .grid section p, .grid section img, .grid section .content-wide, .grid section .slider-wrap, .grid section .video-wrap, .grid section audio, .grid section iframe, .grid section ul {
   grid-column-start: 2;
 }
 
 .grid .item-offset-sm-2,
-.grid .item-offset-md-2, .grid .foot, .grid section, .grid section.full-width figcaption, .grid section.full-width p, .grid section.full-width iframe, .grid section.full-width audio, .grid section.full-width pre, .grid section.full-width code, .grid section.full-width ul, .grid section .full-width figcaption, .grid section .full-width p, .grid section .full-width iframe, .grid section .full-width audio, .grid section .full-width pre, .grid section .full-width code, .grid section .full-width ul, .grid section.has-sidestory .content,
+.grid .item-offset-md-2, .grid .foot, .grid section, .grid section.full-width figcaption, .grid section.full-width p, .grid section.full-width iframe, .grid section.full-width audio, .grid section.full-width ul, .grid section .full-width figcaption, .grid section .full-width p, .grid section .full-width iframe, .grid section .full-width audio, .grid section .full-width ul, .grid section.has-sidestory .content,
 .grid .item-offset-lg-2 {
   grid-column-start: auto;
 }
@@ -951,7 +968,7 @@ body .foot {
     grid-column-start: auto;
     grid-column-end: span 5;
   }
-  .grid .item-span-md-6, .grid section.full-width figcaption, .grid section.full-width p, .grid section.full-width iframe, .grid section.full-width audio, .grid section.full-width pre, .grid section.full-width code, .grid section.full-width ul, .grid section .full-width figcaption, .grid section .full-width p, .grid section .full-width iframe, .grid section .full-width audio, .grid section .full-width pre, .grid section .full-width code, .grid section .full-width ul {
+  .grid .item-span-md-6, .grid section.full-width figcaption, .grid section.full-width p, .grid section.full-width iframe, .grid section.full-width audio, .grid section.full-width ul, .grid section .full-width figcaption, .grid section .full-width p, .grid section .full-width iframe, .grid section .full-width audio, .grid section .full-width ul {
     grid-column-start: auto;
     grid-column-end: span 6;
   }
@@ -959,7 +976,7 @@ body .foot {
     grid-column-start: auto;
     grid-column-end: span 7;
   }
-  .grid .item-span-md-8, .grid .foot, .grid section, .grid section.has-sidestory .content, .grid section .oversized img {
+  .grid .item-span-md-8, .grid .foot, .grid section, .grid section.has-sidestory .content, .grid section .oversized img, .grid section pre img {
     grid-column-start: auto;
     grid-column-end: span 8;
   }
@@ -985,7 +1002,7 @@ body .foot {
   .grid .item-offset-md-1, .grid section.has-sidestory .sidestory-left {
     grid-column-start: 2;
   }
-  .grid .item-offset-md-2, .grid .foot, .grid section, .grid section.full-width figcaption, .grid section.full-width p, .grid section.full-width iframe, .grid section.full-width audio, .grid section.full-width pre, .grid section.full-width code, .grid section.full-width ul, .grid section .full-width figcaption, .grid section .full-width p, .grid section .full-width iframe, .grid section .full-width audio, .grid section .full-width pre, .grid section .full-width code, .grid section .full-width ul, .grid section.has-sidestory .content {
+  .grid .item-offset-md-2, .grid .foot, .grid section, .grid section.full-width figcaption, .grid section.full-width p, .grid section.full-width iframe, .grid section.full-width audio, .grid section.full-width ul, .grid section .full-width figcaption, .grid section .full-width p, .grid section .full-width iframe, .grid section .full-width audio, .grid section .full-width ul, .grid section.has-sidestory .content {
     grid-column-start: 3;
   }
   .grid .item-offset-md-3 {
@@ -1159,13 +1176,11 @@ body .foot {
   background: rgba(0, 0, 0, 0.5);
 }
 
-.grid section.full-width figcaption, .grid section.full-width p, .grid section.full-width iframe, .grid section.full-width audio, .grid section.full-width pre, .grid section.full-width code, .grid section.full-width ul,
+.grid section.full-width figcaption, .grid section.full-width p, .grid section.full-width iframe, .grid section.full-width audio, .grid section.full-width ul,
 .grid section .full-width figcaption,
 .grid section .full-width p,
 .grid section .full-width iframe,
 .grid section .full-width audio,
-.grid section .full-width pre,
-.grid section .full-width code,
 .grid section .full-width ul {
   position: absolute;
   bottom: 10px;
@@ -1223,12 +1238,16 @@ body .foot {
   }
 }
 
-.grid section .oversized {
+.grid section .oversized, .grid section pre {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   padding: 1.25rem 0;
   position: relative;
   margin-bottom: 2rem;
+}
+
+.grid section .oversized code, .grid section pre code {
+  padding: 0 10px;
 }
 
 .grid section .textoverlay {
@@ -1256,7 +1275,7 @@ body .foot {
   font-style: italic;
 }
 
-.grid section h1, .grid section h2, .grid section h3, .grid section h4, .grid section h5, .grid section h6, .grid section p, .grid section img, .grid section .content-wide, .grid section .slider-wrap, .grid section .video-wrap, .grid section pre, .grid section audio, .grid section iframe, .grid section ul {
+.grid section h1, .grid section h2, .grid section h3, .grid section h4, .grid section h5, .grid section h6, .grid section p, .grid section img, .grid section .content-wide, .grid section .slider-wrap, .grid section .video-wrap, .grid section audio, .grid section iframe, .grid section ul {
   width: 100%;
 }
 
@@ -1659,6 +1678,7 @@ body .foot {
 .menu ul li {
   list-style: none;
   display: inline-block;
+  padding: 0 10px;
 }
 
 @media screen and (max-width: 600px) {
@@ -1683,6 +1703,87 @@ body .foot {
 
 .menu ul ul li {
   display: block;
+}
+
+.welcome {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.logo-wrap {
+  max-width: 500px;
+  width: 80%;
+  margin: 2rem auto;
+}
+
+.heinz-logo {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding: 41.0437% 0 0 0;
+  display: block;
+}
+
+.heinz-logo svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#heinz_logo .cls-1 {
+  font-size: 140.92px;
+  font-family: "Libre Baskerville", "Times New Roman", serif;
+}
+
+#heinz_logo .cls-1,
+#heinz_logo .cls-3,
+#heinz_logo .cls-7 {
+  fill: #65A3D9;
+}
+
+#heinz_logo .cls-2 {
+  fill: none;
+  stroke: #65A3D9;
+  stroke-miterlimit: 10;
+}
+
+#heinz_logo .cls-3 {
+  font-size: 40.65px;
+  font-family: "Work Sans", "Calibri", sans-serif;
+}
+
+#heinz_logo .cls-4 {
+  letter-spacing: -0.03em;
+}
+
+#heinz_logo .cls-5 {
+  letter-spacing: -0.03em;
+}
+
+#heinz_logo .cls-6 {
+  letter-spacing: -0.02em;
 }
 
 .logo-img {

@@ -3,7 +3,7 @@
 
 // set color based on lightness of the color given.
 @function black-or-white($c){
-    @if (lightness($c) >= 50){
+    @if (lightness($c) >= 65){
         @return black;
     }
     @else{
