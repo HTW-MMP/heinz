@@ -130,7 +130,7 @@ Heinz offers you a navigation on top of your page.
 On the left side you can fill in your logo and title of the page. The logo you can change by filling in the source `<img src=">"`. Your title you enter between `<span></span>`.
 
 ```
-<a href="#" class="branding">
+<a href="/" class="branding">
     <img src="">
     <span></span>
 </a>
