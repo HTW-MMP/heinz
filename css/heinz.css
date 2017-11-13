@@ -1486,7 +1486,7 @@ body .foot {
   top: 0;
   left: 0;
   height: 100%;
-  width: calc(100% - 7px);
+  width: calc(100% - 4px);
   background: rgba(255, 255, 255, 0.3);
 }
 

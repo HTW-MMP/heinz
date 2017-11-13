@@ -96,8 +96,7 @@ $("section").each(function(i) {
 
 $(document).scroll(function() {
     var scrollTop = $(document).scrollTop(),
-        currentTop = (100 / bodyheight * (scrollTop - navheight));
-
+        currentTop = ((scrollTop + $(window).outerHeight()) / bodyheight) * 100;
     $(".scrollbar").css("width", currentTop+'%');
 });
 
