@@ -1,13 +1,13 @@
-<header>
-  <p align="center">
-  <a href="https://getheinz.com"><img src="https://getheinz.com/img/logo.svg" width="72" height="72"></a>
+<header align="center">
+  <p>
+  <a href="https://getheinz.com"><img src="https://getheinz.com/img/heinz_logo.svg" width="72" height="72"></a>
 </p>
-  <h2 align="center">Heinz</h2>
-  <h3 align="center">the storytelling butler</h3>
-  <p align="center">
+  <h2>Heinz</h2>
+  <h3>the storytelling butler</h3>
+  <p>
     lightweight, modern, and powerful front-end framework for fast and easy multimedia storytelling.
     </p>
-    <p align="center">Made with ❤︎ in Switzerland @ HTW Chur.</p>
+    <p>Made with ❤︎ in Switzerland @ HTW Chur.</p>
 </header>
 <br>
 
@@ -16,7 +16,7 @@
 # Table of Contents
 - [Introduction](#introduction)  
    - [Quick start](#quick-start)
-   - [Starter template](#starter-template)
+   - [Freshness](#freshness)
    - [What's included](#whats-included)
 - [Documentation](#documentation)
   - [Layout](#layout)
@@ -38,26 +38,13 @@
 # Introduction
 ## Quick Start
 
-1. Download the latest release on [getheinz.com/download](https://getheinz.com/download) into your Project Folder.
-2. Open your `index.html` File.
-3. Copy-paste the stylesheet `<link>` into your `<head>` before all other stylesheets to load our CSS:
-
-    ```
-    <link rel="stylesheet" href="css/heinz.css">
-    ```
-
-4. Add the optional JavaScript near the end of your page, right before the closing `</body>` tag. Be sure to place jQuery first, as our JavaScript depends on that.
-
-      ```
-      <script src="js/jquery-3.2.1.min.js"></script>
-      <script src="js/heinz.js"></script>
-      ```
-
+1. Download the latest release on [getheinz.com](https://getheinz.com/) into your project folder.
+2. Open the included `index.html` file.
+3. Fill it with your content.
 5. And that’s about it — you’re about to come down the stretch and have your very own multimedia story. If you’re unsure about the general structure, keep reading for an example page template.
 
-## Starter template
+## Freshness
 Be sure to have your pages set up with the latest design and development standards. That means using an HTML5 doctype and including a viewport meta tag for proper responsive behaviors.
-
 
 
 ## What's included
@@ -66,12 +53,15 @@ Within the download you'll find the following directories and files, logically g
 
 You'll see something like this:
 
-Basic version for simple usecase:
+[Basic version](https://www.heinz.com/downloads/heinz.zip):
 ```
 heinz/
 ├── css/
 │   ├── heinz.css
 │   └── heinz.min.css
+├── fonts/
+│   ├── librebaskerville
+│   └── worksans
 └── js/
     ├── heinz.js
     └── heinz.min.js
@@ -79,19 +69,25 @@ heinz/
 
 
 
-For Code Masters we created a Sass Version. You can get it [here](https://www.google.com).
+For Code Masters we created a Sass Version. You can get it [here](https://www.heinz.com/downloads/heinz_sass.zip).
 
 ```
-heinz/
-├── sass/
-│   ├── heinz.scss
-│   └── assets/
-│        └── settings.css
+heinz_sass/
 ├── css/
-│   └── heinz.css
-└── js/
-    ├── heinz.js
-    └── heinz.min.js
+│   ├── heinz.css
+│   └── heinz.min.css
+├── fonts/
+│   ├── librebaskerville
+│   └── worksans
+├── js/
+│   ├── heinz.js
+│   └── heinz.min.js
+└── sass/
+    ├── _overwrite.scss
+    ├── _settings.scss
+    ├── partials
+    ├── toolbox
+    └── heinz.scss
 ```
 
 
@@ -102,13 +98,13 @@ heinz/
 ## Layout
 
 ### Responsive
-Heinz is fully responsive on all devices.
+Heinz is fully responsive and working on all devices.
 
 ### Grid
 
 The box-layout you can remove if you don't like the style. Then you've the whole page in the same color. No more grey box. You just have to remove the class `boxed` in `<body>`.
 
-Heinz is created on a 12-box grid. By default it uses the combined grid. There are also other prepared grids which you can use. We offer a large, medium and small. You can see them on the end of the page. The shortcut in the classes defines the choosen grid. For example:
+Heinz is created on a 12-box grid. By default it uses the combined grid. There are also other prepared grids which you can use. We offer a large, medium and small. You can see them on the end of the page. The shortcut in the classes defines the chosen grid. For example:
 
 - large = item-span-lg-3
 - medium = item-span-md-4
@@ -153,7 +149,7 @@ On the right side of the navbar you find a dropdown menu. It works as a simple l
 
 ### Progressbar
 
-There's a progressbar placed directly on the bottom of the navigation. It is splited similar to the sections. So for every section you have a chapter in the progressbar. The titles are choosen from the sections, adapted to the first title in it. If you don't want those titles, you can remove them by deleting `display-titles` in the class.
+There's a progressbar placed directly on the bottom of the navigation. It is splited similar to the sections. So for every section you have a chapter in the progressbar. The titles are chosen from the sections, adapted to the first title in it. If you don't want those titles, you can remove them by deleting `display-titles` in the class.
 
 ```
 <div class="scrollspy-wrapper display-titles">
@@ -181,7 +177,7 @@ We prepared lot of different stylings for your running text. To get a general id
 - text-left `<p class="text-left"></p>`
 - text-right `<p class="text-right"></p>`
 - text center `<p class="text-center"></p>`
-- text-justify `<p class="text-justifyn"></p>`
+- text-justify `<p class="text-justify"></p>`
 - text-hyphen `<p class="text-hyphen"></p>`
 - text-no-hyphen `<p class="text-no-hyphen"></p>`
 - text-small `<p class="text-small"></p>`
@@ -203,12 +199,11 @@ For using a blockquote, enter the following code. Fill in your text between `<bl
 
 ### Image
 
-You can add four different kinds of images:
-
-
-**Image content-width**
+There are four image formats defined.
 
 Copy the code and paste it into the `<body>` in your `index.html`. Add the source of your picture into `<img src="">`.
+
+**Image content-width**
 ```
 <figure class="content-wide">
     <img src="" alt="">
@@ -218,10 +213,7 @@ Copy the code and paste it into the `<body>` in your `index.html`. Add the sourc
 </figure>
 ```
 
-
 **Oversized image**
-
-Copy the code and paste it into the `<body>` in your `index.html`. Add the source of your picture into `<img src="">`.
 
 ```
 <figure class="oversized">
@@ -233,9 +225,6 @@ Copy the code and paste it into the `<body>` in your `index.html`. Add the sourc
 ```
 
 **Oversized image with textoverlay**
-
-Copy the code and paste it into the `<body>` in your `index.html`. Add the source of your picture into `<img src="">`.
-
 ```
 <div class="oversized textoverlay">
     <img src="" alt="">
@@ -243,12 +232,7 @@ Copy the code and paste it into the `<body>` in your `index.html`. Add the sourc
 </div>
 ```
 
-
-
 **Full width image**
-
-Copy the code and paste it into the `<body>` in your `index.html`. Add the source of your picture into `<img src="">`.
-
 ```
 <section class="full-width">
     <figure>
@@ -265,10 +249,7 @@ Copy the code and paste it into the `<body>` in your `index.html`. Add the sourc
 There are three kinds of video players you can embed into your `index.html`. Two are normal **players**, one with content width and the one oversized. Both you can start and stop with the play button. Enter the soucre into `src=""`. You can add links from the web or use local stored videos.
 Responsive video needs video-wrap and video, because paddinghack does not like to be used in grid.
 
-
  **player content-width**
-
-
 ```
 <div class="video-wrap">
     <div class="video">
@@ -277,11 +258,9 @@ Responsive video needs video-wrap and video, because paddinghack does not like t
 </div>
 ```
 
-
 **player oversized**
 
-Adding class large will make video bigger. Enter the soucre into `src=""`. You can add links from the web or use local stored videos.
-Responsive video needs video-wrap and video, because paddinghack does not like to be used in grid.
+Adding class large will make video bigger.
 
 
 ```
@@ -294,7 +273,7 @@ Responsive video needs video-wrap and video, because paddinghack does not like t
 
 **background-video**
 
-The third one is a display filling **background-video**. Autoplay, loop and muted inclued by default through URL attributes. There's an over-video container that darkens video and adds a grid where you can put textoverlay. You can remove it by delete class `over-video grid` and its content. Enter the soucre into `src=""`. You can add links from the web or use local stored videos.
+The third one is a display filling **background-video**. Autoplay, loop and muted are included by default through URL attributes. There's an over-video container that darkens video and adds a grid where you can put textoverlay. You can remove it by delete class `over-video grid` and its content. Enter the soucre into `src=""`. You can add links from the web or use local stored videos.
 Responsive video needs video-wrap and video, because paddinghack does not like to be used in grid.
 
 

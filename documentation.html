@@ -47,7 +47,7 @@
             </p>
             <p>Made with ❤︎ in Switzerland @ HTW Chur.</p>
             <h1>General Structure</h1>
-            <p>Heinz uses CSS-Grids for the overall layout. To get started we recommend using a minimalistic template.</p>
+            <p>Heinz uses CSS-Grids for the overall layout. To get started quickly we recommend using a minimalistic template.</p>
 
             <pre><code class="language-markup">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
@@ -81,7 +81,7 @@
         &lt;/div&gt;
     &lt;/footer&gt;
 
-    &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"&gt;&lt;/script&gt; 
+    &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"&gt;&lt;/script&gt;
     &lt;script src="js/heinz.min.js"&gt;&lt;/script&gt;
 &lt;/body&gt;
 
@@ -89,12 +89,10 @@
 
         </section>
         <section class="box">
-
-
             <h1>Introduction</h1>
             <h2 id="quick-start">Quick Start</h2>
             <ul>
-                <li>Download the latest release on <a href="https://getheinz.com/download">getheinz.com/download</a> into your Project Folder.</li>
+                <li>Download the latest release on <a href="https://getheinz.com/">getheinz.com/</a> into your Project Folder.</li>
                 <li>Open your index.html file.</li>
                 <li>Copy-paste the stylesheet link into your <code class="language-markup">&lt;head&gt;</code> before all other stylesheets to load our CSS:</li>
             </ul>
@@ -120,34 +118,43 @@
             <p>Basic version for simple usecase:</p>
 
             <pre><code class="language-markup">heinz/
-        ├── css/
-        │   ├── heinz.css
-        │   └── heinz.min.css
-        └── js/
-            ├── heinz.js
-            └── heinz.min.js</code></pre>
+            ├── css/
+            │   ├── heinz.css
+            │   └── heinz.min.css
+            ├── fonts/
+            │   ├── librebaskerville
+            │   └── worksans
+            └── js/
+                ├── heinz.js
+                └── heinz.min.js</code></pre>
 
 
             <p>If you want to work with Sass and do some customization, you can download the Advanced version. Refer to the <a href="docSass.html">Sass Docs</a> for some help.</p>
 
 
-            <pre><code class="language-markup">heinz/
-        ├── sass/
-        │   ├── heinz.scss
-        │   └── assets/
-        │        └── settings.css
-        ├── css/
-        │   └── heinz.css
-        └── js/
-            ├── heinz.js
-            └── heinz.min.js</code></pre>
+            <pre><code class="language-markup">heinz_sass/
+            ├── css/
+            │   ├── heinz.css
+            │   └── heinz.min.css
+            ├── fonts/
+            │   ├── librebaskerville
+            │   └── worksans
+            ├── js/
+            │   ├── heinz.js
+            │   └── heinz.min.js
+            └── sass/
+                ├── _overwrite.scss
+                ├── _settings.scss
+                ├── partials
+                ├── toolbox
+                └── heinz.scss</code></pre>
         </section>
 
         <section class="box">
             <h1 id="documentation">Documentation</h1>
             <h2 id="layout">Layout</h2>
             <h3 id="responsive">Responsive</h3>
-            <p>Heinz is fully responsive and fully adjustable on all devices.</p>
+            <p>Heinz is fully responsive and working on all devices.</p>
             <h3 id="grid">Grid</h3>
             <p>If you don't like the gray background and boxed look of the design, you can simply remove the <code class="language-markup">boxed</code> CSS class from the body tag and achieve a flat white look.</p>
             <p>Heinz is created using a 12-column grid. You can define a separate grid outside of our prepared layout, just make sure to add a class of <code class="language-markup">grid</code> to your parent.</p>
@@ -418,8 +425,8 @@
             <h4>Full width image</h4>
             <p>Copy the code and paste this into the <code class="language-markup">&lt;main&gt;</code>.
                 <p>Be careful, for adding a full-width image you need to create a new section. Close the preceding section, add the code for the full width image and start a new section for the following code. Add the source of your picture into <code class="language-markup">&lt;img src=&quot;&quot;&gt;</code>.</p>
-            
-            
+
+
                 <pre><code class="language-markup">&lt;section class="full-width"&gt;
     &lt;figure&gt;
         &lt;img src="image.jpg" alt="image full width"&gt;
@@ -446,7 +453,7 @@
             <p>There are three kinds of video players. Two are normal <strong>players</strong>, one with content width and the other one oversized. The third one is a full-width option.</p>
             <p>In our examples we work with YouTube Videos since they are the most common embedded video. If you want to use an HTML5 video, just replace the iframe with the video tag.</p>
             <p>Videos need to be wrapped in 2 containers to ensure they scale responsively.</p>
-            
+
             <h4>player content-width</h4>
             <pre><code class="language-markup">&lt;div class="video-wrap"&gt;
     &lt;div class="video"&gt;
@@ -481,7 +488,7 @@
             <p>The third option is a display filling <strong>background-video</strong>. Autoplay, loop and muted are inclued via URL attributes from the YouTube API. There's an over-video container that darkens the video and adds a grid where you can put a textoverlay.</p>
 
             <p>Be careful, for adding a background-video you need to create a new section. Close the preceding section, add the code for the full width video and start a new section for the following code.</p>
-            
+
                 <pre><code class="language-markup">&lt;section class="full-width"&gt;
     &lt;div class="video-wrap"&gt;
         &lt;div class="video"&gt;
@@ -533,7 +540,7 @@
             <h3 id="slider">Slider</h3>
             <p class="text-center"><span class="text-highlighted">This feature requires JavaScript.</span></p>
             <p>We offer you fully prepared responsive sliders in two sizes. Content width and oversized. The Slider has images as background-image and also navigators in spans. Those are enabled automatically in js. You just have to copy the html into a <code class="language-markup">section</code> and enter the URL <code class="language-markup">src=&quot;img/&quot;</code> of you background-images.</p>
-            
+
 
             <h4>Slider content-width</h4>
 
@@ -592,9 +599,9 @@
                 <h3 id="sidestory">Sidestory</h3>
                 <p class="text-center"><span class="text-highlighted">This feature requires JavaScript.</span></p>
                 <p>You can add additional sidestories to your website. These are small boxes on the side of your container. We prepared one for the left side and one for the right side. By placing an overlay toggle in the box, an overlay opens where you can add your additional story. The background will be blurred then.</p>
-                
+
                 <p>Sidestories require a separate section, the content needs to be placed within a content container and the sidestories either before or after the content. The placement of the sidestory box matters in the responsive view when the content will either be before or after the story.</p>
-                
+
                 <p>The Overlay can be placed anywhere in the code, we recommend at the end of the document though.</p>
                 <p>To open an overlay, you need to use the class toggle and a data-attribute referencing the ID of the overlay.</p>
             </div>
@@ -612,7 +619,7 @@
     &lt;div class="sidestory sidestory-left box"&gt;
         &lt;p&gt;this Sidestory is on the left side and does not open an overlay.&lt;/p&gt;
     &lt;/div&gt;
-    &lt;div class="content box"&gt;    
+    &lt;div class="content box"&gt;
         &lt;p&gt;Sidestory Content&lt;/p&gt;
     &lt;/div&gt;
     &lt;div class="sidestory sidestory-right box"&gt;
@@ -624,7 +631,7 @@
         &lt;/p&gt;
     &lt;/div&gt;
 &lt;/section&gt;</code></pre>
-        
+
             <p>For creating the content of the overlay you need the following code. Again, we like to place it at the end of our code. The Overlay can contain any of the components discussed.</p>
 
             <pre><code class="language-markup">&lt;div class="overlay grid" id="overlay-1"&gt;
@@ -664,7 +671,7 @@
             <h1>Overlay Title</h1>
             <p>In this example we just added an image with content-wide. How you can add this picture you learn in chapter "Images"</p>
             <p>You can close this overlay by clicking the x, clicking outside of the content or hitting "Esc" on your keyboard.</p>
-        
+
             <figure class="content-wide">
                 <img src="img/mountains.jpg" alt="Image width of content">
                 <figcaption>
