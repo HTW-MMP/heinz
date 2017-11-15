@@ -1,0 +1,349 @@
+<html>
+      <head>
+        <meta charset="UTF-8">
+        <title>README.md</title>
+      </head>
+      <body>
+        <p><header align="center">
+  <p>
+  <a href="https://getheinz.com"><img src="https://getheinz.com/img/heinz_logo.svg" width="72" height="72"></a>
+</p>
+  <h2>Heinz</h2>
+  <h3>the storytelling butler</h3>
+  <p>
+    lightweight, modern, and powerful front-end framework for fast and easy multimedia storytelling.
+    </p>
+    <p>Made with ❤︎ in Switzerland @ HTW Chur.</p>
+</header>
+<br /></p>
+<hr>
+<h1 id="table-of-contents">Table of Contents</h1>
+<ul>
+<li><a href="#introduction">Introduction</a>  <ul>
+<li><a href="#quick-start">Quick start</a></li>
+<li><a href="#freshness">Freshness</a></li>
+<li><a href="#whats-included">What&#39;s included</a></li>
+</ul>
+</li>
+<li><a href="#documentation">Documentation</a><ul>
+<li><a href="#layout">Layout</a><ul>
+<li><a href="#responsive">Responsive</a></li>
+<li><a href="#grid">Grid</a></li>
+</ul>
+</li>
+<li><a href="#components">Components</a><ul>
+<li><a href="#nav-bar">Nav Bar</a><ul>
+<li><a href="#navigation">Navigation</a></li>
+<li><a href="#progress-bar">Progress Bar</a></li>
+</ul>
+</li>
+<li><a href="#text">Text</a><ul>
+<li><a href="#headings">Headings</a></li>
+<li><a href="#paragraph-styles">Paragraph Styles</a></li>
+<li><a href="#blockquote">Blockquote</a></li>
+</ul>
+</li>
+<li><a href="#image">Image</a></li>
+<li><a href="#video">Video</a></li>
+<li><a href="#audio">Audio</a></li>
+<li><a href="#slider">Slider</a></li>
+<li><a href="#sidestory">Sidestory</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#creators">Creators</a></li>
+<li><a href="#copyright-and-license">Copyright and License</a></li>
+</ul>
+<hr>
+<h1 id="introduction">Introduction</h1>
+<h2 id="quick-start">Quick Start</h2>
+<pre><code>
+</code></pre><p><strong>or</strong></p>
+<ol>
+<li>Download the latest release on <a href="https://getheinz.com/">getheinz.com</a>.</li>
+<li>Open the included <code>index.html</code> file.</li>
+<li>Fill it with your content.</li>
+<li>And that’s about it — you’re about to come down the stretch and have your very own multimedia story. If you’re unsure about the general structure, keep reading for an example page template.</li>
+</ol>
+<h2 id="freshness">Freshness</h2>
+<p>Heinz is developed for modern browsers only - because the future is awesome.</p>
+<p>Always be sure to have your pages set up with the latest design and development standards. That means using an HTML5 doctype and including a viewport meta tag for proper responsive behaviors.</p>
+<h2 id="what-s-included">What&#39;s included</h2>
+<p>Within the download you&#39;ll find the following directories and files, logically grouping common assets and providing both compiled and minified variations. We provide compiled CSS and JS (<code>heinz.*</code>), as well as compiled and minified CSS and JS (<code>heinz.min.*</code>).</p>
+<p>You&#39;ll see something like this:</p>
+<p><a href="https://getheinz.com/downloads/heinz.zip">Basic version</a> for plug and play:</p>
+<pre><code>heinz/
+├── css/
+│   ├── heinz.css
+│   └── heinz.min.css
+├── fonts/
+│   ├── librebaskerville
+│   └── worksans
+└── js/
+    ├── heinz.js
+    └── heinz.min.js
+</code></pre><p>For Code Masters we created a <a href="https://getheinz.com/downloads/heinz_sass.zip">Sass Version</a>.
+<em>If you don&#39;t know how to use Sass and Compilers, this is not for you.</em></p>
+<pre><code>heinz_sass/
+├── css/
+│   ├── heinz.css
+│   └── heinz.min.css
+├── fonts/
+│   ├── librebaskerville
+│   └── worksans
+├── js/
+│   ├── heinz.js
+│   └── heinz.min.js
+└── sass/
+    ├── _overwrite.scss
+    ├── _settings.scss
+    ├── partials
+    ├── toolbox
+    └── heinz.scss
+</code></pre><hr>
+<h1 id="documentation">Documentation</h1>
+<h2 id="layout">Layout</h2>
+<h3 id="responsive">Responsive</h3>
+<p>Heinz is fully responsive and working on all devices.</p>
+<h3 id="grid">Grid</h3>
+<p>If you don&#39;t like the gray background and boxed look of the design, you can simply remove the <code>boxed</code> class from the body tag and achieve a flat white look.</p>
+<p>Heinz is created using a 12-column grid. You can define a separate grid outside of our prepared layout, just make sure to add the <code>grid</code> class to your parent.</p>
+<p>The Children of the grid can vary in width. The class <code>item-span-suffix-columnNumbers</code> defines the behaviour of the item. There are different classes to help you manage the breakpoints. the <code>-lg</code> suffix describes the item-span up until the breakpoint for medium screen size, <code>-md</code> up until the small breakpoint <code>-sm</code> up until extra small. To create a fully responsive layout, it is recommended to combine the classes. As an example to create a grid that has 4 items in a row on large screens, 3 items on medium, 2 on small and 1 on extra small, you&#39;d apply 3 classes to your grid item.</p>
+<pre><code>&lt;div class=&quot;item-span-lg-3 item-span-md-4 item-span-sm-6&quot;&gt;&lt;/div&gt;
+</code></pre><p>Take a look at <a href="https://getheinz.com/documentation.html#grid">these examples</a> to visualize, try resizing the window to see the behaviour.</p>
+<p>If you want to design the grid differently, use the <a href="https://getheinz.com/downloads/heinz_sass.zip">Sass Version</a> for advanced transformation.</p>
+<h2 id="components">Components</h2>
+<h3 id="navbar">Navbar</h3>
+<p><strong><em>This feature requires JavaScript</em></strong></p>
+<p>The Navbar in our example consists of the Navigation as well a visual representation of the sections and a progressbar.</p>
+<p>We recommend placing this Code in the <code>&lt;header&gt;</code>:</p>
+<pre><code>&lt;nav class=&quot;menu boxed&quot;&gt;
+    &lt;div class=&quot;bar&quot;&gt;
+        &lt;a href=&quot;/&quot; class=&quot;branding&quot;&gt;
+            &lt;!-- Brand --&gt;
+        &lt;/a&gt;
+        &lt;span class=&quot;nav-toggle&quot;&gt;
+            &lt;svg version=&quot;1.1&quot; id=&quot;hamburger&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; x=&quot;0px&quot; y=&quot;0px&quot; viewBox=&quot;0 0 77.3 67.6&quot; style=&quot;enable-background:new 0 0 77.3 67.6;&quot; xml:space=&quot;preserve&quot;&gt;&lt;path d=&quot;M73.4,37.6H3.8c-2.1,0-3.8-1.7-3.8-3.8l0,0C0,31.7,1.7,30,3.8,30h69.7c2.1,0,3.8,1.7,3.8,3.8l0,0 C77.3,35.9,75.6,37.6,73.4,37.6z&quot;/&gt;&lt;path d=&quot;M73.4,7.6H3.8C1.7,7.6,0,5.9,0,3.8l0,0C0,1.7,1.7,0,3.8,0h69.7c2.1,0,3.8,1.7,3.8,3.8l0,0C77.3,5.9,75.6,7.6,73.4,7.6z&quot;/&gt;&lt;path d=&quot;M73.4,67.6H3.8c-2.1,0-3.8-1.7-3.8-3.8l0,0C0,61.7,1.7,60,3.8,60h69.7c2.1,0,3.8,1.7,3.8,3.8l0,0 C77.3,65.9,75.6,67.6,73.4,67.6z&quot;/&gt;&lt;/svg&gt;
+        &lt;/span&gt;
+
+        &lt;!-- Navigation Code Here --&gt;
+    &lt;/div&gt;
+
+    &lt;!-- Progressbar Code Here --&gt;
+&lt;/nav&gt;
+</code></pre><h4 id="navigation">Navigation</h4>
+<p>On the left, you&#39;ll include all brandings. We planned for it to consist of a small logo as well as a short title.</p>
+<pre><code>&lt;a href=&quot;/&quot; class=&quot;branding&quot;&gt;
+    &lt;img src=&quot;icon.svg&quot;&gt;
+    &lt;span&gt;Story Title&lt;/span&gt;
+&lt;/a&gt;
+</code></pre><p>On the right, you have the option to include a list of links. The Menu comes with a dropdown option.</p>
+<p>Don&#39;t forget to include the <code>nav-toggle</code> and include the <code>heinz.js</code> to make sure the menu will work responsively and that the dropdowns will open up.</p>
+<pre><code>&lt;ul&gt;
+    &lt;li&gt;&lt;span class=&quot;nav-toggle&quot;&gt;close&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item&lt;/a&gt;&lt;/li&gt; &lt;!-- normal Item --&gt;
+    &lt;li class=&quot;dropdown&quot;&gt; &lt;!-- dropdown Item --&gt;
+        &lt;span&gt;parent&lt;/span&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Child&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Child&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Child&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Item&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre><h4 id="progressbar">Progressbar</h4>
+<p>The progressbar is a visual representation of all sections within a document. It is created using JavaScript.</p>
+<pre><code>&lt;div class=&quot;scrollspy-wrapper display-titles&quot;&gt;
+    &lt;div class=&quot;scrollbar&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre><p>There are two different version of the progressbar, a minimal one, without titles and one with titles displayed. (Refer to the <a href="https://getheinz.com/docsass.html">Sass Docs</a> to see those in action.)</p>
+<p>To toggle the title display all you do is add or remove <code>display-titles</code> from the wrapper classes.</p>
+<p>The title that is displayed can be defined using a data-attribute within the section tag, or represents the first heading within the section.</p>
+<pre><code>&lt;section data-section-title=&quot;Progressbar Title&quot;&gt;
+    &lt;!-- Content --&gt;
+&lt;/section&gt;
+</code></pre><h3 id="text-classes">Text Classes</h3>
+<p>We&#39;ve baked some text styling for you. See them <a href="https://getheinz.com/documentation.html#text">here</a> in action.</p>
+<h4 id="headings">Headings</h4>
+<p>Headings are automatically styled and can be automatically numbered. To enable numbered headings all you do is add the <code>numbered</code> class to the parent. If you only want the headings within a specific section, add the class to the section, if you want the whole document to have numbered headings, add the class to the body tag.</p>
+<pre><code>&lt;section class=&quot;numbered&quot;&gt;
+    &lt;h1&gt;Heading 1&lt;/h1&gt;
+    &lt;h2&gt;Heading 2&lt;/h2&gt;
+    &lt;h3&gt;Heading 3&lt;/h3&gt;
+    &lt;h3&gt;Heading 3&lt;/h3&gt;
+    &lt;h4&gt;Heading 4&lt;/h4&gt;
+    &lt;h5&gt;Heading 5&lt;/h5&gt;
+    &lt;h6&gt;Heading 6&lt;/h6&gt;
+    &lt;h1&gt;Heading 1&lt;/h1&gt;
+&lt;/section&gt;
+</code></pre><h4 id="paragraph-styles">Paragraph Styles</h4>
+<p>For your running text:</p>
+<ul>
+<li>text-lead <code>&lt;p class=&quot;text-lead&quot;&gt;&lt;/p&gt;</code></li>
+<li>text-left <code>&lt;p class=&quot;text-left&quot;&gt;&lt;/p&gt;</code></li>
+<li>text-right <code>&lt;p class=&quot;text-right&quot;&gt;&lt;/p&gt;</code></li>
+<li>text center <code>&lt;p class=&quot;text-center&quot;&gt;&lt;/p&gt;</code></li>
+<li>text-justify <code>&lt;p class=&quot;text-justify&quot;&gt;&lt;/p&gt;</code></li>
+<li>text-hyphen <code>&lt;p class=&quot;text-hyphen&quot;&gt;&lt;/p&gt;</code></li>
+<li>text-no-hyphen <code>&lt;p class=&quot;text-no-hyphen&quot;&gt;&lt;/p&gt;</code></li>
+<li>text-small <code>&lt;p class=&quot;text-small&quot;&gt;&lt;/p&gt;</code></li>
+<li>text-muted <code>&lt;p class=&quot;text-muted&quot;&gt;&lt;/p&gt;</code></li>
+<li>text-highlighted <code>&lt;p class=&quot;text-highlighted&quot;&gt;&lt;/p&gt;</code></li>
+</ul>
+<h4 id="blockquote">Blockquote</h4>
+<p>For using a blockquote, enter the following code. Fill in your text between <code>&lt;blockquote&gt;</code> and <code>&lt;span&gt;</code>. The source you can add into <code>&lt;span&gt;&lt;/span&gt;</code>.</p>
+<pre><code>&lt;blockquote&gt;
+  &quot;Have no fear of perfection,
+  you&#39;ll never reach it&quot;
+    &lt;span&gt;Salvador Dali&lt;/span&gt;
+&lt;/blockquote&gt;
+</code></pre><h3 id="image">Image</h3>
+<p>There are four image formats defined. Check them out <a href="https://getheinz.com/documentation.html#image">here</a>.</p>
+<p>Copy the code and paste it within a <code>&lt;section&gt;</code>. Add the source of your picture into <code>&lt;img src=&quot;&quot;&gt;</code>.</p>
+<p><strong>Image content-width</strong></p>
+<pre><code>&lt;figure class=&quot;content-wide&quot;&gt;
+    &lt;img src=&quot;img/image.jpg&quot; alt=&quot;image&quot;&gt;
+    &lt;figcaption&gt;
+        Image Caption
+    &lt;/figcaption&gt;
+&lt;/figure&gt;
+</code></pre><p><strong>Oversized image</strong></p>
+<pre><code>&lt;figure class=&quot;oversized&quot;&gt;
+    &lt;img src=&quot;img/image.jpg&quot; alt=&quot;image&quot;&gt;
+    &lt;figcaption&gt;
+        Image Caption
+    &lt;/figcaption&gt;
+&lt;/figure&gt;
+</code></pre><p><strong>Oversized image with textoverlay</strong></p>
+<pre><code>&lt;div class=&quot;oversized textoverlay&quot;&gt;
+    &lt;img src=&quot;&quot; alt=&quot;&quot;&gt;
+    &lt;div class=&quot;overlay-content&quot;&gt;This is overlay text&lt;/div&gt;
+&lt;/div&gt;
+</code></pre><p><strong>Full width image</strong>
+Copy the code and paste this into the <code>&lt;main&gt;</code>.</p>
+<pre><code>&lt;section class=&quot;full-width&quot;&gt;
+    &lt;figure&gt;
+        &lt;img src=&quot;&quot; alt=&quot;image full width&quot;&gt;
+        &lt;figcaption&gt;
+            full width image &lt;a href=&quot;&quot;&gt; source&lt;/a&gt;
+        &lt;/figcaption&gt;
+    &lt;/figure&gt;
+&lt;/section&gt;
+</code></pre><h3 id="video">Video</h3>
+<p>There are three kinds of video players. Two are normal players, one with content width and the other one oversized. The third one is a full-width option.</p>
+<p>In our examples we work with YouTube Videos since they are the most common embedded video. If you want to use an HTML5 video, just replace the iframe with the video tag.</p>
+<p>Videos need to be wrapped in 2 containers to ensure they scale responsively.</p>
+<p> <strong>player content-width</strong></p>
+<pre><code>&lt;div class=&quot;video-wrap&quot;&gt;
+    &lt;div class=&quot;video&quot;&gt;
+        &lt;iframe src=&quot;https://www.youtube.com/embed/YOUTUBEVIDEOID&quot; frameborder=&quot;0&quot; gesture=&quot;media&quot; allowfullscreen&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre><p><strong>player oversized</strong></p>
+<p>Adding class <code>large</code> to the wrapper will make the player oversized.</p>
+<pre><code>&lt;div class=&quot;video-wrap large&quot;&gt;
+    &lt;div class=&quot;video&quot;&gt;
+        &lt;iframe src=&quot;https://www.youtube.com/embed/YOUTUBEVIDEOID&quot; frameborder=&quot;0&quot; gesture=&quot;media&quot; allowfullscreen&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre><p><strong>background-video</strong></p>
+<p>The third option is a display filling <em>background-video</em>. Autoplay, loop and muted are included via URL attributes from the YouTube API. There&#39;s an over-video container that darkens the video and adds a grid where you can put a textoverlay.</p>
+<p>Be careful, for adding a background-video you need to create a new section. Close the preceding section, add the code for the full width video and start a new section for the following code.</p>
+<pre><code>&lt;section class=&quot;full-width&quot;&gt;
+    &lt;div class=&quot;video-wrap&quot;&gt;
+        &lt;div class=&quot;video&quot;&gt;
+            &lt;iframe src=&quot;https://www.youtube.com/embed/YOUTUBEVIDEOID?ecver=1&amp;autoplay=1&amp;mute=1&amp;controls=0&amp;loop=1&amp;playlist=6gCd3VUOYWs&amp;modestbranding=1&quot;&gt;&lt;/iframe&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;over-video grid&quot;&gt;
+        &lt;div class=&quot;item-span-8 item-offset-2&quot;&gt;
+            &lt;h1 class=&quot;text-white&quot;&gt;Text on top of the video&lt;/h1&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/section&gt;
+</code></pre><h3 id="audio">Audio</h3>
+<p>For inserting audio files, copy the following html. Enter your audio source according to the file type into <code>&lt;source src=&quot;&quot;&gt;</code> and the type of your audio file into <code>type=&quot;&quot;</code>. Unfortunately you can&#39;t customize the look of your audio via CSS, because it&#39;s not supported by browsers.</p>
+<pre><code>&lt;audio controls&gt;
+    &lt;source src=&quot;audio.mp3&quot; type=&quot;audio/mpeg&quot;&gt;
+        Your browser does not support audio.
+&lt;/audio&gt;
+</code></pre><h3 id="slider">Slider</h3>
+<p><strong><em>This feature requires JavaScript</em></strong></p>
+<p>We offer you fully prepared responsive sliders in two sizes. Content width and oversized. The Slider has images as background-image and also navigators in spans. Those are enabled automatically in js. Just copy the snippet into a <code>section</code> and enter the URL in <code>url(img/)</code> and <code>src=&quot;img/&quot;</code> of your images.</p>
+<p><strong>Slider content-width</strong></p>
+<pre><code>&lt;div class=&quot;slider-wrap&quot;&gt;
+    &lt;div class=&quot;slider&quot;&gt;
+        &lt;div style=&quot;background-image: url(img/img1.jpg)&quot;&gt;&lt;img src=&quot;img/img1.jpg&quot; alt=&quot;slide 1&quot;&gt;&lt;/div&gt;
+        &lt;div style=&quot;background-image: url(img/img2.jpg)&quot;&gt;&lt;img src=&quot;img/img2.jpg&quot; alt=&quot;slide 2&quot;&gt;&lt;/div&gt;
+        &lt;div style=&quot;background-image: url(img/img3.jpg)&quot;&gt;&lt;img src=&quot;img/img3.jpg&quot; alt=&quot;slide 3&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;span class=&quot;navigator toggle-next&quot;&gt;next&lt;/span&gt;
+    &lt;span class=&quot;navigator toggle-prev&quot;&gt;prev&lt;/span&gt;
+&lt;/div&gt;
+</code></pre><p><strong>Slider oversized</strong></p>
+<p>Adding class <code>large</code> to the wrapper makes the slider bigger.</p>
+<pre><code>&lt;div class=&quot;slider-wrap large&quot;&gt;
+    &lt;div class=&quot;slider&quot;&gt;
+        &lt;div style=&quot;background-image: url(img/img1.jpg)&quot;&gt;&lt;img src=&quot;img/img1.jpg&quot; alt=&quot;slide 1&quot;&gt;&lt;/div&gt;
+        &lt;div style=&quot;background-image: url(img/img2.jpg)&quot;&gt;&lt;img src=&quot;img/img2.jpg&quot; alt=&quot;slide 2&quot;&gt;&lt;/div&gt;
+        &lt;div style=&quot;background-image: url(img/img3.jpg)&quot;&gt;&lt;img src=&quot;img/img3.jpg&quot; alt=&quot;slide 3&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;span class=&quot;navigator toggle-next&quot;&gt;next&lt;/span&gt;
+    &lt;span class=&quot;navigator toggle-prev&quot;&gt;prev&lt;/span&gt;
+&lt;/div&gt;
+</code></pre><h3 id="sidestory">Sidestory</h3>
+<p><strong><em>This feature requires JavaScript</em></strong></p>
+<p>You can add additional sidestories to your website. These are small boxes on the side of your container. We prepared one for the left side and one for the right side. By placing an overlay toggle in the box, an overlay opens where you can add your additional story. The background will be blurred then.</p>
+<p>Sidestories require a separate section, the content needs to be placed within a content container and the sidestories either before or after the content. The placement of the sidestory box matters in the responsive view when the content will either be before or after the story.</p>
+<p>The Overlay can be placed anywhere in the code, we recommend at the end of the document though.</p>
+<p>To open an overlay, you need to use the class toggle and a data-attribute referencing the ID of the overlay.</p>
+<pre><code>&lt;section class=&quot;has-sidestory&quot;&gt;
+    &lt;div class=&quot;sidestory sidestory-left box&quot;&gt;
+        &lt;p&gt;this Sidestory is on the left side and does not open an overlay.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;content box&quot;&gt;
+        &lt;p&gt;Sidestory Content&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;sidestory sidestory-right box&quot;&gt;
+        &lt;h2&gt;Sidestory&lt;/h2&gt;
+        &lt;p&gt;This Story is on the right, and it does open an overlay.&lt;/p&gt;
+        &lt;br&gt;
+        &lt;p class=&quot;text-center&quot;&gt;
+            &lt;span class=&quot;toggle&quot; data-toggle-overlay=&quot;overlay-1&quot;&gt;Toggle Overlay&lt;/span&gt;
+        &lt;/p&gt;
+    &lt;/div&gt;
+&lt;/section&gt;
+</code></pre><p>For creating the content of the overlay you need the following code. Again, we like to place it at the end of our code. The Overlay can contain any of the components discussed.</p>
+<pre><code>&lt;div class=&quot;overlay grid&quot; id=&quot;overlay-1&quot;&gt;
+    &lt;section&gt;
+        &lt;span class=&quot;toggle close&quot;&gt;x&lt;/span&gt;
+        &lt;h1&gt;Overlay Title&lt;/h1&gt;
+        &lt;p&gt;In this example we just added an image with content-wide. How you can add this picture you learn in chapter &quot;Images&quot;&lt;/p&gt;
+        &lt;p&gt;You can close this overlay by clicking the x, clicking outside of the content or hitting &quot;Esc&quot; on your keyboard.&lt;/p&gt;
+
+        &lt;figure class=&quot;content-wide&quot;&gt;
+            &lt;img src=&quot;img/mountains.jpg&quot; alt=&quot;Image width of content&quot;&gt;
+            &lt;figcaption&gt;
+                Image with content-width, &lt;a href=&quot;https://unsplash.com/photos/gdE-5Oui1Y0&quot;&gt; source&lt;/a&gt;
+            &lt;/figcaption&gt;
+        &lt;/figure&gt;
+    &lt;/section&gt;
+&lt;/div&gt;
+</code></pre><hr>
+<h1 id="creators">Creators</h1>
+<ul>
+<li>Myriam Frisano</li>
+<li>Sebastian Hubacher</li>
+<li>Nadia Etter</li>
+<li>Pascal Lüthi</li>
+<li>Kyle Smith</li>
+<li>Kim Schläpfer</li>
+</ul>
+<hr>
+<h1 id="copyright-and-license">Copyright and License</h1>
+<p>Heinz is released under MIT.</p>
+
+      </body>
+    </html>
