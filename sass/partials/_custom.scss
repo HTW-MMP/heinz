@@ -129,8 +129,6 @@ $grid-colors: #F5C7CA, #E779AE, #3759A0, #A0CEEC, #EBEBEB, #D7E6E8, #D6D3EE;
 }
 
 .toggle-code{
-    position: fixed;
-    top: 57px;
     width: 100%;
     background: lighten(#007E33, 10%);
     color: black-or-white(lighten(#007E33, 10%));

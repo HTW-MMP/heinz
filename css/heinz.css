@@ -2093,8 +2093,6 @@ pre {
 }
 
 .toggle-code {
-  position: fixed;
-  top: 57px;
   width: 100%;
   background: #00b148;
   color: white;
