@@ -13,7 +13,9 @@ $(document).ready( function(){
         }
         var l = '<a href="#'+id+'" class="'+$(this).prop("tagName")+'">'+h+'</a>';
 
-        if(!$(this).parent().is('#toc')){
+        if($(this).parent().is('#toc') || $(this).hasClass('no-toc')){
+            console.log($(this).text());
+        } else{
             headings.push(l);
         }
     });

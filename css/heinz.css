@@ -665,7 +665,7 @@ body .foot {
   grid-column-end: span 12;
 }
 
-.grid .item-span-6, .grid section .oversized div, .grid section .oversized figcaption, .grid section .oversized p, .grid section pre div, .grid section pre figcaption, .grid section pre p, .grid section h1, .grid section h2, .grid section h3, .grid section h4, .grid section h5, .grid section h6, .grid section p, .grid section img, .grid section .content-wide, .grid section .slider-wrap, .grid section .video-wrap, .grid section audio, .grid section iframe, .grid section ul, .grid section ol {
+.grid .item-span-6, .grid section .oversized div, .grid section .oversized figcaption, .grid section .oversized p, .grid section pre div, .grid section pre figcaption, .grid section pre p, .grid section h1, .grid section h2, .grid section h3, .grid section h4, .grid section h5, .grid section h6, .grid section p, .grid section img, .grid section .content-wide, .grid section .slider-wrap, .grid section .video-wrap, .grid section audio, .grid section iframe, .grid section ul, .grid section ol, .grid #toc {
   grid-column-start: auto;
   grid-column-end: span 6;
 }
@@ -759,7 +759,7 @@ body .foot {
   grid-column-start: auto;
 }
 
-.grid .item-offset-1, .grid section .oversized div, .grid section .oversized figcaption, .grid section .oversized p, .grid section pre div, .grid section pre figcaption, .grid section pre p, .grid section h1, .grid section h2, .grid section h3, .grid section h4, .grid section h5, .grid section h6, .grid section p, .grid section img, .grid section .content-wide, .grid section .slider-wrap, .grid section .video-wrap, .grid section audio, .grid section iframe, .grid section ul, .grid section ol {
+.grid .item-offset-1, .grid section .oversized div, .grid section .oversized figcaption, .grid section .oversized p, .grid section pre div, .grid section pre figcaption, .grid section pre p, .grid section h1, .grid section h2, .grid section h3, .grid section h4, .grid section h5, .grid section h6, .grid section p, .grid section img, .grid section .content-wide, .grid section .slider-wrap, .grid section .video-wrap, .grid section audio, .grid section iframe, .grid section ul, .grid section ol, .grid #toc {
   grid-column-start: 2;
 }
 
@@ -1142,11 +1142,11 @@ body .foot {
   grid-template-columns: repeat(8, 1fr);
 }
 
-.grid section:first-of-type:not(.fullscreen):not(.full-width) {
+.boxed .grid section:first-of-type:not(.fullscreen):not(.full-width) {
   padding-top: 100px;
 }
 
-.grid section:last-of-type {
+.boxed .grid section:last-of-type {
   padding-bottom: 100px;
 }
 
@@ -1304,6 +1304,8 @@ body .foot {
 
 #toc {
   width: 100%;
+  font-family: "Work Sans", "Calibri", sans-serif;
+  text-transform: uppercase;
 }
 
 #toc ul {
@@ -1732,6 +1734,10 @@ body .foot {
 
 .menu ul ul li {
   display: block;
+}
+
+pre {
+  margin: 2rem 0 !important;
 }
 
 .welcome {
