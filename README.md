@@ -1,6 +1,6 @@
 <header align="center">
   <p>
-  <a href="https://getheinz.com"><img src="img/logo.png"></a>
+  <a href="https://getheinz.com" style="width: 100%; display: block; text-align: center;"><img src="img/logo.png"></a>
 </p>
   <h2>Heinz</h2>
   <h3>the storytelling butler</h3>
