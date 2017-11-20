@@ -1,6 +1,6 @@
-var navheight = $('nav.menu').outerHeight();
 $(document).ready( function(){
-    var toc = $('#toc');
+    var navheight = $('nav.menu').outerHeight();
+    var toc = $('.toc');
     var headings = [];
     $('h1, h2, h3').each(function(){
         var h = $(this).text(),

@@ -1,3 +1,57 @@
+$(document).ready( function(){
+    var navheight = $('nav.menu').outerHeight();
+    var toc = $('.toc');
+    var headings = [];
+    $('h1, h2, h3').each(function(){
+        var h = $(this).text(),
+            id = null;
+
+        if($(this).attr('id')){
+           id = $(this).attr('id');
+        } else{
+            id = h.replace(/ /g,'')
+            $(this).attr('id', id);
+        }
+        var l = '<a href="#'+id+'" class="'+$(this).prop("tagName")+'">'+h+'</a>';
+
+        if($(this).parent().is('#toc') || $(this).hasClass('no-toc')){
+            console.log($(this).text());
+        } else{
+            headings.push(l);
+        }
+    });
+
+    var list = '<ul class="table-of-contents">';
+    for (var i = 0; i < headings.length; i++){
+        list += '<li>'+headings[i]+'</li>';
+    }
+    list += '</ul>';
+    toc.append(list);
+
+    console.log(headings);
+
+    $(".table-of-contents a").click(function() {
+		var id = $(this).attr('href');
+		$('html, body').animate({
+			scrollTop: $(id).offset().top - navheight
+		}, 1000);
+	});
+});
+
+// Navigation
+$(document).ready(function(){
+    $('.dropdown ul').hide();
+});
+
+$('.dropdown span').click(function(){
+    $(this).next('ul').slideToggle();
+    $(this).toggleClass('open');
+});
+
+$('.nav-toggle').click(function(){
+    $('.menu ul').toggleClass('active');
+});
+
 // overlay
 
 
@@ -31,6 +85,10 @@ function closeOverlay(){
     $('.overlay').removeClass('open');
     $('body').removeClass('overlay-open');
 }
+
+$(document).ready(function(){
+    $('.menu .toc ul').unwrap();
+});
 
 // Slider 
 $('.slider').each(function() {
@@ -118,63 +176,12 @@ $(document).scroll(function() {
     $(".scrollbar").css("width", currentTop+'%');
 });
 
-// Navigation
-$('.dropdown ul').hide();
-$('.dropdown span').click(function(){
-    $(this).next('ul').slideToggle();
-});
-
-$('.nav-toggle').click(function(){
-    $('.menu ul').toggleClass('active');
-});
-
-var navheight = $('nav.menu').outerHeight();
-$(document).ready( function(){
-    var toc = $('#toc');
-    var headings = [];
-    $('h1, h2, h3').each(function(){
-        var h = $(this).text(),
-            id = null;
-
-        if($(this).attr('id')){
-           id = $(this).attr('id');
-        } else{
-            id = h.replace(/ /g,'')
-            $(this).attr('id', id);
-        }
-        var l = '<a href="#'+id+'" class="'+$(this).prop("tagName")+'">'+h+'</a>';
-
-        if($(this).parent().is('#toc') || $(this).hasClass('no-toc')){
-            console.log($(this).text());
-        } else{
-            headings.push(l);
-        }
-    });
-
-    var list = '<ul class="table-of-contents">';
-    for (var i = 0; i < headings.length; i++){
-        list += '<li>'+headings[i]+'</li>';
-    }
-    list += '</ul>';
-    toc.append(list);
-
-    console.log(headings);
-
-    $(".table-of-contents a").click(function() {
-		var id = $(this).attr('href');
-		$('html, body').animate({
-			scrollTop: $(id).offset().top - navheight
-		}, 1000);
-	});
-});
-
-
+//@prepros-prepend toc.js
+//@prepros-prepend nav.js
 //@prepros-prepend overlay.js
+//@prepros-prepend custom.js
 //@prepros-prepend slider.js
 //@prepros-prepend video.js
 //@prepros-prepend backtotop.js
 //@prepros-prepend scrollspy.js
-//@prepros-prepend nav.js
-//@prepros-prepend toc.js
-//@prepros-prepend custom.js
 

@@ -1,15 +1,14 @@
-#toc{
+.toc{
     width: 100%;
     font-family: $headings-font;
     text-transform: uppercase;
     @extend .item-span-#{$section-content-span};
     @extend .item-offset-#{($section-span - $section-content-span)/2};
+}
 
-
-    ul{
-        list-style: none;
-        list-style-type: none;
-    }
+.table-of-contents{
+    list-style: none;
+    list-style-type: none;
 
     .H2{
         padding-left: $gutter;
