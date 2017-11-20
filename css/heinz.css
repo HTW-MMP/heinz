@@ -2071,3 +2071,52 @@ pre {
     grid-template-areas: "area-1 area-2""area-3 area-3""area-4 area-5""area-6 area-5""area-7 area-7";
   }
 }
+
+.copy-code {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: .8em;
+  padding: 1px 3px;
+  font-family: "Work Sans", "Calibri", sans-serif;
+  cursor: pointer;
+  background: white;
+  color: black;
+  border: 1px solid black;
+  -webkit-transition: .3s all ease;
+  -o-transition: .3s all ease;
+  transition: .3s all ease;
+}
+
+.copy-code:hover {
+  opacity: .8;
+}
+
+.toggle-code {
+  position: fixed;
+  top: 57px;
+  width: 100%;
+  background: #00b148;
+  color: white;
+  text-align: center;
+  -webkit-transition: .3s all ease;
+  -o-transition: .3s all ease;
+  transition: .3s all ease;
+  cursor: pointer;
+  font-family: "Work Sans", "Calibri", sans-serif;
+  text-transform: uppercase;
+  font-size: .8em;
+}
+
+.toggle-code:after {
+  content: 'on';
+}
+
+.toggle-code.off {
+  background: #ff6666;
+  color: black;
+}
+
+.toggle-code.off:after {
+  content: 'off';
+}

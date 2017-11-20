@@ -42,7 +42,11 @@
     </header>
     <!--  main section has class grid, in the grid there are secions, if section needs background, add class box -->
     <main class="main grid">
+        <div class="toggle-code">toggle Code Visibility:</div>
         <section class="box">
+            <div class="toc">
+                <h1 class="no-toc">Table Of Contents</h1>
+            </div>
             <h1>Introduction</h1>
             <h2 id="quick-start">Quick Start</h2>
             <ol>
@@ -160,7 +164,7 @@
             &lt;!-- Brand --&gt;
         &lt;/a&gt;
         &lt;span class="nav-toggle"&gt;
-            &lt;svg version="1.1" id="hamburger" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 77.3 67.6" style="enable-background:new 0 0 77.3 67.6;" xml:space="preserve"&gt;&lt;path d="M73.4,37.6H3.8c-2.1,0-3.8-1.7-3.8-3.8l0,0C0,31.7,1.7,30,3.8,30h69.7c2.1,0,3.8,1.7,3.8,3.8l0,0 C77.3,35.9,75.6,37.6,73.4,37.6z"/&gt;&lt;path d="M73.4,7.6H3.8C1.7,7.6,0,5.9,0,3.8l0,0C0,1.7,1.7,0,3.8,0h69.7c2.1,0,3.8,1.7,3.8,3.8l0,0C77.3,5.9,75.6,7.6,73.4,7.6z"/&gt;&lt;path d="M73.4,67.6H3.8c-2.1,0-3.8-1.7-3.8-3.8l0,0C0,61.7,1.7,60,3.8,60h69.7c2.1,0,3.8,1.7,3.8,3.8l0,0 C77.3,65.9,75.6,67.6,73.4,67.6z"/&gt;&lt;/svg&gt;
+            &lt;div class="hamburger"&gt;toggle menu&lt;/div&gt;
         &lt;/span&gt;
 
         &lt;!-- Navigation Code Here --&gt;
@@ -180,7 +184,7 @@
             <p>Don't forget to include the <code class="language-markup">nav-toggle</code> and include the js-file to make sure the menu will work responsively and that the dropdowns will open up.</p>
 
             <pre><code class="language-markup">&lt;ul&gt;
-    &lt;li&gt;&lt;span class="nav-toggle"&gt;close&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span class="nav-toggle"&gt;&lt;div class="ex"&gt;close&lt;/div&gt;&lt;/span&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href="#"&gt;Item&lt;/a&gt;&lt;/li&gt; &lt;!-- normal Item --&gt;
     &lt;li class="dropdown"&gt; &lt;!-- dropdown Item --&gt;
         &lt;span&gt;parent&lt;/span&gt;
