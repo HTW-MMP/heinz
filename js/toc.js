@@ -1,3 +1,4 @@
+var navheight = $('nav.menu').outerHeight();
 $(document).ready( function(){
     var toc = $('#toc');
     var headings = [];
@@ -28,4 +29,11 @@ $(document).ready( function(){
     toc.append(list);
 
     console.log(headings);
+
+    $(".table-of-contents a").click(function() {
+		var id = $(this).attr('href');
+		$('html, body').animate({
+			scrollTop: $(id).offset().top - navheight
+		}, 1000);
+	});
 });

@@ -128,6 +128,7 @@ $('.nav-toggle').click(function(){
     $('.menu ul').toggleClass('active');
 });
 
+var navheight = $('nav.menu').outerHeight();
 $(document).ready( function(){
     var toc = $('#toc');
     var headings = [];
@@ -158,7 +159,15 @@ $(document).ready( function(){
     toc.append(list);
 
     console.log(headings);
+
+    $(".table-of-contents a").click(function() {
+		var id = $(this).attr('href');
+		$('html, body').animate({
+			scrollTop: $(id).offset().top - navheight
+		}, 1000);
+	});
 });
+
 
 //@prepros-prepend overlay.js
 //@prepros-prepend slider.js
@@ -167,4 +176,5 @@ $(document).ready( function(){
 //@prepros-prepend scrollspy.js
 //@prepros-prepend nav.js
 //@prepros-prepend toc.js
+//@prepros-prepend custom.js
 
