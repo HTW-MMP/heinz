@@ -471,6 +471,7 @@ a.btn:hover, .btn.backtotop:hover,
   text-decoration: none;
   background: #65A3D9;
   color: white;
+  border-color: #65A3D9;
 }
 
 blockquote {
@@ -1734,6 +1735,12 @@ body .foot {
 
 .menu ul ul li {
   display: block;
+}
+
+@media screen and (max-width: 600px) {
+  .fork-link {
+    display: none;
+  }
 }
 
 pre {

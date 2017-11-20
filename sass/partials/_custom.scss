@@ -1,3 +1,8 @@
+.fork-link{
+    @media screen and (max-width: $menu-collapse){
+        display: none;
+    }
+}
 pre{
     margin: 2rem 0 !important;
 }

@@ -160,6 +160,7 @@ a,
             text-decoration: none;
             background: $link-color;
             color: black-or-white($link-color);
+            border-color: $link-color;
         }
     }
 }
