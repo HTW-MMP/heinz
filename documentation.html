@@ -21,7 +21,7 @@
         <nav class="menu boxed">
             <div class="bar">
                 <a href="/" class="branding">
-                <img src="img/feather.svg">
+                  <img src="img/heinz_h.svg">
                 <span>Heinz</span>
             </a>
             <a class="fork-link" target="_blank"href="https://github.com/"><img style="position: absolute; top: 0; right: 0; border: 0;z-index: 10001;" src="https://camo.githubusercontent.com/a6677b08c955af8400f44c6298f40e7d19cc5b2d/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677261795f3664366436642e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png"></a>
@@ -43,126 +43,31 @@
     <!--  main section has class grid, in the grid there are secions, if section needs background, add class box -->
     <main class="main grid">
         <section class="box">
-            <div class="toc">
-                <h1 class="no-toc">Table of Contents</h1>
-            </div>
-            <h1>General Structure</h1>
-            <p>Heinz uses CSS-Grids for the overall layout. To get started quickly we recommend using a minimalistic template.</p>
-
-            <pre><code class="language-markup">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-
-&lt;head&gt;
-    &lt;meta charset="utf-8"&gt;
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
-
-    &lt;!-- include heinz css --&gt;
-    &lt;link href="css/heinz.min.css" rel="stylesheet"&gt;
-
-    &lt;title&gt;An Awesome Story Created with Heinz&lt;/title&gt;
-&lt;/head&gt;
-
-&lt;body class="boxed"&gt;
-
-    &lt;header class="head"&gt;
-        &lt;!-- a place for nav or other top content --&gt;
-    &lt;/header&gt;
-
-    &lt;main class="main grid"&gt;
-        &lt;section class="box" data-section-title="Title"&gt;
-            &lt;h1&gt;Your First Section&lt;/h1&gt;
-            &lt;p&gt;Your First Content&lt;/p&gt;
-        &lt;/section&gt;
-    &lt;/main&gt;
-
-    &lt;footer class="grid"&gt;
-        &lt;div class="foot"&gt;
-            &lt;p&gt;&amp;copy; Heinz &amp;middot; 2017 &amp;middot; &lt;span class="backtotop"&gt;Back To Top&lt;/span&gt;&lt;/p&gt;
-        &lt;/div&gt;
-    &lt;/footer&gt;
-
-    &lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"&gt;&lt;/script&gt;
-    &lt;script src="js/heinz.min.js"&gt;&lt;/script&gt;
-&lt;/body&gt;
-
-&lt;/html&gt;</code></pre>
-
-        </section>
-        <section class="box">
             <h1>Introduction</h1>
             <h2 id="quick-start">Quick Start</h2>
-            <ul>
-                <li>Download the latest release on <a href="https://getheinz.com/">getheinz.com/</a> into your Project Folder.</li>
-                <li>Open your index.html file.</li>
-                <li>Copy-paste the stylesheet link into your <code class="language-markup">&lt;head&gt;</code> before all other stylesheets to load our CSS:</li>
-            </ul>
-            <pre><code class="language-markup">&lt;link rel=&quot;stylesheet&quot; href=&quot;css/heinz.css&quot;&gt;</code></pre>
-            <ul>
-                <li>
-                    Add the optional JavaScript near the end of your page, right before the closing <code class="language-markup">&lt;/body&gt;</code> tag. Be sure to place jQuery first, as our JavaScript depends on that.
-                </li>
-            </ul>
-            <pre><code class="language-markup">&lt;script src=&quot;js/jquery-3.2.1.min.js&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;js/heinz.min.js&quot;&gt;&lt;/script&gt;</code></pre>
-            <ul>
-                <li>
-                    And that’s about it — you’re about to come down the stretch and have your very own multimedia story. If you’re unsure about the general structure, keep reading for an example page template.
-                </li>
-            </ul>
-            <h2 id="starter-template">Starter template</h2>
-            <p>Be sure to have your pages set up with the latest design and development standards. That means using an HTML5 doctype and including a viewport meta tag for proper responsive behaviors.</p>
-            <h2 id="what-s-included">What's included</h2>
-            <p>Within the download you'll find the following directories and files, logically grouping common assets and providing both compiled and minified variations. We provide compiled CSS and JS (heinz.*), as well as compiled and minified CSS and JS (heinz.min.*).
-            </p>
-            <p>You'll see something like this:</p>
-            <p>Basic version for simple usecase:</p>
+            <ol>
+                <li>Download the latest release on <a href="https://getheinz.com/">getheinz.com</a>.</li>
+                <li>Open the included index.html file.</li>
+                <li>Fill it with your content.</li>
+                <li>And that’s about it — you’re about to come down the stretch and have your very own multimedia story. If you’re unsure about the general structure, keep reading for an example page template.</li>
+            </ol>
+            <h2 id="starter-template">Freshness</h2>
+            <p>Heinz is developed for modern browsers only - because the future is awesome.</p>
+            <p>Altough, always be sure to have your pages set up with the latest design and development standards. That means using an HTML5 doctype and including a viewport meta tag for proper responsive behaviors. Still we recommend you to use an autoprefixer. ;)</p>
 
-            <pre><code class="language-markup">heinz/
-            ├── css/
-            │   ├── heinz.css
-            │   └── heinz.min.css
-            ├── fonts/
-            │   ├── librebaskerville
-            │   └── worksans
-            └── js/
-                ├── heinz.js
-                └── heinz.min.js</code></pre>
-
-
-            <p>If you want to work with Sass and do some customization, you can download the Advanced version. Refer to the <a href="docSass.html">Sass Docs</a> for some help.</p>
-
-
-            <pre><code class="language-markup">heinz_sass/
-            ├── css/
-            │   ├── heinz.css
-            │   └── heinz.min.css
-            ├── fonts/
-            │   ├── librebaskerville
-            │   └── worksans
-            ├── js/
-            │   ├── heinz.js
-            │   └── heinz.min.js
-            └── sass/
-                ├── _overwrite.scss
-                ├── _settings.scss
-                ├── partials
-                ├── toolbox
-                └── heinz.scss</code></pre>
         </section>
 
         <section class="box">
             <h1 id="documentation">Documentation</h1>
             <h2 id="layout">Layout</h2>
-            <h3 id="responsive">Responsive</h3>
-            <p>Heinz is fully responsive and working on all devices.</p>
             <h3 id="grid">Grid</h3>
             <p>If you don't like the gray background and boxed look of the design, you can simply remove the <code class="language-markup">boxed</code> CSS class from the body tag and achieve a flat white look.</p>
             <p>Heinz is created using a 12-column grid. You can define a separate grid outside of our prepared layout, just make sure to add a class of <code class="language-markup">grid</code> to your parent.</p>
-            <p>The Children of the grid can vary in width. The class <code class="language-markup">item-span-suffix-columnNumbers</code> defines the behaviour of the item. There are different classes to help you manage the breakpoints. the <code class="language-markup">-lg</code> suffix describes the item-span up until the breakpoint for medium screen size, <code class="language-markup">-md</code> up until the small breakpoint <code class="language-markup">-sm</code> up until extra small. To create a fully responsive layout, it is recommended to combine the classes. As an example to create a grid that has 4 items in a row on large screens, 3 items on medium, 2 on small and 1 on extra small, you'd apply 3 clases to your grid item.</p>
+            <p>The Children of the grid can vary in width. The class <code class="language-markup">item-span-suffix-columnNumbers</code> defines the behavior of the item. There are different classes to help you manage the breakpoints. The <code class="language-markup">-lg</code> suffix describes the item-span up until the breakpoint for medium screen size, <code class="language-markup">-md</code> up until the small breakpoint <code class="language-markup">-sm</code> up until extra small. To create a fully responsive layout, it is recommended to combine the classes. As an example to create a grid that has 4 items in a row on large screens, 3 items on medium, 2 on small and 1 on extra small, you'd apply 3 clases to your grid item.</p>
 
             <pre><code class="language-markup">&lt;div class=&quot;item-span-lg-3 item-span-md-4 item-span-sm-6&quot;&gt;&lt;/div&gt;</code></pre>
 
-            <p>Take a look at the following examples to visualize, try resizing the window to see the behaviour.</p>
+            <p>Take a look at the following examples to visualize, try resizing the window to see the behavior.</p>
             <h4>Grid inside Section</h4>
             <div style="border: 1px solid black" class="item-span-9">.item-span-9</div>
             <div style="border: 1px solid black" class="item-span-8">.item-span-8</div>
@@ -293,7 +198,7 @@
             <pre><code class="language-markup">&lt;div class="scrollspy-wrapper display-titles"&gt;
     &lt;div class="scrollbar"&gt;&lt;/div&gt;
 &lt;/div&gt;</code></pre>
-            <p>There are two different Version of the Progressbar, a minimal one, without titles and one with titles displayed. (Refer to the <a href="docSass.html">Sass Docs</a> to see those in action.</p>
+            <p>There are two different version of the progressbar, a minimal one, without titles and one with titles displayed. (Refer to the <a href="docSass.html">Sass Docs</a> to see those in action.</p>
             <p>To toggle the title display all you do is add or remove <code class="language-markup">display-titles</code> from the wrapper classes.</p>
             <p>The title that is displayed can be defined using a data-attribute within the section tag, or represents the first heading within the section.</p>
             <pre><code class="language-markup">&lt;section data-section-title="Progressbar Title"&gt;
@@ -301,10 +206,10 @@
 &lt;/section&gt;</code></pre>
 
             <h3 id="text">Text Classes</h3>
-            <p>Heinz comes with pretty text styles out of the Box and has some classes to modify text.</p>
+            <p>We've baked some text styling for you.</p>
 
             <h4>Headings</h4>
-            <p>Headings are automatically styled and can be automatically numbered. To enable numbered headings all you do is add a class of <code class="language-markup">numbered</code> to the parent. If you only want the Headings within a specific section, add the class to the section, if you want the whole document to have numbered headings, add the class to the body tag. </p>
+            <p>Headings are automatically styled and can be automatically numbered. To enable numbered headings all you do is add the <code class="language-markup">numbered</code> class to the parent. If you only want the headings within a specific section, add the class to the section, if you want the whole document to have numbered headings, add the class to the body tag.</p>
 
             <pre><code class="language-markup">&lt;section class="numbered"&gt;
     &lt;h1&gt;Heading 1&lt;/h1&gt;
@@ -330,7 +235,7 @@
 
             <h4>Paragraph Styles</h4>
 
-            <p>We prepared lot of different stylings for your running text.</p>
+            <p>For your running text:</p>
 
             <pre><code class="language-markup">&lt;p class="text-lead"&gt;This is very useful for a lead text, that follows a heading and begins an article&lt;/p&gt;
 &lt;p class="text-left"&gt;This paragraph has left text alignment.&lt;/p&gt;
@@ -360,24 +265,23 @@
             <p>For using a blockquote, enter the following code. Fill in your text between <code class="language-markup">&lt;blockquote&gt;</code> and <code class="language-markup">&lt;span&gt;</code>. The source you can add into <code class="language-markup">&lt;span&gt;&lt;/span&gt;</code></p>
 
             <pre><code class="language-markup">&lt;blockquote&gt;
-    &lt;p&gt;This is what a blockquote looks like.&lt;/p&gt;
-   &lt;span&gt;Creators of Heinz&lt;/span&gt;
+    &lt;p&gt;"Have no fear of perfection,
+    you'll never reach it"&lt;/p&gt;
+   &lt;span&gt;Salvador Dali&lt;/span&gt;
 &lt;/blockquote&gt;</code></pre>
 
             <blockquote>
-                <p>This is what a blockquote looks like. If it's longer it'll wrap at one point.</p>
-                <span>Creators of Heinz</span>
+                <p>"Have no fear of perfection,
+                you'll never reach it"</p>
+                <span>Salvador Dali</span>
             </blockquote>
 
-            <h3 id="image">Images</h3>
-            <p>You can add four different kinds of images:</p>
-            <h4>Image content-width</h4>
-
-
+            <h3 id="image">Image</h3>
+            <p>There are four image formats defined.</p>
             <p>Copy the code and paste it within a <code class="language-markup">&lt;section&gt;</code>. Add the source of your picture into <code class="language-markup">&lt;img src=&quot;&quot;&gt;</code>.</p>
-
+            <h4>Image content-width</h4>
             <pre><code class="language-markup">&lt;figure class="content-wide"&gt;
-    &lt;img src="image.jpg" alt="image"&gt;
+    &lt;img src="img/image.jpg" alt="image"&gt;
     &lt;figcaption&gt;
         Image Caption
     &lt;/figcaption&gt;
@@ -391,10 +295,8 @@
             </figure>
 
             <h4>Oversized image</h4>
-            <p>Copy the code and paste it into a <code class="language-markup">&lt;section&gt;</code>. Add the source of your picture into <code class="language-markup">&lt;img src=&quot;&quot;&gt;</code>.</p>
-
             <pre><code class="language-markup">&lt;figure class="oversized"&gt;
-    &lt;img src="image.jpg" alt="image"&gt;
+    &lt;img src="img/image.jpg" alt="image"&gt;
     &lt;figcaption&gt;
         Image Caption
     &lt;/figcaption&gt;
@@ -410,9 +312,8 @@
 
 
             <h4>Oversized image with textoverlay</h4>
-            <p>Copy the code and paste it into a <code class="language-markup">&lt;section&gt;</code>. Add the source of your picture into <code class="language-markup">&lt;img src=&quot;&quot;&gt;</code>.</p>
             <pre><code class="language-markup">&lt;div class="oversized textoverlay"&gt;
-    &lt;img src="image.jpg" alt="image"&gt;
+    &lt;img src="img/image.jpg" alt="image"&gt;
     &lt;div class="overlay-content"&gt;This is overlay text&lt;/div&gt;
 &lt;/div&gt;</code></pre>
 
@@ -424,11 +325,9 @@
             <h4>Full width image</h4>
             <p>Copy the code and paste this into the <code class="language-markup">&lt;main&gt;</code>.
                 <p>Be careful, for adding a full-width image you need to create a new section. Close the preceding section, add the code for the full width image and start a new section for the following code. Add the source of your picture into <code class="language-markup">&lt;img src=&quot;&quot;&gt;</code>.</p>
-
-
                 <pre><code class="language-markup">&lt;section class="full-width"&gt;
     &lt;figure&gt;
-        &lt;img src="image.jpg" alt="image full width"&gt;
+        &lt;img src="img/image.jpg" alt="image full width"&gt;
         &lt;figcaption&gt;
                 full width image caption
         &lt;/figcaption&gt;
@@ -445,11 +344,64 @@
             </figure>
         </section>
 
-
         <section class="box">
 
+          <h3 id="slider">Slider</h3>
+          <p class="text-center"><span class="text-highlighted">This feature requires JavaScript.</span></p>
+          <p>We offer you fully prepared responsive sliders in two sizes. Content width and oversized. The Slider has images as background-image and also navigators in spans. Those are enabled automatically in js. Just copy the snippet into a <code class="language-markup">section</code> and enter the URL in <code class="language-markup">url(img/)</code> and <code class="language-markup">src=&quot;img/&quot;</code> of your images.</p>
+
+
+          <h4>Slider content-width</h4>
+
+          <pre><code class="language-markup">&lt;div class="slider-wrap"&gt;
+  &lt;div class="slider"&gt;
+      &lt;div style="background-image: url(img/img1.jpg)"&gt;&lt;img src="img/img1.jpg" alt="slide 1"&gt;&lt;/div&gt;
+      &lt;div style="background-image: url(img/img2.jpg)"&gt;&lt;img src="img/img2.jpg" alt="slide 2"&gt;&lt;/div&gt;
+      &lt;div style="background-image: url(img/img3.jpg)"&gt;&lt;img src="img/img3.jpg" alt="slide 3"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;span class="navigator toggle-next"&gt;next&lt;/span&gt;
+  &lt;span class="navigator toggle-prev"&gt;prev&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+
+          <div class="slider-wrap">
+              <div class="slider">
+                  <div style="background-image: url(img/clouds.jpg)"><img src="img/clouds.jpg" alt="slide 1"></div>
+                  <div style="background-image: url(img/mountains.jpg)"><img src="img/mountains.jpg" alt="slide 2"></div>
+                  <div style="background-image: url(img/wheel.jpg)"><img src="img/wheel.jpg" alt="slide 3"></div>
+              </div>
+              <span class="navigator toggle-next">next</span>
+              <span class="navigator toggle-prev">prev</span>
+          </div>
+
+          <h4>Slider oversized</h4>
+
+          <p>Adding class <code class="language-markup">large</code> to the wrapper makes the slider bigger.</p>
+
+          <pre><code class="language-markup"><pre><code class="language-markup">&lt;div class="slider-wrap large"&gt;
+  &lt;div class="slider"&gt;
+      &lt;div style="background-image: url(img/img1.jpg)"&gt;&lt;img src="img/img1.jpg" alt="slide 1"&gt;&lt;/div&gt;
+      &lt;div style="background-image: url(img/img2.jpg)"&gt;&lt;img src="img/img2.jpg" alt="slide 2"&gt;&lt;/div&gt;
+      &lt;div style="background-image: url(img/img3.jpg)"&gt;&lt;img src="img/img3.jpg" alt="slide 3"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;span class="navigator toggle-next"&gt;next&lt;/span&gt;
+  &lt;span class="navigator toggle-prev"&gt;prev&lt;/span&gt;
+&lt;/div&gt;</code></pre></code></pre>
+
+          <div class="slider-wrap large">
+              <div class="slider">
+                  <div style="background-image: url(img/clouds.jpg)"><img src="img/clouds.jpg" alt="slide 1"></div>
+                  <div style="background-image: url(img/mountains.jpg)"><img src="img/mountains.jpg" alt="slide 2"></div>
+                  <div style="background-image: url(img/wheel.jpg)"><img src="img/wheel.jpg" alt="slide 3"></div>
+              </div>
+              <span class="navigator toggle-next">next</span>
+              <span class="navigator toggle-prev">prev</span>
+          </div>
+      </section>
+
+
+        <section class="box">
             <h3 id="video">Video</h3>
-            <p>There are three kinds of video players. Two are normal <strong>players</strong>, one with content width and the other one oversized. The third one is a full-width option.</p>
+            <p>There are three kinds of video players. Two are normal players, one with content width and the other one oversized. The third one is a full-width option.</p>
             <p>In our examples we work with YouTube Videos since they are the most common embedded video. If you want to use an HTML5 video, just replace the iframe with the video tag.</p>
             <p>Videos need to be wrapped in 2 containers to ensure they scale responsively.</p>
 
@@ -468,7 +420,7 @@
 
 
             <h4>player oversized</h4>
-            <p>Adding class large to the wrapper will make the player oversized.</p>
+            <p>Adding class <code class="language-markup">large</code> to the wrapper makes the player bigger.</p>
 
             <pre><code class="language-markup">&lt;div class="video-wrap large"&gt;
     &lt;div class="video"&gt;
@@ -536,56 +488,6 @@
             </audio>
 
 
-            <h3 id="slider">Slider</h3>
-            <p class="text-center"><span class="text-highlighted">This feature requires JavaScript.</span></p>
-            <p>We offer you fully prepared responsive sliders in two sizes. Content width and oversized. The Slider has images as background-image and also navigators in spans. Those are enabled automatically in js. You just have to copy the html into a <code class="language-markup">section</code> and enter the URL <code class="language-markup">src=&quot;img/&quot;</code> of you background-images.</p>
-
-
-            <h4>Slider content-width</h4>
-
-            <pre><code class="language-markup">&lt;div class="slider-wrap"&gt;
-    &lt;div class="slider"&gt;
-        &lt;div style="background-image: url(img/img1.jpg)"&gt;&lt;img src="img/img1.jpg" alt="slide 1"&gt;&lt;/div&gt;
-        &lt;div style="background-image: url(img/img2.jpg)"&gt;&lt;img src="img/img2.jpg" alt="slide 2"&gt;&lt;/div&gt;
-        &lt;div style="background-image: url(img/img3.jpg)"&gt;&lt;img src="img/img3.jpg" alt="slide 3"&gt;&lt;/div&gt;
-    &lt;/div&gt;
-    &lt;span class="navigator toggle-next"&gt;next&lt;/span&gt;
-    &lt;span class="navigator toggle-prev"&gt;prev&lt;/span&gt;
-&lt;/div&gt;</code></pre>
-
-            <div class="slider-wrap">
-                <div class="slider">
-                    <div style="background-image: url(img/clouds.jpg)"><img src="img/clouds.jpg" alt="slide 1"></div>
-                    <div style="background-image: url(img/mountains.jpg)"><img src="img/mountains.jpg" alt="slide 2"></div>
-                    <div style="background-image: url(img/wheel.jpg)"><img src="img/wheel.jpg" alt="slide 3"></div>
-                </div>
-                <span class="navigator toggle-next">next</span>
-                <span class="navigator toggle-prev">prev</span>
-            </div>
-
-            <h4>Slider oversized</h4>
-
-            <p>Adding class large to the wrapper makes the slider bigger.</p>
-
-            <pre><code class="language-markup"><pre><code class="language-markup">&lt;div class="slider-wrap large"&gt;
-    &lt;div class="slider"&gt;
-        &lt;div style="background-image: url(img/img1.jpg)"&gt;&lt;img src="img/img1.jpg" alt="slide 1"&gt;&lt;/div&gt;
-        &lt;div style="background-image: url(img/img2.jpg)"&gt;&lt;img src="img/img2.jpg" alt="slide 2"&gt;&lt;/div&gt;
-        &lt;div style="background-image: url(img/img3.jpg)"&gt;&lt;img src="img/img3.jpg" alt="slide 3"&gt;&lt;/div&gt;
-    &lt;/div&gt;
-    &lt;span class="navigator toggle-next"&gt;next&lt;/span&gt;
-    &lt;span class="navigator toggle-prev"&gt;prev&lt;/span&gt;
-&lt;/div&gt;</code></pre></code></pre>
-
-            <div class="slider-wrap large">
-                <div class="slider">
-                    <div style="background-image: url(img/clouds.jpg)"><img src="img/clouds.jpg" alt="slide 1"></div>
-                    <div style="background-image: url(img/mountains.jpg)"><img src="img/mountains.jpg" alt="slide 2"></div>
-                    <div style="background-image: url(img/wheel.jpg)"><img src="img/wheel.jpg" alt="slide 3"></div>
-                </div>
-                <span class="navigator toggle-next">next</span>
-                <span class="navigator toggle-prev">prev</span>
-            </div>
 
 
         </section>
@@ -601,7 +503,7 @@
 
                 <p>Sidestories require a separate section, the content needs to be placed within a content container and the sidestories either before or after the content. The placement of the sidestory box matters in the responsive view when the content will either be before or after the story.</p>
 
-                <p>The Overlay can be placed anywhere in the code, we recommend at the end of the document though.</p>
+                <p>The overlay can be placed anywhere in the code, we recommend at the end of the document though.</p>
                 <p>To open an overlay, you need to use the class toggle and a data-attribute referencing the ID of the overlay.</p>
             </div>
             <div class="sidestory sidestory-right box">
@@ -631,7 +533,7 @@
     &lt;/div&gt;
 &lt;/section&gt;</code></pre>
 
-            <p>For creating the content of the overlay you need the following code. Again, we like to place it at the end of our code. The Overlay can contain any of the components discussed.</p>
+            <p>For creating the content of the overlay you need the following code. Again, we like to place it at the end of our code. The overlay can contain any of the components discussed.</p>
 
             <pre><code class="language-markup">&lt;div class="overlay grid" id="overlay-1"&gt;
     &lt;section&gt;
