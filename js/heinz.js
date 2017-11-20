@@ -77,34 +77,45 @@ var bodyheight = $(document).outerHeight(),
 
 $('body').css('margin-top', navheight);
 
-$("section").each(function(i) {
-    var offset = $(this).offset().top,
-        height = $(this).outerHeight(),
-        p = (offset / bodyheight) * 100,
-        w = (height / bodyheight) * 100;
+$(document).ready(function() {
+	bodyheight = $(document).outerHeight() - $(window).innerHeight();
 
-    if ($(this).attr('data-section-title')) {
-        var title = $(this).data('section-title');
-    } else {
-        var title = $(this).children(':header').first().text();
-    }
+	$("section").each(function(i) {
+		var offset = $(this).offset().top,
+			height = $(this).outerHeight(),
+			p = (offset / bodyheight) * 100,
+			w = (height / bodyheight) * 100;
+		if ($(this).attr('data-section-title')) {
+			var title = $(this).data('section-title');
+		} else {
+			var title = $(this).children(':header').first().text();
+		}
 
-    $(this).attr('id', 'section-'+i);
+		$(this).attr('id', 'section-'+i);
 
-    $(".scrollspy-wrapper").append('<div data-go-to="section-' + i + '" class="scrollspy" style="width:'+w+'%; left:'+p+'%">' + title + '</div>');
+		// console.log("Section ID: " + i + " width: " + w + " left: " + p);
+
+		$(".scrollspy-wrapper").append('<div data-go-to="section-' + i + '" class="scrollspy" style="width:'+w+'%; left:'+p+'%">' + title + '</div>');
+	});
+
+    navheight = $('nav.menu').outerHeight();
+
+	$(".scrollspy").click(function() {
+		var id = $(this).data('go-to');
+		$('html, body').animate({
+			scrollTop: $('#'+id).offset().top - navheight
+		}, 1000);
+	});
 });
 
 $(document).scroll(function() {
     var scrollTop = $(document).scrollTop(),
-        currentTop = ((scrollTop + $(window).outerHeight()) / bodyheight) * 100;
-    $(".scrollbar").css("width", currentTop+'%');
-});
+		bodyheight = $(document).outerHeight() - $(window).innerHeight(),
+        currentTop = ((scrollTop) / (bodyheight)) * 100;
 
-$(".scrollspy").click(function() {
-    var id = $(this).data('go-to');
-    $('html, body').animate({
-        scrollTop: $('#'+id).offset().top - navheight
-    }, 1000);
+		// console.log("currentTop ( (scrollTop + window.innerHeight) / bodyheight ) * 100: " + currentTop);
+
+    $(".scrollbar").css("width", currentTop+'%');
 });
 
 // Navigation
@@ -117,10 +128,41 @@ $('.nav-toggle').click(function(){
     $('.menu ul').toggleClass('active');
 });
 
+$(document).ready( function(){
+    var toc = $('#toc');
+    var headings = [];
+    $('h1, h2, h3').each(function(){
+        var h = $(this).text(),
+            id = null;
+
+        if($(this).attr('id')){
+           id = $(this).attr('id');
+        } else{
+            id = h.replace(/ /g,'')
+            $(this).attr('id', id);
+        }
+        var l = '<a href="#'+id+'" class="'+$(this).prop("tagName")+'">'+h+'</a>';
+
+        if(!$(this).parent().is('#toc')){
+            headings.push(l);
+        }
+    });
+
+    var list = '<ul class="table-of-contents">';
+    for (var i = 0; i < headings.length; i++){
+        list += '<li>'+headings[i]+'</li>';
+    }
+    list += '</ul>';
+    toc.append(list);
+
+    console.log(headings);
+});
+
 //@prepros-prepend overlay.js
 //@prepros-prepend slider.js
 //@prepros-prepend video.js
 //@prepros-prepend backtotop.js
 //@prepros-prepend scrollspy.js
 //@prepros-prepend nav.js
+//@prepros-prepend toc.js
 

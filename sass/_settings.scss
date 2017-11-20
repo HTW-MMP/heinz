@@ -52,9 +52,9 @@ $paragraph-text-align: justify !default;
 $text-highlighted-color: $bright-blue !default;
 
 $link-color: $bright-blue !default;
-$link-hover-color: $main-brown !default;
+$link-hover-color: $bright-blue !default;
 $link-line: false !default;
-$link-hover-line: false !default;
+$link-hover-line: true !default;
 
 $blockquote-font: $serif !default;
 $blockquote-style: italic !default;
@@ -76,7 +76,7 @@ $container-max-width: 900px;
 $column-count: 12 !default;
 $section-span: $column-count - 4 !default;
 $section-content-span: $section-span - 2 !default;
-$section-quote-span: $section-content-span - 2 !default;
+$section-quote-span: $section-content-span - 1 !default;
 
 $breakpoint-s-to-xs: 600px !default;
 $breakpoint-m-to-s: 960px !default;
@@ -111,7 +111,7 @@ $video-ratio-height: 9 !default;
 $video-overlay-background: rgba(black, .5) !default;
 
 $menu-bg: $main-blue !default;
-$menu-color: darken(white, 10%) !default;
+$menu-color: white !default;
 $menu-hover-color: rgba(white, .8) !default;
 $menu-logo-max-width: 30px !default;
 $nav-toggle-max-width: 40px !default;
@@ -121,7 +121,7 @@ $hambuger-hover-color: $menu-hover-color !default;
 $menu-collapse: 600px !default;
 
 $scrollspy-height-titles: 20px !default;
-$scrollspy-height: 7px !default;
+$scrollspy-height: 10px !default;
 $scrollspy-section-bg: rgba(white, .3) !default;
 $scrollspy-background: $menu-bg !default;
 $scrollspy-progress: $bright-blue !default;

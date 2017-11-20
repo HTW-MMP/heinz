@@ -444,7 +444,8 @@ a, .backtotop,
 
 a:hover, .backtotop:hover,
 .toggle:hover {
-  color: #968572;
+  color: #65A3D9;
+  text-decoration: underline;
 }
 
 a.btn, .btn.backtotop,
@@ -455,6 +456,7 @@ a.btn, .btn.backtotop,
   margin: auto 10px;
   line-height: 3;
   white-space: nowrap;
+  font-family: "Work Sans", "Calibri", sans-serif;
 }
 
 @media screen and (max-width: 600px) {
@@ -541,7 +543,7 @@ blockquote span {
   font-family: "Work Sans", "Calibri", sans-serif;
   line-height: 1.375;
   text-align: left;
-  font-size: 1.1em;
+  font-size: 1.4em;
   font-weight: 300;
   margin-bottom: 1.25rem;
 }
@@ -632,7 +634,7 @@ body .foot {
   grid-column-end: span 12;
 }
 
-.grid .item-span-4, .grid section blockquote {
+.grid .item-span-4 {
   grid-column-start: auto;
   grid-column-end: span 4;
 }
@@ -644,7 +646,7 @@ body .foot {
   grid-column-end: span 12;
 }
 
-.grid .item-span-5 {
+.grid .item-span-5, .grid section blockquote {
   grid-column-start: auto;
   grid-column-end: span 5;
 }
@@ -656,7 +658,7 @@ body .foot {
   grid-column-end: span 12;
 }
 
-.grid .item-span-6, .grid section .oversized div, .grid section .oversized figcaption, .grid section .oversized p, .grid section pre div, .grid section pre figcaption, .grid section pre p, .grid section h1, .grid section h2, .grid section h3, .grid section h4, .grid section h5, .grid section h6, .grid section p, .grid section img, .grid section .content-wide, .grid section .slider-wrap, .grid section .video-wrap, .grid section audio, .grid section iframe, .grid section ul {
+.grid .item-span-6, .grid section .oversized div, .grid section .oversized figcaption, .grid section .oversized p, .grid section pre div, .grid section pre figcaption, .grid section pre p, .grid section h1, .grid section h2, .grid section h3, .grid section h4, .grid section h5, .grid section h6, .grid section p, .grid section img, .grid section .content-wide, .grid section .slider-wrap, .grid section .video-wrap, .grid section audio, .grid section iframe, .grid section ul, .grid section ol {
   grid-column-start: auto;
   grid-column-end: span 6;
 }
@@ -680,7 +682,7 @@ body .foot {
   grid-column-end: span 12;
 }
 
-.grid .item-span-8, .grid section .oversized, .grid section pre, .grid section h1.large, .grid section h2.large, .grid section h3.large, .grid section h4.large, .grid section h5.large, .grid section h6.large, .grid section p.large, .grid section img.large, .grid section .content-wide.large, .grid section .slider-wrap.large, .grid section .video-wrap.large, .grid section audio.large, .grid section iframe.large, .grid section ul.large {
+.grid .item-span-8, .grid section .oversized, .grid section pre, .grid section h1.large, .grid section h2.large, .grid section h3.large, .grid section h4.large, .grid section h5.large, .grid section h6.large, .grid section p.large, .grid section img.large, .grid section .content-wide.large, .grid section .slider-wrap.large, .grid section .video-wrap.large, .grid section audio.large, .grid section iframe.large, .grid section ul.large, .grid section ol.large {
   grid-column-start: auto;
   grid-column-end: span 8;
 }
@@ -728,7 +730,7 @@ body .foot {
   grid-column-end: span 12;
 }
 
-.grid .item-span-12, .grid .fullscreen {
+.grid .item-span-12, .grid div, .grid .fullscreen {
   grid-column-start: auto;
   grid-column-end: span 12;
 }
@@ -740,7 +742,7 @@ body .foot {
   grid-column-end: span 12;
 }
 
-.grid .item-offset-0, .grid section.full-width, .grid section .full-width, .grid section.full-width figure, .grid section.full-width iframe, .grid section.full-width video, .grid section.full-width .video-wrap, .grid section.full-width .over-video, .grid section .full-width figure, .grid section .full-width iframe, .grid section .full-width video, .grid section .full-width .video-wrap, .grid section .full-width .over-video, .grid section.has-sidestory, .grid section h1.large, .grid section h2.large, .grid section h3.large, .grid section h4.large, .grid section h5.large, .grid section h6.large, .grid section p.large, .grid section img.large, .grid section .content-wide.large, .grid section .slider-wrap.large, .grid section .video-wrap.large, .grid section audio.large, .grid section iframe.large, .grid section ul.large {
+.grid .item-offset-0, .grid section.full-width, .grid section .full-width, .grid section.full-width figure, .grid section.full-width iframe, .grid section.full-width video, .grid section.full-width .video-wrap, .grid section.full-width .over-video, .grid section .full-width figure, .grid section .full-width iframe, .grid section .full-width video, .grid section .full-width .video-wrap, .grid section .full-width .over-video, .grid section.has-sidestory, .grid section h1.large, .grid section h2.large, .grid section h3.large, .grid section h4.large, .grid section h5.large, .grid section h6.large, .grid section p.large, .grid section img.large, .grid section .content-wide.large, .grid section .slider-wrap.large, .grid section .video-wrap.large, .grid section audio.large, .grid section iframe.large, .grid section ul.large, .grid section ol.large {
   grid-column-start: 1;
 }
 
@@ -750,7 +752,7 @@ body .foot {
   grid-column-start: auto;
 }
 
-.grid .item-offset-1, .grid section .oversized div, .grid section .oversized figcaption, .grid section .oversized p, .grid section pre div, .grid section pre figcaption, .grid section pre p, .grid section h1, .grid section h2, .grid section h3, .grid section h4, .grid section h5, .grid section h6, .grid section p, .grid section img, .grid section .content-wide, .grid section .slider-wrap, .grid section .video-wrap, .grid section audio, .grid section iframe, .grid section ul {
+.grid .item-offset-1, .grid section .oversized div, .grid section .oversized figcaption, .grid section .oversized p, .grid section pre div, .grid section pre figcaption, .grid section pre p, .grid section h1, .grid section h2, .grid section h3, .grid section h4, .grid section h5, .grid section h6, .grid section p, .grid section img, .grid section .content-wide, .grid section .slider-wrap, .grid section .video-wrap, .grid section audio, .grid section iframe, .grid section ul, .grid section ol {
   grid-column-start: 2;
 }
 
@@ -1128,7 +1130,7 @@ body .foot {
 }
 
 .grid section {
-  padding: 60px 0;
+  padding: 50px 0;
   display: grid;
   grid-template-columns: repeat(8, 1fr);
 }
@@ -1138,7 +1140,7 @@ body .foot {
 }
 
 .grid section:last-of-type {
-  padding-bottom: 60px;
+  padding-bottom: 100px;
 }
 
 .grid section.full-width,
@@ -1222,6 +1224,7 @@ body .foot {
   z-index: 10;
   -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  font-size: .8em;
 }
 
 @media screen and (max-width: 960px) {
@@ -1275,19 +1278,40 @@ body .foot {
   font-style: italic;
 }
 
-.grid section h1, .grid section h2, .grid section h3, .grid section h4, .grid section h5, .grid section h6, .grid section p, .grid section img, .grid section .content-wide, .grid section .slider-wrap, .grid section .video-wrap, .grid section audio, .grid section iframe, .grid section ul {
+.grid section h1, .grid section h2, .grid section h3, .grid section h4, .grid section h5, .grid section h6, .grid section p, .grid section img, .grid section .content-wide, .grid section .slider-wrap, .grid section .video-wrap, .grid section audio, .grid section iframe, .grid section ul, .grid section ol {
   width: 100%;
 }
 
 .grid section blockquote {
-  grid-column-start: 3;
+  grid-column-start: 4;
+}
+
+.grid section blockquote p {
+  text-align: right !important;
 }
 
 @media screen and (max-width: 700px) {
   .grid section blockquote {
-    grid-column-start: 2;
+    grid-column-start: 0;
     grid-column-end: span 6;
   }
+}
+
+#toc {
+  width: 100%;
+}
+
+#toc ul {
+  list-style: none;
+  list-style-type: none;
+}
+
+#toc .H2 {
+  padding-left: 10px;
+}
+
+#toc .H3 {
+  padding-left: 20px;
 }
 
 .overlay-open {
@@ -1456,7 +1480,7 @@ body .foot {
 }
 
 .scrollspy-wrapper {
-  height: 7px;
+  height: 10px;
   margin: 0;
   position: relative;
   left: 0;
@@ -1470,7 +1494,7 @@ body .foot {
 
 @media screen and (max-width: 500px) {
   .scrollspy-wrapper.display-titles {
-    height: 7px;
+    height: 10px;
   }
 }
 
@@ -1522,7 +1546,7 @@ body .foot {
   left: 0;
   width: 100%;
   background: #747D84;
-  color: #e6e6e6;
+  color: white;
   z-index: 10000;
   font-family: "Work Sans", "Calibri", sans-serif;
   text-transform: uppercase;
@@ -1589,7 +1613,7 @@ body .foot {
 }
 
 .menu .nav-toggle path {
-  fill: #e6e6e6;
+  fill: white;
 }
 
 .menu .nav-toggle:hover path {
@@ -1636,7 +1660,7 @@ body .foot {
 }
 
 .menu a, .menu .backtotop, .menu span {
-  color: #e6e6e6;
+  color: white;
   cursor: pointer;
 }
 
@@ -1706,6 +1730,32 @@ body .foot {
 }
 
 .welcome {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  position: relative;
+  padding: 0 !important;
+}
+
+.welcome .overlay-content {
+  background: rgba(0, 0, 0, 0.5);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;

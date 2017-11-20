@@ -1,5 +1,13 @@
 .welcome{
-    @include flexbox(row, wrap, center, center);
+    @include flexbox(row, wrap, center, stretch);
+    position: relative;
+    padding: 0 !important;
+
+    .overlay-content{
+        background: rgba($textoverlay-background, $textoverlay-image-opacity);
+        @include flexbox(row, wrap, center, center);
+    }
+
 }
 .logo-wrap{
     max-width: 500px;

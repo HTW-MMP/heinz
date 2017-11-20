@@ -1,0 +1,15 @@
+#toc{
+    width: 100%;
+    ul{
+        list-style: none;
+        list-style-type: none;
+    }
+
+    .H2{
+        padding-left: $gutter;
+    }
+
+    .H3{
+        padding-left: $gutter*2;
+    }
+}

@@ -150,6 +150,7 @@ a,
         margin: auto $gutter;
         line-height: 3;
         white-space: nowrap;
+        font-family: $headings-font;
 
         @media screen and (max-width: 600px){
             padding: $gutter/1.5 $gutter*2;
@@ -233,7 +234,7 @@ blockquote{
         font-family: $headings-font;
         line-height: 1.375;
         text-align: left;
-        font-size: 1.1em;
+        font-size: 1.4em;
         font-weight: 300;
         margin-bottom: 1.25rem;
     }

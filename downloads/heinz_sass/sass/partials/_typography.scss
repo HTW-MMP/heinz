@@ -166,7 +166,11 @@ blockquote{
     }
     line-height: 1.4583;
     @include center();
-    text-align: right;
+    text-align: $blockquote-text-align !important;
+
+    p {
+        text-align: $blockquote-text-align !important;
+    }
     color: $blockquote-color;
 
     @if $blockquote-border-line{

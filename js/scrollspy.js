@@ -1,7 +1,7 @@
 // scrollspy
 var bodyheight = $(document).outerHeight(),
     navheight = $('nav.menu').outerHeight();
-	
+
 $('body').css('margin-top', navheight);
 
 $(document).ready(function() {
@@ -19,12 +19,14 @@ $(document).ready(function() {
 		}
 
 		$(this).attr('id', 'section-'+i);
-		
-		console.log("Section ID: " + i + " width: " + w + " left: " + p);
+
+		// console.log("Section ID: " + i + " width: " + w + " left: " + p);
 
 		$(".scrollspy-wrapper").append('<div data-go-to="section-' + i + '" class="scrollspy" style="width:'+w+'%; left:'+p+'%">' + title + '</div>');
 	});
-	
+
+    navheight = $('nav.menu').outerHeight();
+
 	$(".scrollspy").click(function() {
 		var id = $(this).data('go-to');
 		$('html, body').animate({
@@ -37,8 +39,8 @@ $(document).scroll(function() {
     var scrollTop = $(document).scrollTop(),
 		bodyheight = $(document).outerHeight() - $(window).innerHeight(),
         currentTop = ((scrollTop) / (bodyheight)) * 100;
-				
-		console.log("currentTop ( (scrollTop + window.innerHeight) / bodyheight ) * 100: " + currentTop);
-		
+
+		// console.log("currentTop ( (scrollTop + window.innerHeight) / bodyheight ) * 100: " + currentTop);
+
     $(".scrollbar").css("width", currentTop+'%');
 });
