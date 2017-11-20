@@ -155,6 +155,12 @@ a,
         @media screen and (max-width: 600px){
             padding: $gutter/1.5 $gutter*2;
         }
+
+        &:hover{
+            text-decoration: none;
+            background: $link-color;
+            color: black-or-white($link-color);
+        }
     }
 }
 

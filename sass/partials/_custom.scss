@@ -1,3 +1,7 @@
+pre{
+    margin: 2rem 0 !important;
+}
+
 .welcome{
     @include flexbox(row, wrap, center, stretch);
     position: relative;
