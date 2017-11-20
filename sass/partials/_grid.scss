@@ -197,16 +197,16 @@
                 align-self: center;
                 padding: $gutter * 2;
                 z-index: 10;
-                box-shadow: 0 0 20px rgba(black, .1);
+                margin: 25px;
                 font-size: .8em;
+                background: darken($container-background-color, 5%);
 
                 @media screen and (max-width: $breakpoint-m-to-s){
                     grid-column-start: auto;
                     grid-column-end: span 12;
                     grid-row-start: auto;
 
-                    box-shadow: 0 0 0 0 transparent;
-                    background: $background-color;
+                    background: darken($container-background-color, 5%);
 
                     h1, h2, h3, h4, h5, h6{
                         text-align: left;

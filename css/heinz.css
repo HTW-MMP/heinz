@@ -466,6 +466,13 @@ a.btn, .btn.backtotop,
   }
 }
 
+a.btn:hover, .btn.backtotop:hover,
+.toggle.btn:hover {
+  text-decoration: none;
+  background: #65A3D9;
+  color: white;
+}
+
 blockquote {
   font-family: "Libre Baskerville", "Times New Roman", serif;
   font-style: italic;
@@ -1222,9 +1229,9 @@ body .foot {
   align-self: center;
   padding: 20px;
   z-index: 10;
-  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  margin: 25px;
   font-size: .8em;
+  background: #f2f2f2;
 }
 
 @media screen and (max-width: 960px) {
@@ -1232,9 +1239,7 @@ body .foot {
     grid-column-start: auto;
     grid-column-end: span 12;
     grid-row-start: auto;
-    -webkit-box-shadow: 0 0 0 0 transparent;
-    box-shadow: 0 0 0 0 transparent;
-    background: #CCCFD0;
+    background: #f2f2f2;
   }
   .grid section.has-sidestory .sidestory h1, .grid section.has-sidestory .sidestory h2, .grid section.has-sidestory .sidestory h3, .grid section.has-sidestory .sidestory h4, .grid section.has-sidestory .sidestory h5, .grid section.has-sidestory .sidestory h6 {
     text-align: left;
