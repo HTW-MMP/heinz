@@ -1,6 +1,6 @@
 <header align="center">
   <p>
-  <a href="https://getheinz.com" style="width: 100%; display: block; text-align: center;"><img src="media/logo.png"></a>
+  <a href="http://getheinz.com" style="width: 100%; display: block; text-align: center;"><img src="media/logo.png"></a>
 </p>
   <h2>Heinz</h2>
   <h3>the storytelling butler</h3>
@@ -16,7 +16,7 @@
 
 ## Quick Start
 
-1. Download the latest release on [getheinz.com](https://getheinz.com/).
+1. Download the latest release on [getheinz.com](http://getheinz.com/).
 2. Open the included `index.html` file.
 3. Fill it with your content.
 5. And that’s about it — you’re about to come down the stretch and have your very own multimedia story. If you’re unsure about the general structure, keep reading.
@@ -34,7 +34,7 @@ Within the download you'll find the following directories and files, logically g
 
 You'll see something like this:
 
-[Basic version](https://getheinz.com/downloads/heinz.zip) for plug and play:
+[Basic version](http://getheinz.com/downloads/heinz.zip) for plug and play:
 ```
 heinz/
 ├── css/
@@ -50,7 +50,7 @@ heinz/
 
 
 
-For Code Masters we created a [Sass Version](https://getheinz.com/downloads/heinz_sass.zip).
+For Code Masters we created a [Sass Version](http://getheinz.com/downloads/heinz_sass.zip).
 _If you don't know how to use Sass and Compilers, this is not for you._
 
 ```
@@ -75,7 +75,7 @@ heinz_sass/
 ---
 # Documentation
 
-Find the documentation [here](https://getheinz.com/documentation.html).
+Find the documentation [here](http://getheinz.com/documentation.html).
 
 
 ---
