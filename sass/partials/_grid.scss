@@ -183,7 +183,7 @@
                 display: grid;
                 grid-template-columns: repeat(#{$section-span}, 1fr);
 
-                @media screen and (max-width: $breakpoint-m-to-s){
+                @media screen and (max-width: $breakpoint-l-to-m){
                     grid-column-start: auto;
                     grid-column-end: span 12;
                     padding: $gutter*2 0;
@@ -201,7 +201,7 @@
                 font-size: .8em;
                 background: darken($container-background-color, 5%);
 
-                @media screen and (max-width: $breakpoint-m-to-s){
+                @media screen and (max-width: $breakpoint-l-to-m){
                     grid-column-start: auto;
                     grid-column-end: span 12;
                     grid-row-start: auto;
