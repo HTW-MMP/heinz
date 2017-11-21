@@ -2109,6 +2109,7 @@ pre {
 .toggle-code {
   background: #65A3D9;
   color: white;
+  font-size: .7em;
   padding: 3px 20px;
   border-radius: 30px;
 }
