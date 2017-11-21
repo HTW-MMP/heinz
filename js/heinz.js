@@ -66,7 +66,7 @@ $('.overlay .close').click(function(){
 });
 
 // close when clicked outside of element
-$('body').on('click', '.backdrop', function(){
+$('body').on('click, touch', '.backdrop', function(){
     closeOverlay();
 });
 
@@ -157,6 +157,7 @@ $(document).ready(function() {
 			height = $(this).outerHeight(),
 			p = (offset / bodyheight) * 100,
 			w = (height / bodyheight) * 100;
+			
 		if ($(this).attr('data-section-title')) {
 			var title = $(this).data('section-title');
 		} else {
@@ -164,8 +165,11 @@ $(document).ready(function() {
 		}
 
 		$(this).attr('id', 'section-'+i);
-
-		$(".scrollspy-wrapper").append('<div data-go-to="section-' + i + '" class="scrollspy" style="width:'+w+'%; left:'+p+'%">' + title + '</div>');
+		
+		if (!$(this).parent().hasClass('overlay')){
+			$(".scrollspy-wrapper").append('<div data-go-to="section-' + i + '" class="scrollspy" style="width:'+w+'%; left:'+p+'%">' + title + '</div>');
+		}
+		
 	});
 
 	$(".display-titles .scrollspy").click(function() {
