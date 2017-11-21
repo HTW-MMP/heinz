@@ -1,0 +1,61 @@
+.scrollspy-wrapper{
+    height: $scrollspy-height;
+    // @include flexbox(row, wrap, space-between, center);
+
+    .scrollspy {
+        width: auto;
+        height: 100%;
+        position: absolute;
+        white-space: nowrap;
+        color: white;
+        font-size: 0;
+        padding: 0 $gutter/2;
+        box-sizing: border-box;
+
+        &:after{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background: rgba(white, .3);
+        }
+    }
+
+    &.display-titles{
+        height: $scrollspy-height-titles;
+        @media screen and (max-width: $scrollspy-title-collapse){
+            height: $scrollspy-height;
+        }
+
+        .scrollspy{
+            font-size: .8em;
+            font-family: $headings-font;
+            line-height: $scrollspy-height-titles;
+            cursor: pointer;
+            @media screen and (max-width: $scrollspy-title-collapse){
+                font-size: 0;
+            }
+
+            &:after{
+                width: calc(100% - 4px);
+            }
+        }
+    }
+
+    margin:0;
+    position: relative;
+    left: 0;
+    width: 100%;
+    background: $menu-bg;
+
+
+    .scrollbar {
+        height: 100%;
+        width: 0px;
+        position: absolute;
+        background: $scrollspy-progress;
+        // z-index: 9999;
+    }
+}
