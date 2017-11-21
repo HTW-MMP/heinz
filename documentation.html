@@ -8,11 +8,11 @@
     <link href="css/prism.css" rel="stylesheet" />
     <title>Heinz - Documentation</title>
 
-    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
-    <link rel="manifest" href="img/favicons/manifest.json">
-    <link rel="mask-icon" href="img/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="apple-touch-icon" sizes="180x180" href="media/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="media/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="media/favicons/favicon-16x16.png">
+    <link rel="manifest" href="media/favicons/manifest.json">
+    <link rel="mask-icon" href="media/favicons/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="theme-color" content="#ffffff">
 </head>
 
@@ -21,7 +21,7 @@
         <nav class="menu boxed">
             <div class="bar">
                 <a href="/" class="branding">
-                  <img src="img/heinz_h.svg">
+                  <img src="media/heinz_h.svg">
 
             </a>
             <a class="fork-link" target="_blank"href="https://github.com/"><img style="position: absolute; top: 0; right: 0; border: 0;z-index: 10001;" src="https://camo.githubusercontent.com/a6677b08c955af8400f44c6298f40e7d19cc5b2d/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677261795f3664366436642e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png"></a>
@@ -337,14 +337,14 @@
             <p>Copy the code and paste it within a <code class="language-markup">&lt;section&gt;</code>. Add the source of your picture into <code class="language-markup">&lt;img src=&quot;&quot;&gt;</code>.</p>
             <h4>Image content-width</h4>
             <pre><code class="language-markup">&lt;figure class="content-wide"&gt;
-    &lt;img src="img/image.jpg" alt="image"&gt;
+    &lt;img src="media/image.jpg" alt="image"&gt;
     &lt;figcaption&gt;
         Image Caption
     &lt;/figcaption&gt;
 &lt;/figure&gt;</code></pre>
 
             <figure class="content-wide">
-                <img src="img/mountains.jpg" alt="Image width of content">
+                <img src="media/mountains.jpg" alt="Image width of content">
                 <figcaption>
                     Image with content-width, <a href="https://unsplash.com/photos/gdE-5Oui1Y0"> source</a>
                 </figcaption>
@@ -352,7 +352,7 @@
 
             <h4>Oversized image</h4>
             <pre><code class="language-markup">&lt;figure class="oversized"&gt;
-    &lt;img src="img/image.jpg" alt="image"&gt;
+    &lt;img src="media/image.jpg" alt="image"&gt;
     &lt;figcaption&gt;
         Image Caption
     &lt;/figcaption&gt;
@@ -360,7 +360,7 @@
 
 
             <figure class="oversized">
-                <img src="img/mountains.jpg" alt="Oversized">
+                <img src="media/mountains.jpg" alt="Oversized">
                 <figcaption>
                     Image with content-width, <a href="https://unsplash.com/photos/gdE-5Oui1Y0"> source</a>
                 </figcaption>
@@ -369,12 +369,12 @@
 
             <h4>Oversized image with textoverlay</h4>
             <pre><code class="language-markup">&lt;div class="oversized textoverlay"&gt;
-    &lt;img src="img/image.jpg" alt="image"&gt;
+    &lt;img src="media/image.jpg" alt="image"&gt;
     &lt;div class="overlay-content"&gt;This is overlay text&lt;/div&gt;
 &lt;/div&gt;</code></pre>
 
             <div class="oversized textoverlay">
-                <img src="img/clouds.jpg" alt="image oversized">
+                <img src="media/clouds.jpg" alt="image oversized">
                 <div class="overlay-content">This is overlay text</div>
             </div>
 
@@ -383,7 +383,7 @@
                 <p>Be careful, for adding a full-width image you need to create a new section. Close the preceding section, add the code for the full width image and start a new section for the following code. Add the source of your picture into <code class="language-markup">&lt;img src=&quot;&quot;&gt;</code>.</p>
                 <pre><code class="language-markup">&lt;section class="full-width"&gt;
     &lt;figure&gt;
-        &lt;img src="img/image.jpg" alt="image full width"&gt;
+        &lt;img src="media/image.jpg" alt="image full width"&gt;
         &lt;figcaption&gt;
                 full width image caption
         &lt;/figcaption&gt;
@@ -393,7 +393,7 @@
 
         <section class="full-width">
             <figure>
-                <img src="img/clouds.jpg" alt="image full width">
+                <img src="media/clouds.jpg" alt="image full width">
                 <figcaption>
                     full width image <a href="https://unsplash.com/photos/viNPa2F7fnw"> source</a>
                 </figcaption>
@@ -404,16 +404,16 @@
 
           <h3 id="slider">Slider</h3>
           <p class="text-center"><span class="text-highlighted">This feature requires JavaScript.</span></p>
-          <p>We offer you fully prepared responsive sliders in two sizes. Content width and oversized. The Slider has images as background-image and also navigators in spans. Those are enabled automatically in js. Just copy the snippet into a <code class="language-markup">section</code> and enter the URL in <code class="language-markup">url(img/)</code> and <code class="language-markup">src=&quot;img/&quot;</code> of your images.</p>
+          <p>We offer you fully prepared responsive sliders in two sizes. Content width and oversized. The Slider has images as background-image and also navigators in spans. Those are enabled automatically in js. Just copy the snippet into a <code class="language-markup">section</code> and enter the URL in <code class="language-markup">url(media/)</code> and <code class="language-markup">src=&quot;media/&quot;</code> of your images.</p>
 
 
           <h4>Slider content-width</h4>
 
           <pre><code class="language-markup">&lt;div class="slider-wrap"&gt;
   &lt;div class="slider"&gt;
-      &lt;div style="background-image: url(img/img1.jpg)"&gt;&lt;img src="img/img1.jpg" alt="slide 1"&gt;&lt;/div&gt;
-      &lt;div style="background-image: url(img/img2.jpg)"&gt;&lt;img src="img/img2.jpg" alt="slide 2"&gt;&lt;/div&gt;
-      &lt;div style="background-image: url(img/img3.jpg)"&gt;&lt;img src="img/img3.jpg" alt="slide 3"&gt;&lt;/div&gt;
+      &lt;div style="background-image: url(media/img1.jpg)"&gt;&lt;img src="media/img1.jpg" alt="slide 1"&gt;&lt;/div&gt;
+      &lt;div style="background-image: url(media/img2.jpg)"&gt;&lt;img src="media/img2.jpg" alt="slide 2"&gt;&lt;/div&gt;
+      &lt;div style="background-image: url(media/img3.jpg)"&gt;&lt;img src="media/img3.jpg" alt="slide 3"&gt;&lt;/div&gt;
   &lt;/div&gt;
   &lt;span class="navigator toggle-next"&gt;next&lt;/span&gt;
   &lt;span class="navigator toggle-prev"&gt;prev&lt;/span&gt;
@@ -421,9 +421,9 @@
 
           <div class="slider-wrap">
               <div class="slider">
-                  <div style="background-image: url(img/clouds.jpg)"><img src="img/clouds.jpg" alt="slide 1"></div>
-                  <div style="background-image: url(img/mountains.jpg)"><img src="img/mountains.jpg" alt="slide 2"></div>
-                  <div style="background-image: url(img/wheel.jpg)"><img src="img/wheel.jpg" alt="slide 3"></div>
+                  <div style="background-image: url(media/clouds.jpg)"><img src="media/clouds.jpg" alt="slide 1"></div>
+                  <div style="background-image: url(media/mountains.jpg)"><img src="media/mountains.jpg" alt="slide 2"></div>
+                  <div style="background-image: url(media/wheel.jpg)"><img src="media/wheel.jpg" alt="slide 3"></div>
               </div>
               <span class="navigator toggle-next">next</span>
               <span class="navigator toggle-prev">prev</span>
@@ -435,9 +435,9 @@
 
           <pre><code class="language-markup"><pre><code class="language-markup">&lt;div class="slider-wrap large"&gt;
   &lt;div class="slider"&gt;
-      &lt;div style="background-image: url(img/img1.jpg)"&gt;&lt;img src="img/img1.jpg" alt="slide 1"&gt;&lt;/div&gt;
-      &lt;div style="background-image: url(img/img2.jpg)"&gt;&lt;img src="img/img2.jpg" alt="slide 2"&gt;&lt;/div&gt;
-      &lt;div style="background-image: url(img/img3.jpg)"&gt;&lt;img src="img/img3.jpg" alt="slide 3"&gt;&lt;/div&gt;
+      &lt;div style="background-image: url(media/img1.jpg)"&gt;&lt;img src="media/img1.jpg" alt="slide 1"&gt;&lt;/div&gt;
+      &lt;div style="background-image: url(media/img2.jpg)"&gt;&lt;img src="media/img2.jpg" alt="slide 2"&gt;&lt;/div&gt;
+      &lt;div style="background-image: url(media/img3.jpg)"&gt;&lt;img src="media/img3.jpg" alt="slide 3"&gt;&lt;/div&gt;
   &lt;/div&gt;
   &lt;span class="navigator toggle-next"&gt;next&lt;/span&gt;
   &lt;span class="navigator toggle-prev"&gt;prev&lt;/span&gt;
@@ -445,9 +445,9 @@
 
           <div class="slider-wrap large">
               <div class="slider">
-                  <div style="background-image: url(img/clouds.jpg)"><img src="img/clouds.jpg" alt="slide 1"></div>
-                  <div style="background-image: url(img/mountains.jpg)"><img src="img/mountains.jpg" alt="slide 2"></div>
-                  <div style="background-image: url(img/wheel.jpg)"><img src="img/wheel.jpg" alt="slide 3"></div>
+                  <div style="background-image: url(media/clouds.jpg)"><img src="media/clouds.jpg" alt="slide 1"></div>
+                  <div style="background-image: url(media/mountains.jpg)"><img src="media/mountains.jpg" alt="slide 2"></div>
+                  <div style="background-image: url(media/wheel.jpg)"><img src="media/wheel.jpg" alt="slide 3"></div>
               </div>
               <span class="navigator toggle-next">next</span>
               <span class="navigator toggle-prev">prev</span>
@@ -599,7 +599,7 @@
         &lt;p&gt;You can close this overlay by clicking the x, clicking outside of the content or hitting "Esc" on your keyboard.&lt;/p&gt;
 
         &lt;figure class="content-wide"&gt;
-            &lt;img src="img/mountains.jpg" alt="Image width of content"&gt;
+            &lt;img src="media/mountains.jpg" alt="Image width of content"&gt;
             &lt;figcaption&gt;
                 Image with content-width, &lt;a href="https://unsplash.com/photos/gdE-5Oui1Y0"&gt; source&lt;/a&gt;
             &lt;/figcaption&gt;
@@ -630,7 +630,7 @@
             <p>You can close this overlay by clicking the x, clicking outside of the content or hitting "Esc" on your keyboard.</p>
 
             <figure class="content-wide">
-                <img src="img/mountains.jpg" alt="Image width of content">
+                <img src="media/mountains.jpg" alt="Image width of content">
                 <figcaption>
                     Image with content-width, <a href="https://unsplash.com/photos/gdE-5Oui1Y0"> source</a>
                 </figcaption>

@@ -40,15 +40,20 @@ $(document).ready(function(){
     $('.dropdown ul').hide();
 });
 
-$('.dropdown span').click(function(){
+$(document).click(function() {
+	$(".dropdown span").next('ul').slideToggle();
+	$(".dropdown span").removeClass('open');
+});
+
+$(document).on("click touchend", ".dropdown span, .table-of-contents", function (event) {
     $(this).next('ul').slideToggle();
-    $(this).toggleClass('open');
+    $(".dropdown span").addClass('open');
+    event.stopPropagation();
 });
 
 $('.nav-toggle').click(function(){
     $('.menu ul').toggleClass('active');
 });
-
 // overlay
 
 
@@ -192,12 +197,12 @@ $(document).scroll(function() {
     $(".scrollbar").css("width", currentTop + '%');
 });
 
-//@prepros-prepend toc.js
-//@prepros-prepend nav.js
-//@prepros-prepend overlay.js
-//@prepros-prepend custom.js
-//@prepros-prepend slider.js
-//@prepros-prepend video.js
-//@prepros-prepend backtotop.js
-//@prepros-prepend scrollspy.js
+//@prepros-prepend components/toc.js
+//@prepros-prepend components/nav.js
+//@prepros-prepend components/overlay.js
+//@prepros-prepend components/custom.js
+//@prepros-prepend components/slider.js
+//@prepros-prepend components/video.js
+//@prepros-prepend components/backtotop.js
+//@prepros-prepend components/scrollspy.js
 
