@@ -1,14 +1,15 @@
 // scrollspy
-var bodyheight = $(document).outerHeight(),
-    navheight = $('nav.menu').outerHeight();
-
+var navheight = $('nav.menu').outerHeight(),
+	bodyheight;
+	
 $('body').css('margin-top', navheight);
 
 $(document).ready(function() {
-	bodyheight = $(document).outerHeight() - $(window).innerHeight();
-
-	$("section").each(function(i) {
-		var offset = $(this).offset().top,
+	navheight = $('nav.menu').outerHeight();
+	bodyheight = $(document).outerHeight() - navheight;
+	
+	$("section").each(function(i) {	
+		var offset = $(this).offset().top - navheight,
 			height = $(this).outerHeight(),
 			p = (offset / bodyheight) * 100,
 			w = (height / bodyheight) * 100;
@@ -20,13 +21,11 @@ $(document).ready(function() {
 
 		$(this).attr('id', 'section-'+i);
 
-		// console.log("Section ID: " + i + " width: " + w + " left: " + p);
-
 		$(".scrollspy-wrapper").append('<div data-go-to="section-' + i + '" class="scrollspy" style="width:'+w+'%; left:'+p+'%">' + title + '</div>');
 	});
-
-    navheight = $('nav.menu').outerHeight();
-
+	
+	console.log("last part: " + ((bodyheight) - (($( "section" ).last().offset().top - navheight) + $( "section" ).last().outerHeight())));
+	
 	$(".scrollspy").click(function() {
 		var id = $(this).data('go-to');
 		$('html, body').animate({
@@ -35,12 +34,17 @@ $(document).ready(function() {
 	});
 });
 
+var scrollHeight = $('body').prop("scrollHeight");
+var windowHeight = $(window).innerHeight();
+	body = $(document).outerHeight();
+
 $(document).scroll(function() {
-    var scrollTop = $(document).scrollTop(),
-		bodyheight = $(document).outerHeight() - $(window).innerHeight(),
-        currentTop = ((scrollTop) / (bodyheight)) * 100;
+    var scrollTop = $(document).scrollTop();	
 
-		// console.log("currentTop ( (scrollTop + window.innerHeight) / bodyheight ) * 100: " + currentTop);
-
-    $(".scrollbar").css("width", currentTop+'%');
+        var currentTop = ((scrollTop / (scrollHeight - (windowHeight - navheight))) * 100) * ((scrollHeight - (windowHeight + navheight)) / bodyheight);
+		
+    $(".scrollbar").css("width", currentTop + '%');
 });
+
+
+
