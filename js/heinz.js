@@ -66,7 +66,7 @@ $('.overlay .close').click(function(){
 });
 
 // close when clicked outside of element
-$('body').on('click, touch', '.backdrop', function(){
+$('body').on('touchstart click', '.backdrop', function(){
     closeOverlay();
 });
 
