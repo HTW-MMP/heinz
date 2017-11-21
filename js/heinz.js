@@ -27,8 +27,6 @@ $(document).ready( function(){
     list += '</ul>';
     toc.append(list);
 
-    console.log(headings);
-
     $(".table-of-contents a").click(function() {
 		var id = $(this).attr('href');
 		$('html, body').animate({
@@ -145,16 +143,17 @@ $('.backtotop').click(function() {
 });
 
 // scrollspy
-var bodyheight = $(document).outerHeight(),
-    navheight = $('nav.menu').outerHeight();
+var navheight = $('nav.menu').outerHeight(),
+	bodyheight;
 
 $('body').css('margin-top', navheight);
 
 $(document).ready(function() {
-	bodyheight = $(document).outerHeight() - $(window).innerHeight();
+	navheight = $('nav.menu').outerHeight();
+	bodyheight = $(document).outerHeight() - navheight;
 
 	$("section").each(function(i) {
-		var offset = $(this).offset().top,
+		var offset = $(this).offset().top - navheight,
 			height = $(this).outerHeight(),
 			p = (offset / bodyheight) * 100,
 			w = (height / bodyheight) * 100;
@@ -166,14 +165,10 @@ $(document).ready(function() {
 
 		$(this).attr('id', 'section-'+i);
 
-		// console.log("Section ID: " + i + " width: " + w + " left: " + p);
-
 		$(".scrollspy-wrapper").append('<div data-go-to="section-' + i + '" class="scrollspy" style="width:'+w+'%; left:'+p+'%">' + title + '</div>');
 	});
 
-    navheight = $('nav.menu').outerHeight();
-
-	$(".scrollspy").click(function() {
+	$(".display-titles .scrollspy").click(function() {
 		var id = $(this).data('go-to');
 		$('html, body').animate({
 			scrollTop: $('#'+id).offset().top - navheight
@@ -181,14 +176,16 @@ $(document).ready(function() {
 	});
 });
 
+var scrollHeight = $('body').prop("scrollHeight");
+var windowHeight = $(window).innerHeight();
+	body = $(document).outerHeight();
+
 $(document).scroll(function() {
-    var scrollTop = $(document).scrollTop(),
-		bodyheight = $(document).outerHeight() - $(window).innerHeight(),
-        currentTop = ((scrollTop) / (bodyheight)) * 100;
+    var scrollTop = $(document).scrollTop();
 
-		// console.log("currentTop ( (scrollTop + window.innerHeight) / bodyheight ) * 100: " + currentTop);
+        var currentTop = ((scrollTop / (scrollHeight - (windowHeight - navheight))) * 100) * ((scrollHeight - (windowHeight + navheight)) / bodyheight);
 
-    $(".scrollbar").css("width", currentTop+'%');
+    $(".scrollbar").css("width", currentTop + '%');
 });
 
 //@prepros-prepend toc.js

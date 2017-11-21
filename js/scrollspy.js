@@ -1,14 +1,14 @@
 // scrollspy
 var navheight = $('nav.menu').outerHeight(),
 	bodyheight;
-	
+
 $('body').css('margin-top', navheight);
 
 $(document).ready(function() {
 	navheight = $('nav.menu').outerHeight();
 	bodyheight = $(document).outerHeight() - navheight;
-	
-	$("section").each(function(i) {	
+
+	$("section").each(function(i) {
 		var offset = $(this).offset().top - navheight,
 			height = $(this).outerHeight(),
 			p = (offset / bodyheight) * 100,
@@ -23,10 +23,8 @@ $(document).ready(function() {
 
 		$(".scrollspy-wrapper").append('<div data-go-to="section-' + i + '" class="scrollspy" style="width:'+w+'%; left:'+p+'%">' + title + '</div>');
 	});
-	
-	console.log("last part: " + ((bodyheight) - (($( "section" ).last().offset().top - navheight) + $( "section" ).last().outerHeight())));
-	
-	$(".scrollspy").click(function() {
+
+	$(".display-titles .scrollspy").click(function() {
 		var id = $(this).data('go-to');
 		$('html, body').animate({
 			scrollTop: $('#'+id).offset().top - navheight
@@ -39,12 +37,9 @@ var windowHeight = $(window).innerHeight();
 	body = $(document).outerHeight();
 
 $(document).scroll(function() {
-    var scrollTop = $(document).scrollTop();	
+    var scrollTop = $(document).scrollTop();
 
         var currentTop = ((scrollTop / (scrollHeight - (windowHeight - navheight))) * 100) * ((scrollHeight - (windowHeight + navheight)) / bodyheight);
-		
+
     $(".scrollbar").css("width", currentTop + '%');
 });
-
-
-

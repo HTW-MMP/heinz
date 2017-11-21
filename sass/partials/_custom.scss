@@ -135,8 +135,8 @@ $grid-colors: #F5C7CA, #E779AE, #3759A0, #A0CEEC, #EBEBEB, #D7E6E8, #D6D3EE;
 }
 .toggle-code{
     // width: 100%;
-    background: lighten(#007E33, 10%);
-    color: black-or-white(lighten(#007E33, 10%));
+    background: $bright-blue;
+    color: black-or-white($bright-blue);
     // text-align: center;
     // transition: .3s all ease;
     // cursor: pointer;
@@ -151,8 +151,8 @@ $grid-colors: #F5C7CA, #E779AE, #3759A0, #A0CEEC, #EBEBEB, #D7E6E8, #D6D3EE;
     }
 
     &.off{
-        background: lighten(#CC0000, 30%);
-        color: black-or-white(lighten(#CC0000, 30%));
+        background: $background-blue;
+        color: black-or-white($background-blue);
 
 
         &:after{

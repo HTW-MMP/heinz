@@ -27,8 +27,6 @@ $(document).ready( function(){
     list += '</ul>';
     toc.append(list);
 
-    console.log(headings);
-
     $(".table-of-contents a").click(function() {
 		var id = $(this).attr('href');
 		$('html, body').animate({
