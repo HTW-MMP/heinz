@@ -12,74 +12,20 @@
 <br />
 
 --------------------------------------------------------------------------------
-
-# Table of Contents
-- [Introduction](#introduction)  
-   - [Quick start](#quick-start)
-   - [Freshness](#freshness)
-   - [What's included](#whats-included)
-- [Documentation](#documentation)
-- [Creators](#creators)
-- [Copyright and License](#copyright-and-license)
-
----
 # Introduction
 
 ## Quick Start
 
-```
-<!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- include heinz css -->
-    <link href="css/heinz.min.css" rel="stylesheet">
-
-    <title>An Awesome Story Created with Heinz</title>
-</head>
-
-<body class="boxed">
-
-    <header class="head">
-        <!-- a place for nav or other top content -->
-    </header>
-
-    <main class="main grid">
-        <section class="box" data-section-title="Title">
-            <h1>Your First Section</h1>
-            <p>Your First Content</p>
-        </section>
-    </main>
-
-    <footer class="grid">
-        <div class="foot">
-            <p>&copy; Heinz &middot; 2017 &middot; <span class="backtotop">Back To Top</span></p>
-        </div>
-    </footer>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="js/heinz.min.js"></script>
-</body>
-
-</html>
-
-```
-
-**or**
-
 1. Download the latest release on [getheinz.com](https://getheinz.com/).
 2. Open the included `index.html` file.
 3. Fill it with your content.
-5. And that’s about it — you’re about to come down the stretch and have your very own multimedia story. If you’re unsure about the general structure, keep reading for an example page template.
+5. And that’s about it — you’re about to come down the stretch and have your very own multimedia story. If you’re unsure about the general structure, keep reading.
 
 ## Freshness
 
 Heinz is developed for modern browsers only - because the future is awesome.
 
-Always be sure to have your pages set up with the latest design and development standards. That means using an HTML5 doctype and including a viewport meta tag for proper responsive behaviors. Still we used autoprefixer. ;)
+Always be sure to have your pages set up with the latest design and development standards. That means using an HTML5 doctype and including a viewport meta tag for proper responsive behaviors. Still we used autoprefixer to support good ol' IE ;)
 
 
 ## What's included
@@ -109,9 +55,6 @@ _If you don't know how to use Sass and Compilers, this is not for you._
 
 ```
 heinz_sass/
-├── css/
-│   ├── heinz.css
-│   └── heinz.min.css
 ├── fonts/
 │   ├── librebaskerville
 │   └── worksans
@@ -121,8 +64,9 @@ heinz_sass/
 └── sass/
     ├── _overwrite.scss
     ├── _settings.scss
-    ├── partials
-    ├── toolbox
+    ├── partials/
+    │   └── _custom.scss
+    ├── toolbox/
     └── heinz.scss
 ```
 
