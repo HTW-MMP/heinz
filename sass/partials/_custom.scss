@@ -128,17 +128,24 @@ $grid-colors: #F5C7CA, #E779AE, #3759A0, #A0CEEC, #EBEBEB, #D7E6E8, #D6D3EE;
     }
 }
 
+.code-display{
+    @media screen and (max-width: $menu-collapse){
+        display: none;
+    }
+}
 .toggle-code{
-    width: 100%;
+    // width: 100%;
     background: lighten(#007E33, 10%);
     color: black-or-white(lighten(#007E33, 10%));
-    text-align: center;
-    transition: .3s all ease;
-    cursor: pointer;
-    font-family: $headings-font;
-    text-transform: uppercase;
-    font-size: .8em;
-
+    // text-align: center;
+    // transition: .3s all ease;
+    // cursor: pointer;
+    // font-family: $headings-font;
+    // text-transform: uppercase;
+    // font-size: .8em;
+    @extend .btn;
+        padding: 3px 20px;
+        border-radius: 30px;
     &:after{
         content: 'on';
     }
