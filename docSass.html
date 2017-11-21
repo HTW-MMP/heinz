@@ -75,7 +75,7 @@ $menu-bg: black;</code></pre>
                 <div class="area-7"></div>
             </div>
             <p></p>
-            <p>Building this is super simple. Start by writing some HTML. To keep this simple I'm just working with a bunch of div tags.</p>
+            <p>Building this is super simple. Start by writing some HTML. To keep this simple this example works with a bunch of div tags.</p>
             <pre><code class="language-markup">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 
@@ -99,8 +99,8 @@ $menu-bg: black;</code></pre>
 &lt;/html&gt;</code></pre>
 
             <p>Next is building the Sass. The Grid Creator is a mixin, that takes 4 values. The rows, the columns, the list of elements and the grid layout.</p>
-            <p>In the example we are working with a simple 4x4 layout, that breaks into a 2x5 grid.</p>
-            <p>Adding this Sass to the _custom.scss partial file, we'll start with two variables. One of them is the breakpoint at which we want our layout to break and the other is a list of colors. This example uses some background colors and stretches all grid items, to fill the full screen. Accomplishing this is just a few lines of SCSS.</p>
+            <p>This example works with a simple 4x4 layout, that breaks into a 2x5 grid.</p>
+            <p>Then this Sass is added to the _custom.scss partial file with two variables. One of them is the breakpoint where the layout should break and the other is a list of colors. This example uses some background colors and stretches all grid items, to fill the full screen. Accomplishing this is just a few lines of SCSS.</p>
             <pre><code class="language-scss">$breakpoint: 850px;
 
 $grid-colors: #F5C7CA, #E779AE, #3759A0, #A0CEEC, #EBEBEB, #D7E6E8, #D6D3EE;
@@ -119,7 +119,7 @@ $grid-colors: #F5C7CA, #E779AE, #3759A0, #A0CEEC, #EBEBEB, #D7E6E8, #D6D3EE;
     align-items: stretch;
 }</code></pre>
 
-            <p>Now for the actual Grid Part. We're using auto sizing for our grid items in this example, passing the list of items will assign the area to the container with the class of the same name in the HTML. So make sure you use those area names as your class names, in order for this to work. The amount of classes is variable, you can pass an empty list too, which is what we do, when we call the gridCreator mixing again, for our media query. Then just build the layout, and you're done.</p>
+            <p>Now for the actual Grid Part. In this example auto-sizing is used for the grid items, passing the list of items will assign the area to the container with the class of the same name in the HTML. So make sure you use those area names as your class names, in order for this to work. The amount of classes is variable, you can pass an empty list too, which is what happends in this example, when the gridCreator mixin is called again, for our media query. Then just build the layout, and you're done.</p>
 
             <pre><code class="language-scss">.customgrid{
     width: 100%;
